@@ -139,7 +139,7 @@
                     android:weightSum="1">
 
                     <com.example.corechatoperationconfigapp.customviews.CustomEditText
-                        android:id="@+id/et_about_us"
+                        android:id="@+id/et_settings"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -154,17 +154,17 @@
                         app:customEditTextFont="@string/Roboto_LightItalic" />
 
                     <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_about_us"
+                        android:id="@+id/spinner_settings"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_weight="0.5"
                         android:background="@drawable/bg_spinner"
                         android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_about_us_icon_array"
+                        android:entries="@array/dropdown_settings_icon_array"
                         android:overlapAnchor="false"
                         android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_about_us_icon_array}" />
+                        app:customIconSpinner="@{R.array.dropdown_settings_icon_array}" />
 
                 </LinearLayout>
 
@@ -176,7 +176,7 @@
                     android:weightSum="1">
 
                     <com.example.corechatoperationconfigapp.customviews.CustomEditText
-                        android:id="@+id/et_select_topics"
+                        android:id="@+id/et_admin_section"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -191,17 +191,17 @@
                         app:customEditTextFont="@string/Roboto_LightItalic" />
 
                     <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_select_topics"
+                        android:id="@+id/spinner_admin_section"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_weight="0.5"
                         android:background="@drawable/bg_spinner"
                         android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_select_topics_icon_array"
+                        android:entries="@array/dropdown_admin_section_icon_array"
                         android:overlapAnchor="false"
                         android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_select_topics_icon_array}" />
+                        app:customIconSpinner="@{R.array.dropdown_admin_section_icon_array}" />
 
                 </LinearLayout>
 
@@ -279,116 +279,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
-                        android:id="@+id/et_notification"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_edit_text"
-                        android:hint="@string/side_menu_name"
-                        android:imeOptions="actionDone"
-                        android:inputType="textPersonName"
-                        android:maxLines="1"
-                        android:padding="@dimen/_5sdp"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/small_text_size"
-                        app:customEditTextFont="@string/Roboto_LightItalic" />
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_notification"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_notification_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_notification_icon_array}" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
-                        android:id="@+id/et_eula"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_edit_text"
-                        android:hint="@string/side_menu_name"
-                        android:imeOptions="actionDone"
-                        android:inputType="textPersonName"
-                        android:maxLines="1"
-                        android:padding="@dimen/_5sdp"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/small_text_size"
-                        app:customEditTextFont="@string/Roboto_LightItalic" />
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_eula"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_eula_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_eula_icon_array}" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
-                        android:id="@+id/et_download_data"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_edit_text"
-                        android:hint="@string/side_menu_name"
-                        android:imeOptions="actionDone"
-                        android:inputType="textPersonName"
-                        android:maxLines="1"
-                        android:padding="@dimen/_5sdp"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/small_text_size"
-                        app:customEditTextFont="@string/Roboto_LightItalic" />
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_download_data"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_download_data_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_download_data_icon_array}" />
-
-                </LinearLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"

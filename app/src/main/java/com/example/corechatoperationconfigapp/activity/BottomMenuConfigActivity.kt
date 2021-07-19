@@ -39,44 +39,59 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
                     binding.etDashboard.text.toString().isEmpty() -> {
                         showToast(resources.getString(R.string.error_message_add_dashboard_menu_name))
                     }
-                    Utils.dynamicUIModel?.bottomMenuList?.get(0)?.iconValue.isNullOrEmpty() -> {
+                    Utils.dynamicUIModel?.bottomTabBar?.get(0)?.iconValue.isNullOrEmpty() -> {
                         showToast(resources.getString(R.string.error_message_select_dashboard_icon))
                     }
                     binding.etHistory.text.toString().isEmpty() -> {
                         showToast(resources.getString(R.string.error_message_add_history_menu_name))
                     }
-                    Utils.dynamicUIModel?.bottomMenuList?.get(1)?.iconValue.isNullOrEmpty() -> {
+                    Utils.dynamicUIModel?.bottomTabBar?.get(3)?.iconValue.isNullOrEmpty() -> {
                         showToast(resources.getString(R.string.error_message_select_history_icon))
                     }
                     binding.etLiveChat.text.toString().isEmpty() -> {
                         showToast(resources.getString(R.string.error_message_add_live_chat_menu_name))
                     }
-                    Utils.dynamicUIModel?.bottomMenuList?.get(2)?.iconValue.isNullOrEmpty() -> {
+                    Utils.dynamicUIModel?.bottomTabBar?.get(2)?.iconValue.isNullOrEmpty() -> {
                         showToast(resources.getString(R.string.error_message_select_live_chat_icon))
                     }
+                    binding.etWaiting.text.toString().isEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_add_waiting_menu_name))
+                    }
+                    Utils.dynamicUIModel?.bottomTabBar?.get(1)?.iconValue.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_waiting_icon))
+                    }
+                    binding.etNotification.text.toString().isEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_add_notification_menu_name))
+                    }
+                    Utils.dynamicUIModel?.bottomTabBar?.get(4)?.iconValue.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_notification_icon))
+                    }
                     else -> {
-                        Utils.dynamicUIModel?.bottomMenuList?.get(0)?.textValue =
+                        Utils.dynamicUIModel?.bottomTabBar?.get(0)?.textValue =
                             binding.etDashboard.text.toString()
-                        Utils.dynamicUIModel?.bottomMenuList?.get(1)?.textValue =
+                        Utils.dynamicUIModel?.bottomTabBar?.get(1)?.textValue =
                             binding.etHistory.text.toString()
-                        Utils.dynamicUIModel?.bottomMenuList?.get(2)?.textValue =
+                        Utils.dynamicUIModel?.bottomTabBar?.get(2)?.textValue =
+                            binding.etLiveChat.text.toString()
+                        Utils.dynamicUIModel?.bottomTabBar?.get(3)?.textValue =
+                            binding.etLiveChat.text.toString()
+                        Utils.dynamicUIModel?.bottomTabBar?.get(4)?.textValue =
                             binding.etLiveChat.text.toString()
 
                         if (binding.swBold.isChecked && binding.swItalic.isChecked) {
-                            for (i in 0 until Utils.dynamicUIModel?.bottomMenuList?.size!!) {
-                                Utils.dynamicUIModel?.bottomMenuList?.get(i)?.fontType =
+                            for (i in 0 until Utils.dynamicUIModel?.bottomTabBar?.size!!) {
+                                Utils.dynamicUIModel?.bottomTabBar?.get(i)?.fontType =
                                     "bold-italic"
                             }
                         } else if (binding.swBold.isChecked) {
-                            for (i in 0 until Utils.dynamicUIModel?.bottomMenuList?.size!!) {
-                                Utils.dynamicUIModel?.bottomMenuList?.get(i)?.fontType = "bold"
+                            for (i in 0 until Utils.dynamicUIModel?.bottomTabBar?.size!!) {
+                                Utils.dynamicUIModel?.bottomTabBar?.get(i)?.fontType = "bold"
                             }
                         } else if (binding.swItalic.isChecked) {
-                            for (i in 0 until Utils.dynamicUIModel?.bottomMenuList?.size!!) {
-                                Utils.dynamicUIModel?.bottomMenuList?.get(i)?.fontType = "italic"
+                            for (i in 0 until Utils.dynamicUIModel?.bottomTabBar?.size!!) {
+                                Utils.dynamicUIModel?.bottomTabBar?.get(i)?.fontType = "italic"
                             }
                         }
-
                         startActivity(Intent(this, SideMenuConfigActivity::class.java))
                     }
                 }
@@ -85,27 +100,27 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
     }
 
     private fun setValuesToViews() {
-        if (Utils.dynamicUIModel?.bottomMenuList?.size == 3) {
-            for (i in 0 until Utils.dynamicUIModel?.bottomMenuList!!.size) {
+        if (Utils.dynamicUIModel?.bottomTabBar?.size == 5) {
+            for (i in 0 until Utils.dynamicUIModel?.bottomTabBar!!.size) {
                 when (i) {
                     0 -> {
-                        if (Utils.dynamicUIModel?.bottomMenuList?.get(i)?.fontType?.contains(
+                        if (Utils.dynamicUIModel?.bottomTabBar?.get(i)?.fontType?.contains(
                                 AppConstants.BOLD.lowercase()
                             ) == true
                         ) {
                             binding.swBold.isChecked = true
                         }
 
-                        if (Utils.dynamicUIModel?.bottomMenuList?.get(i)?.fontType?.contains(
+                        if (Utils.dynamicUIModel?.bottomTabBar?.get(i)?.fontType?.contains(
                                 AppConstants.ITALIC.lowercase()
                             ) == true
                         ) {
                             binding.swItalic.isChecked = true
                         }
 
-                        binding.etDashboard.setText(Utils.dynamicUIModel?.bottomMenuList?.get(i)?.textValue)
+                        binding.etDashboard.setText(Utils.dynamicUIModel?.bottomTabBar?.get(i)?.textValue)
 
-                        Utils.dynamicUIModel?.bottomMenuList?.get(i)?.iconValue?.let {
+                        Utils.dynamicUIModel?.bottomTabBar?.get(i)?.iconValue?.let {
                             Utils.getIndex(
                                 Utils.getStringArrayFromXML(
                                     this,
@@ -116,9 +131,35 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
                         }?.let { binding.spinnerDashboard.setSelection(it) }
                     }
                     1 -> {
-                        binding.etHistory.setText(Utils.dynamicUIModel?.bottomMenuList?.get(i)?.textValue)
+                        binding.etWaiting.setText(Utils.dynamicUIModel?.bottomTabBar?.get(i)?.textValue)
 
-                        Utils.dynamicUIModel?.bottomMenuList?.get(i)?.iconValue?.let {
+                        Utils.dynamicUIModel?.bottomTabBar?.get(i)?.iconValue?.let {
+                            Utils.getIndex(
+                                Utils.getStringArrayFromXML(
+                                    this,
+                                    R.array.dropdown_waiting_icon_array
+                                ),
+                                it
+                            )
+                        }?.let { binding.spinnerWaiting.setSelection(it) }
+                    }
+                    2 -> {
+                        binding.etLiveChat.setText(Utils.dynamicUIModel?.bottomTabBar?.get(i)?.textValue)
+
+                        Utils.dynamicUIModel?.bottomTabBar?.get(i)?.iconValue?.let {
+                            Utils.getIndex(
+                                Utils.getStringArrayFromXML(
+                                    this,
+                                    R.array.dropdown_live_chat_icon_array
+                                ),
+                                it
+                            )
+                        }?.let { binding.spinnerLiveChat.setSelection(it) }
+                    }
+                    3 -> {
+                        binding.etHistory.setText(Utils.dynamicUIModel?.bottomTabBar?.get(i)?.textValue)
+
+                        Utils.dynamicUIModel?.bottomTabBar?.get(i)?.iconValue?.let {
                             Utils.getIndex(
                                 Utils.getStringArrayFromXML(
                                     this,
@@ -128,18 +169,18 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
                             )
                         }?.let { binding.spinnerHistory.setSelection(it) }
                     }
-                    2 -> {
-                        binding.etLiveChat.setText(Utils.dynamicUIModel?.bottomMenuList?.get(i)?.textValue)
+                    4 -> {
+                        binding.etNotification.setText(Utils.dynamicUIModel?.bottomTabBar?.get(i)?.textValue)
 
-                        Utils.dynamicUIModel?.bottomMenuList?.get(i)?.iconValue?.let {
+                        Utils.dynamicUIModel?.bottomTabBar?.get(i)?.iconValue?.let {
                             Utils.getIndex(
                                 Utils.getStringArrayFromXML(
                                     this,
-                                    R.array.dropdown_live_chat_icon_array
+                                    R.array.dropdown_notification_icon_array
                                 ),
                                 it
                             )
-                        }?.let { binding.spinnerLiveChat.setSelection(it) }
+                        }?.let { binding.spinnerNotification.setSelection(it) }
                     }
                 }
             }
@@ -150,28 +191,28 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         when (parent) {
             binding.spinnerDashboard -> {
                 if (position != 0) {
-                    Utils.dynamicUIModel?.bottomMenuList?.get(0)?.iconValue =
+                    Utils.dynamicUIModel?.bottomTabBar?.get(0)?.iconValue =
                         Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
                 } else {
-                    Utils.dynamicUIModel?.bottomMenuList?.get(0)?.iconValue = ""
+                    Utils.dynamicUIModel?.bottomTabBar?.get(0)?.iconValue = ""
                 }
             }
 
             binding.spinnerHistory -> {
                 if (position != 0) {
-                    Utils.dynamicUIModel?.bottomMenuList?.get(1)?.iconValue =
+                    Utils.dynamicUIModel?.bottomTabBar?.get(1)?.iconValue =
                         Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
                 } else {
-                    Utils.dynamicUIModel?.bottomMenuList?.get(1)?.iconValue = ""
+                    Utils.dynamicUIModel?.bottomTabBar?.get(1)?.iconValue = ""
                 }
             }
 
             binding.spinnerLiveChat -> {
                 if (position != 0) {
-                    Utils.dynamicUIModel?.bottomMenuList?.get(2)?.iconValue =
+                    Utils.dynamicUIModel?.bottomTabBar?.get(2)?.iconValue =
                         Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
                 } else {
-                    Utils.dynamicUIModel?.bottomMenuList?.get(2)?.iconValue = ""
+                    Utils.dynamicUIModel?.bottomTabBar?.get(2)?.iconValue = ""
                 }
             }
         }

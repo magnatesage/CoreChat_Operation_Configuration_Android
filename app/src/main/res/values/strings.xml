@@ -41,41 +41,30 @@
     <string name="profile_icon_3" translatable="false">e9ba</string>
     <string name="profile_icon_4" translatable="false">e9bb</string>
 
-    <string name="notification_selected_icon" translatable="false">f0f3</string>
-    <string name="notification_selected_icon_1" translatable="false">ea06</string>
-    <string name="notification_selected_icon_2" translatable="false">ea08</string>
-    <string name="notification_selected_icon_3" translatable="false">ea04</string>
-    <string name="notification_selected_icon_4" translatable="false">ea12</string>
-
-    <string name="notification_unselected_icon" translatable="false">e927</string>
-    <string name="notification_unselected_icon_1" translatable="false">ea05</string>
-    <string name="notification_unselected_icon_2" translatable="false">ea03</string>
-    <string name="notification_unselected_icon_3" translatable="false">ea07</string>
-    <string name="notification_unselected_icon_4" translatable="false">ea13</string>
-
-    <string name="favourites_selected_icon" translatable="false">e973</string>
-    <string name="favourites_selected_icon_1" translatable="false">ea0a</string>
-    <string name="favourites_selected_icon_2" translatable="false">ea11</string>
-    <string name="favourites_selected_icon_3" translatable="false">ea0b</string>
-    <string name="favourites_selected_icon_4" translatable="false">ea15</string>
-
-    <string name="favourites_unselected_icon" translatable="false">e972</string>
-    <string name="favourites_unselected_icon_1" translatable="false">ea0c</string>
-    <string name="favourites_unselected_icon_2" translatable="false">ea0e</string>
-    <string name="favourites_unselected_icon_3" translatable="false">ea0d</string>
-    <string name="favourites_unselected_icon_4" translatable="false">ea14</string>
-
-    <string name="notes_icon" translatable="false">e912</string>
-    <string name="notes_icon_1" translatable="false">e960</string>
-    <string name="notes_icon_2" translatable="false">e961</string>
-    <string name="notes_icon_3" translatable="false">e962</string>
-    <string name="notes_icon_4" translatable="false">e963</string>
-
     <string name="live_icon" translatable="false">e908</string>
     <string name="live_icon_1" translatable="false">e9a8</string>
     <string name="live_icon_2" translatable="false">e9a9</string>
     <string name="live_icon_3" translatable="false">e9aa</string>
     <string name="live_icon_4" translatable="false">e9ab</string>
+
+    <string name="tickets_icon" translatable="false">e909</string>
+    <string name="tickets_icon_1" translatable="false">e975</string>
+    <string name="tickets_icon_2" translatable="false">e976</string>
+    <string name="tickets_icon_3" translatable="false">e977</string>
+    <string name="tickets_icon_4" translatable="false">e978</string>
+
+    <string name="bot_icon" translatable="false">e921</string>
+    <string name="bot_icon_1" translatable="false">e9c1</string>
+    <string name="bot_icon_2" translatable="false">e9c2</string>
+    <string name="bot_icon_3" translatable="false">e9c3</string>
+    <string name="bot_icon_4" translatable="false">e9c4</string>
+
+    <string name="message_icon" translatable="false">f27a</string>
+    <string name="message_icon_1" translatable="false">e9b0</string>
+    <string name="message_icon_2" translatable="false">e9b1</string>
+    <string name="message_icon_3" translatable="false">e9b2</string>
+    <string name="message_icon_4" translatable="false">e9b3</string>
+    <string name="message_icon_5" translatable="false">e9b4</string>
 
     <string name="timer_icon" translatable="false">e971</string>
     <string name="timer_icon_1" translatable="false">e979</string>
@@ -83,17 +72,149 @@
     <string name="timer_icon_3" translatable="false">e97b</string>
     <string name="timer_icon_4" translatable="false">e97d</string>
 
-    <string name="message_icon" translatable="false">f27a</string>
-    <string name="message_icon_1" translatable="false">e9b0</string>
-    <string name="message_icon_2" translatable="false">e9b1</string>
-    <string name="message_icon_3" translatable="false">e9b2</string>
-    <string name="message_icon_4" translatable="false">e9b3</string>
+    <string name="disconnect_icon" translatable="false">e922</string>
+    <string name="disconnect_icon_1" translatable="false">e99a</string>
+    <string name="disconnect_icon_2" translatable="false">e99b</string>
+    <string name="disconnect_icon_3" translatable="false">e99d</string>
+    <string name="disconnect_icon_4" translatable="false">e99e</string>
 
-    <string name="dashboard_icon" translatable="false">e902</string>
+    <string name="schedule_icon" translatable="false">e90c</string>
+    <string name="schedule_icon_1" translatable="false">e98c</string>
+    <string name="schedule_icon_2" translatable="false">e98e</string>
+    <string name="schedule_icon_3" translatable="false">e98f</string>
+    <string name="schedule_icon_4" translatable="false">e990</string>
+
+    <string name="all_time_icon" translatable="false">f534</string>
+    <string name="all_time_icon_1" translatable="false">ea29</string>
+    <string name="all_time_icon_2" translatable="false">ea2a</string>
+    <string name="all_time_icon_3" translatable="false">ea2b</string>
+    <string name="all_time_icon_4" translatable="false">ea2c</string>
+
+    <string name="user_icon" translatable="false">e923</string>
+    <string name="user_icon_1" translatable="false">e9df</string>
+    <string name="user_icon_2" translatable="false">e9e1</string>
+    <string name="user_icon_3" translatable="false">e9e3</string>
+    <string name="user_icon_4" translatable="false">e9dc</string>
+
+    <string name="info_icon" translatable="false">f05a</string>
+    <string name="info_icon_1" translatable="false">e964</string>
+    <string name="info_icon_2" translatable="false">e965</string>
+    <string name="info_icon_3" translatable="false">e966</string>
+    <string name="info_icon_4" translatable="false">e967</string>
+
+    <string name="notes_icon" translatable="false">e912</string>
+    <string name="notes_icon_1" translatable="false">e960</string>
+    <string name="notes_icon_2" translatable="false">e961</string>
+    <string name="notes_icon_3" translatable="false">e962</string>
+    <string name="notes_icon_4" translatable="false">e963</string>
+
+    <string name="remove_icon" translatable="false">f056</string>
+    <string name="remove_icon_1" translatable="false">e9dd</string>
+    <string name="remove_icon_2" translatable="false">e9e0</string>
+    <string name="remove_icon_3" translatable="false">e9e4</string>
+    <string name="remove_icon_4" translatable="false">e9e5</string>
+
+    <string name="training_mode_icon" translatable="false">e91e</string>
+    <string name="training_mode_icon_1" translatable="false">e9a4</string>
+    <string name="training_mode_icon_2" translatable="false">e970</string>
+    <string name="training_mode_icon_3" translatable="false">e9ce</string>
+    <string name="training_mode_icon_4" translatable="false">e9cf</string>
+
+    <string name="end_session_icon" translatable="false">f2f5</string>
+    <string name="end_session_icon_1" translatable="false">ea1c</string>
+    <string name="end_session_icon_2" translatable="false">ea1d</string>
+    <string name="end_session_icon_3" translatable="false">ea1e</string>
+    <string name="end_session_icon_4" translatable="false">ea1f</string>
+
+    <string name="whisper_icon" translatable="false">f1fa</string>
+<!--    <string name="whisper_icon_1" translatable="false">e979</string>-->
+<!--    <string name="whisper_icon_2" translatable="false">e97a</string>-->
+<!--    <string name="whisper_icon_3" translatable="false">e97b</string>-->
+<!--    <string name="whisper_icon_4" translatable="false">e97d</string>-->
+
+    <string name="interact_icon" translatable="false">f00d</string>
+<!--    <string name="interact_icon_1" translatable="false">e979</string>-->
+<!--    <string name="interact_icon_2" translatable="false">e97a</string>-->
+<!--    <string name="interact_icon_3" translatable="false">e97b</string>-->
+<!--    <string name="interact_icon_4" translatable="false">e97d</string>-->
+
+    <string name="bot_start_icon" translatable="false">e929</string>
+<!--    <string name="bot_start_icon_1" translatable="false">e979</string>-->
+<!--    <string name="bot_start_icon_2" translatable="false">e97a</string>-->
+<!--    <string name="bot_start_icon_3" translatable="false">e97b</string>-->
+<!--    <string name="bot_start_icon_4" translatable="false">e97d</string>-->
+
+    <string name="user_location_icon" translatable="false">e92a</string>
+<!--    <string name="user_location_icon_1" translatable="false">e979</string>-->
+<!--    <string name="user_location_icon_2" translatable="false">e97a</string>-->
+<!--    <string name="user_location_icon_3" translatable="false">e97b</string>-->
+<!--    <string name="user_location_icon_4" translatable="false">e97d</string>-->
+
+    <string name="manager_icon" translatable="false">e923</string>
+    <string name="manager_icon_1" translatable="false">e9df</string>
+    <string name="manager_icon_2" translatable="false">e9e1</string>
+    <string name="manager_icon_3" translatable="false">e9e3</string>
+    <string name="manager_icon_4" translatable="false">e9dc</string>
+
+    <string name="supervisor_icon" translatable="false">e923</string>
+    <string name="supervisor_icon_1" translatable="false">e9df</string>
+    <string name="supervisor_icon_2" translatable="false">e9e1</string>
+    <string name="supervisor_icon_3" translatable="false">e9e3</string>
+    <string name="supervisor_icon_4" translatable="false">e9dc</string>
+
+    <string name="agent_icon" translatable="false">e923</string>
+    <string name="agent_icon_1" translatable="false">e9df</string>
+    <string name="agent_icon_2" translatable="false">e9e1</string>
+    <string name="agent_icon_3" translatable="false">e9e3</string>
+    <string name="agent_icon_4" translatable="false">e9dc</string>
+
+    <string name="green_flag_icon" translatable="false">e92b</string>
+    <string name="green_flag_icon_1" translatable="false">e9d8</string>
+    <string name="green_flag_icon_2" translatable="false">e9d9</string>
+    <string name="green_flag_icon_3" translatable="false">e9da</string>
+    <string name="green_flag_icon_4" translatable="false">e9db</string>
+
+    <string name="umber_flag_icon" translatable="false">e92b</string>
+    <string name="umber_flag_icon_1" translatable="false">e9d8</string>
+    <string name="umber_flag_icon_2" translatable="false">e9d9</string>
+    <string name="umber_flag_icon_3" translatable="false">e9da</string>
+    <string name="umber_flag_icon_4" translatable="false">e9db</string>
+
+    <string name="red_flag_icon" translatable="false">e92b</string>
+    <string name="red_flag_icon_1" translatable="false">e9d8</string>
+    <string name="red_flag_icon_2" translatable="false">e9d9</string>
+    <string name="red_flag_icon_3" translatable="false">e9da</string>
+    <string name="red_flag_icon_4" translatable="false">e9db</string>
+
+    <string name="online_icon" translatable="false">f011</string>
+    <string name="online_icon_1" translatable="false">ea2e</string>
+    <string name="online_icon_2" translatable="false">ea2f</string>
+    <string name="online_icon_3" translatable="false">ea30</string>
+    <string name="online_icon_4" translatable="false">ea33</string>
+
+    <string name="offline_icon" translatable="false">f011</string>
+    <string name="offline_icon_1" translatable="false">ea2e</string>
+    <string name="offline_icon_2" translatable="false">ea2f</string>
+    <string name="offline_icon_3" translatable="false">ea30</string>
+    <string name="offline_icon_4" translatable="false">ea33</string>
+
+    <string name="upcoming_icon" translatable="false">e950</string>
+    <string name="upcoming_icon_1" translatable="false">e97d</string>
+    <string name="upcoming_icon_2" translatable="false">e97b</string>
+    <string name="upcoming_icon_3" translatable="false">e979</string>
+    <string name="upcoming_icon_4" translatable="false">e97a</string>
+
+    <string name="pause_icon" translatable="false">f04c</string>
+    <string name="pause_icon_1" translatable="false">ea20</string>
+    <string name="pause_icon_2" translatable="false">ea21</string>
+    <string name="pause_icon_3" translatable="false">ea22</string>
+    <string name="pause_icon_4" translatable="false">ea23</string>
+
+    <string name="dashboard_icon" translatable="false">e913</string>
     <string name="dashboard_icon_1" translatable="false">e9c5</string>
-    <string name="dashboard_icon_2" translatable="false">e9c7</string>
-    <string name="dashboard_icon_3" translatable="false">e9c8</string>
-    <string name="dashboard_icon_4" translatable="false">e9c6</string>
+    <string name="dashboard_icon_2" translatable="false">e9c6</string>
+    <string name="dashboard_icon_3" translatable="false">e9c7</string>
+    <string name="dashboard_icon_4" translatable="false">e9c8</string>
 
     <string name="history_icon" translatable="false">e910</string>
     <string name="history_icon_1" translatable="false">e9a0</string>
@@ -107,53 +228,47 @@
     <string name="live_chat_icon_3" translatable="false">e9ae</string>
     <string name="live_chat_icon_4" translatable="false">e9af</string>
 
-    <string name="account_icon" translatable="false">e90f</string>
-    <string name="account_icon_1" translatable="false">e9b8</string>
-    <string name="account_icon_2" translatable="false">e9b9</string>
-    <string name="account_icon_3" translatable="false">e9ba</string>
-    <string name="account_icon_4" translatable="false">e9bb</string>
+    <string name="account_icon" translatable="false">e91b</string>
+    <string name="account_icon_1" translatable="false">e9b9</string>
+    <string name="account_icon_2" translatable="false">e9ba</string>
+    <string name="account_icon_3" translatable="false">e9bb</string>
+    <string name="account_icon_4" translatable="false">e9bc</string>
 
-    <string name="about_us_icon" translatable="false">e90d</string>
-    <string name="about_us_icon_1" translatable="false">e9ca</string>
-    <string name="about_us_icon_2" translatable="false">e9cb</string>
-    <string name="about_us_icon_3" translatable="false">e9cc</string>
-    <string name="about_us_icon_4" translatable="false">e9cd</string>
-
-    <string name="select_topics_icon" translatable="false">e903</string>
-    <string name="select_topics_icon_1" translatable="false">e991</string>
-    <string name="select_topics_icon_2" translatable="false">e992</string>
-    <string name="select_topics_icon_3" translatable="false">e993</string>
-    <string name="select_topics_icon_4" translatable="false">e994</string>
-
-    <string name="privacy_icon" translatable="false">e907</string>
+    <string name="privacy_icon" translatable="false">e919</string>
     <string name="privacy_icon_1" translatable="false">e987</string>
     <string name="privacy_icon_2" translatable="false">e988</string>
     <string name="privacy_icon_3" translatable="false">e989</string>
     <string name="privacy_icon_4" translatable="false">e98a</string>
 
-    <string name="t_and_C_icon" translatable="false">e900</string>
+    <string name="t_and_C_icon" translatable="false">e91a</string>
     <string name="t_and_C_icon_1" translatable="false">e983</string>
     <string name="t_and_C_icon_2" translatable="false">e984</string>
     <string name="t_and_C_icon_3" translatable="false">e985</string>
     <string name="t_and_C_icon_4" translatable="false">e986</string>
 
-    <string name="notification_icon" translatable="false">e90a</string>
+    <string name="notification_icon" translatable="false">e927</string>
     <string name="notification_icon_1" translatable="false">e9b4</string>
     <string name="notification_icon_2" translatable="false">e9b5</string>
     <string name="notification_icon_3" translatable="false">e9b6</string>
     <string name="notification_icon_4" translatable="false">e9b7</string>
 
-    <string name="eula_icon" translatable="false">e906</string>
-    <string name="eula_icon_1" translatable="false">ea18</string>
-    <string name="eula_icon_2" translatable="false">ea19</string>
-    <string name="eula_icon_3" translatable="false">ea1a</string>
-    <string name="eula_icon_4" translatable="false">ea1b</string>
+    <string name="settings_icon" translatable="false">f013</string>
+    <string name="settings_icon_1" translatable="false">e996</string>
+    <string name="settings_icon_2" translatable="false">e997</string>
+    <string name="settings_icon_3" translatable="false">e998</string>
+    <string name="settings_icon_4" translatable="false">e995</string>
 
-    <string name="download_data_icon" translatable="false">e974</string>
-    <string name="download_data_icon_1" translatable="false">f019</string>
-    <string name="download_data_icon_2" translatable="false">f381</string>
-    <string name="download_data_icon_3" translatable="false">f56d</string>
-    <string name="download_data_icon_4" translatable="false">ea16</string>
+    <string name="admin_section_icon" translatable="false">e91c</string>
+    <string name="admin_section_icon_1" translatable="false">e9bd</string>
+    <string name="admin_section_icon_2" translatable="false">e9bf</string>
+    <string name="admin_section_icon_3" translatable="false">e9c0</string>
+    <string name="admin_section_icon_4" translatable="false">e9be</string>
+
+    <string name="waiting_icon" translatable="false">e91f</string>
+    <string name="waiting_icon_1" translatable="false">e97f</string>
+    <string name="waiting_icon_2" translatable="false">e980</string>
+    <string name="waiting_icon_3" translatable="false">e981</string>
+    <string name="waiting_icon_4" translatable="false">e982</string>
 
     <string-array name="dropdown_font_list_array">
         <item>@string/font_type</item>
@@ -242,51 +357,6 @@
         <item>@string/profile_icon_4</item>
     </string-array>
 
-    <string-array name="dropdown_notification_selected_icon_array">
-        <item>@string/select_icon</item>
-        <item>@string/notification_selected_icon</item>
-        <item>@string/notification_selected_icon_1</item>
-        <item>@string/notification_selected_icon_2</item>
-        <item>@string/notification_selected_icon_3</item>
-        <item>@string/notification_selected_icon_4</item>
-    </string-array>
-
-    <string-array name="dropdown_notification_unselected_icon_array">
-        <item>@string/select_icon</item>
-        <item>@string/notification_unselected_icon</item>
-        <item>@string/notification_unselected_icon_1</item>
-        <item>@string/notification_unselected_icon_2</item>
-        <item>@string/notification_unselected_icon_3</item>
-        <item>@string/notification_unselected_icon_4</item>
-    </string-array>
-
-    <string-array name="dropdown_favourites_selected_icon_array">
-        <item>@string/select_icon</item>
-        <item>@string/favourites_selected_icon</item>
-        <item>@string/favourites_selected_icon_1</item>
-        <item>@string/favourites_selected_icon_2</item>
-        <item>@string/favourites_selected_icon_3</item>
-        <item>@string/favourites_selected_icon_4</item>
-    </string-array>
-
-    <string-array name="dropdown_favourites_unselected_icon_array">
-        <item>@string/select_icon</item>
-        <item>@string/favourites_unselected_icon</item>
-        <item>@string/favourites_unselected_icon_1</item>
-        <item>@string/favourites_unselected_icon_2</item>
-        <item>@string/favourites_unselected_icon_3</item>
-        <item>@string/favourites_unselected_icon_4</item>
-    </string-array>
-
-    <string-array name="dropdown_notes_icon_array">
-        <item>@string/select_icon</item>
-        <item>@string/notes_icon</item>
-        <item>@string/notes_icon_1</item>
-        <item>@string/notes_icon_2</item>
-        <item>@string/notes_icon_3</item>
-        <item>@string/notes_icon_4</item>
-    </string-array>
-
     <string-array name="dropdown_live_icon_array">
         <item>@string/select_icon</item>
         <item>@string/live_icon</item>
@@ -294,6 +364,33 @@
         <item>@string/live_icon_2</item>
         <item>@string/live_icon_3</item>
         <item>@string/live_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_tickets_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/tickets_icon</item>
+        <item>@string/tickets_icon_1</item>
+        <item>@string/tickets_icon_2</item>
+        <item>@string/tickets_icon_3</item>
+        <item>@string/tickets_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_bot_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/bot_icon</item>
+        <item>@string/bot_icon_1</item>
+        <item>@string/bot_icon_2</item>
+        <item>@string/bot_icon_3</item>
+        <item>@string/bot_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_message_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/message_icon</item>
+        <item>@string/message_icon_1</item>
+        <item>@string/message_icon_2</item>
+        <item>@string/message_icon_3</item>
+        <item>@string/message_icon_4</item>
     </string-array>
 
     <string-array name="dropdown_timer_icon_array">
@@ -305,13 +402,195 @@
         <item>@string/timer_icon_4</item>
     </string-array>
 
-    <string-array name="dropdown_message_icon_array">
+    <string-array name="dropdown_disconnect_icon_array">
         <item>@string/select_icon</item>
-        <item>@string/message_icon</item>
-        <item>@string/message_icon_1</item>
-        <item>@string/message_icon_2</item>
-        <item>@string/message_icon_3</item>
-        <item>@string/message_icon_4</item>
+        <item>@string/disconnect_icon</item>
+        <item>@string/disconnect_icon_1</item>
+        <item>@string/disconnect_icon_2</item>
+        <item>@string/disconnect_icon_3</item>
+        <item>@string/disconnect_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_schedule_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/schedule_icon</item>
+        <item>@string/schedule_icon_1</item>
+        <item>@string/schedule_icon_2</item>
+        <item>@string/schedule_icon_3</item>
+        <item>@string/schedule_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_all_time_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/all_time_icon</item>
+        <item>@string/all_time_icon_1</item>
+        <item>@string/all_time_icon_2</item>
+        <item>@string/all_time_icon_3</item>
+        <item>@string/all_time_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_user_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/user_icon</item>
+        <item>@string/user_icon_1</item>
+        <item>@string/user_icon_2</item>
+        <item>@string/user_icon_3</item>
+        <item>@string/user_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_info_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/info_icon</item>
+        <item>@string/info_icon_1</item>
+        <item>@string/info_icon_2</item>
+        <item>@string/info_icon_3</item>
+        <item>@string/info_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_notes_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/notes_icon</item>
+        <item>@string/notes_icon_1</item>
+        <item>@string/notes_icon_2</item>
+        <item>@string/notes_icon_3</item>
+        <item>@string/notes_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_remove_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/remove_icon</item>
+        <item>@string/remove_icon_1</item>
+        <item>@string/remove_icon_2</item>
+        <item>@string/remove_icon_3</item>
+        <item>@string/remove_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_training_mode_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/training_mode_icon</item>
+        <item>@string/training_mode_icon_1</item>
+        <item>@string/training_mode_icon_2</item>
+        <item>@string/training_mode_icon_3</item>
+        <item>@string/training_mode_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_end_session_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/end_session_icon</item>
+        <item>@string/end_session_icon_1</item>
+        <item>@string/end_session_icon_2</item>
+        <item>@string/end_session_icon_3</item>
+        <item>@string/end_session_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_whisper_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/whisper_icon</item>
+    </string-array>
+
+    <string-array name="dropdown_interact_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/interact_icon</item>
+    </string-array>
+
+    <string-array name="dropdown_bot_start_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/bot_start_icon</item>
+    </string-array>
+
+    <string-array name="dropdown_user_location_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/user_location_icon</item>
+    </string-array>
+
+    <string-array name="dropdown_manager_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/manager_icon</item>
+        <item>@string/manager_icon_1</item>
+        <item>@string/manager_icon_2</item>
+        <item>@string/manager_icon_3</item>
+        <item>@string/manager_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_supervisor_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/supervisor_icon</item>
+        <item>@string/supervisor_icon_1</item>
+        <item>@string/supervisor_icon_2</item>
+        <item>@string/supervisor_icon_3</item>
+        <item>@string/supervisor_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_agent_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/agent_icon</item>
+        <item>@string/agent_icon_1</item>
+        <item>@string/agent_icon_2</item>
+        <item>@string/agent_icon_3</item>
+        <item>@string/agent_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_green_flag_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/green_flag_icon</item>
+        <item>@string/green_flag_icon_1</item>
+        <item>@string/green_flag_icon_2</item>
+        <item>@string/green_flag_icon_3</item>
+        <item>@string/green_flag_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_umber_flag_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/umber_flag_icon</item>
+        <item>@string/umber_flag_icon_1</item>
+        <item>@string/umber_flag_icon_2</item>
+        <item>@string/umber_flag_icon_3</item>
+        <item>@string/umber_flag_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_red_flag_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/red_flag_icon</item>
+        <item>@string/red_flag_icon_1</item>
+        <item>@string/red_flag_icon_2</item>
+        <item>@string/red_flag_icon_3</item>
+        <item>@string/red_flag_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_online_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/online_icon</item>
+        <item>@string/online_icon_1</item>
+        <item>@string/online_icon_2</item>
+        <item>@string/online_icon_3</item>
+        <item>@string/online_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_offline_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/offline_icon</item>
+        <item>@string/offline_icon_1</item>
+        <item>@string/offline_icon_2</item>
+        <item>@string/offline_icon_3</item>
+        <item>@string/offline_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_upcoming_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/upcoming_icon</item>
+        <item>@string/upcoming_icon_1</item>
+        <item>@string/upcoming_icon_2</item>
+        <item>@string/upcoming_icon_3</item>
+        <item>@string/upcoming_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_pause_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/pause_icon</item>
+        <item>@string/pause_icon_1</item>
+        <item>@string/pause_icon_2</item>
+        <item>@string/pause_icon_3</item>
+        <item>@string/pause_icon_4</item>
     </string-array>
 
     <string-array name="dropdown_dashboard_icon_array">
@@ -350,24 +629,6 @@
         <item>@string/account_icon_4</item>
     </string-array>
 
-    <string-array name="dropdown_about_us_icon_array">
-        <item>@string/select_icon</item>
-        <item>@string/about_us_icon</item>
-        <item>@string/about_us_icon_1</item>
-        <item>@string/about_us_icon_2</item>
-        <item>@string/about_us_icon_3</item>
-        <item>@string/about_us_icon_4</item>
-    </string-array>
-
-    <string-array name="dropdown_select_topics_icon_array">
-        <item>@string/select_icon</item>
-        <item>@string/select_topics_icon</item>
-        <item>@string/select_topics_icon_1</item>
-        <item>@string/select_topics_icon_2</item>
-        <item>@string/select_topics_icon_3</item>
-        <item>@string/select_topics_icon_4</item>
-    </string-array>
-
     <string-array name="dropdown_privacy_icon_array">
         <item>@string/select_icon</item>
         <item>@string/privacy_icon</item>
@@ -395,22 +656,31 @@
         <item>@string/notification_icon_4</item>
     </string-array>
 
-    <string-array name="dropdown_eula_icon_array">
+    <string-array name="dropdown_settings_icon_array">
         <item>@string/select_icon</item>
-        <item>@string/eula_icon</item>
-        <item>@string/eula_icon_1</item>
-        <item>@string/eula_icon_2</item>
-        <item>@string/eula_icon_3</item>
-        <item>@string/eula_icon_4</item>
+        <item>@string/settings_icon</item>
+        <item>@string/settings_icon_1</item>
+        <item>@string/settings_icon_2</item>
+        <item>@string/settings_icon_3</item>
+        <item>@string/settings_icon_4</item>
     </string-array>
 
-    <string-array name="dropdown_download_data_icon_array">
+    <string-array name="dropdown_admin_section_icon_array">
         <item>@string/select_icon</item>
-        <item>@string/download_data_icon</item>
-        <item>@string/download_data_icon_1</item>
-        <item>@string/download_data_icon_2</item>
-        <item>@string/download_data_icon_3</item>
-        <item>@string/download_data_icon_4</item>
+        <item>@string/admin_section_icon</item>
+        <item>@string/admin_section_icon_1</item>
+        <item>@string/admin_section_icon_2</item>
+        <item>@string/admin_section_icon_3</item>
+        <item>@string/admin_section_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_waiting_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/waiting_icon</item>
+        <item>@string/waiting_icon_1</item>
+        <item>@string/waiting_icon_2</item>
+        <item>@string/waiting_icon_3</item>
+        <item>@string/waiting_icon_4</item>
     </string-array>
 
     <!--========================================= Error Message =========================================-->
@@ -434,36 +704,54 @@
     <string name="error_message_add_organization_name">Please add Organization Name</string>
     <string name="error_message_select_logo_for_organization">Please Select logo for Organization</string>
     <string name="error_message_select_profile_icon">Please Select Profile Icon</string>
-    <string name="error_message_select_notification_selected_icon">Please Select Notification(Selected) Icon</string>
-    <string name="error_message_select_notification_unselected_icon">Please Select Notification(Unselected) Icon</string>
-    <string name="error_message_select_favourites_selected_icon">Please Select Favourites(Selected) Icon</string>
-    <string name="error_message_select_favourites_unselected_icon">Please Select Favourites(Unselected) Icon</string>
-    <string name="error_message_select_notes_icon">Please Select Notes Icon</string>
     <string name="error_message_select_live_icon">Please Select Live Icon</string>
+    <string name="error_message_select_tickets_icon">Please Select Tickets Icon</string>
+    <string name="error_message_select_bot_icon">Please Select Bot Icon</string>
     <string name="error_message_select_timer_icon">Please Select Timer Icon</string>
     <string name="error_message_select_message_icon">Please Select Message Icon</string>
+    <string name="error_message_select_disconnect_icon">Please Select Disconnect Icon</string>
+    <string name="error_message_select_schedule_icon">Please Select Schedule Icon</string>
+    <string name="error_message_select_all_time_icon">Please Select All Time Icon</string>
+    <string name="error_message_select_user_icon">Please Select User Icon</string>
+    <string name="error_message_select_info_icon">Please Select Info Icon</string>
+    <string name="error_message_select_notes_icon">Please Select Notes Icon</string>
+    <string name="error_message_select_remove_icon">Please Select Remove Icon</string>
+    <string name="error_message_select_training_mode_icon">Please Select Training Mode Icon</string>
+    <string name="error_message_select_end_session_icon">Please Select End Session Icon</string>
+    <string name="error_message_select_whisper_icon">Please Select Whisper Icon</string>
+    <string name="error_message_select_interact_icon">Please Select Interact Icon</string>
+    <string name="error_message_select_bot_start_icon">Please Select Bot Start Icon</string>
+    <string name="error_message_select_user_location_icon">Please Select User Location Icon</string>
+    <string name="error_message_select_manager_icon">Please Select Manager Icon</string>
+    <string name="error_message_select_supervisor_icon">Please Select Supervisor Icon</string>
+    <string name="error_message_select_agent_icon">Please Select Agent Icon</string>
+    <string name="error_message_select_green_flag_icon">Please Select Green Flag Icon</string>
+    <string name="error_message_select_umber_flag_icon">Please Select Umber Flag Icon</string>
+    <string name="error_message_select_red_flag_icon">Please Select Red Flag Icon</string>
+    <string name="error_message_select_online_icon">Please Select Online Icon</string>
+    <string name="error_message_select_offline_icon">Please Select Offline Icon</string>
+    <string name="error_message_select_upcoming_icon">Please Select Upcoming Icon</string>
+    <string name="error_message_select_pause_icon">Please Select Pause Icon</string>
     <string name="error_message_select_dashboard_icon">Please Select Dashboard Icon</string>
     <string name="error_message_select_history_icon">Please Select History Icon</string>
     <string name="error_message_select_live_chat_icon">Please Select Live Chat Icon</string>
+    <string name="error_message_select_waiting_icon">Please Select Waiting Icon</string>
+    <string name="error_message_select_notification_icon">Please Select Notification Icon</string>
     <string name="error_message_add_dashboard_menu_name">Please add Dashboard Menu Name</string>
     <string name="error_message_add_history_menu_name">Please add History Menu Name</string>
     <string name="error_message_add_live_chat_menu_name">Please add Live Chat Menu Name</string>
+    <string name="error_message_add_waiting_menu_name">Please add Waiting Menu Name</string>
+    <string name="error_message_add_notification_menu_name">Please add Notification Menu Name</string>
     <string name="error_message_add_account_menu_name">Please add Account Menu Name</string>
-    <string name="error_message_add_about_us_menu_name">Please add About Us Menu Name</string>
-    <string name="error_message_add_select_topics_menu_name">Please add Select Topics Menu Name</string>
+    <string name="error_message_add_setting_menu_name">Please add Setting Menu Name</string>
+    <string name="error_message_add_select_admin_section_menu_name">Please add Admin Section Menu Name</string>
     <string name="error_message_add_privacy_menu_name">Please add Privacy Menu Name</string>
     <string name="error_message_add_t_and_c_menu_name">Please add T&amp;Cs Menu Name</string>
-    <string name="error_message_add_notification_menu_name">Please add Notification Menu Name</string>
-    <string name="error_message_add_eula_menu_name">Please add EULA Menu Name</string>
-    <string name="error_message_add_download_data_menu_name">Please add Download Data Menu Name</string>
     <string name="error_message_select_account_icon">Please Select Account Icon</string>
-    <string name="error_message_select_about_us_icon">Please Select About Us Icon</string>
-    <string name="error_message_select_topics_icon">Please Select Topics Icon</string>
+    <string name="error_message_select_settings_icon">Please Select Setting Icon</string>
+    <string name="error_message_select_admin_section_icon">Please Select Admin Section Icon</string>
     <string name="error_message_select_privacy_icon">Please Select Privacy Icon</string>
     <string name="error_message_select_t_and_c_icon">Please Select T&amp;Cs Icon</string>
-    <string name="error_message_select_notification_icon">Please Select Notification Icon</string>
-    <string name="error_message_select_eula_icon">Please Select EULA Icon</string>
-    <string name="error_message_select_download_data_icon">Please Select Download Data Icon</string>
     <string name="error_message_select_chat_bot_background_image">Please Select Chat Bot Background Image</string>
     <string name="error_message_select_chat_bot_background_type">Please Select Chat Bot Background Type</string>
     <string name="error_message_select_chat_bubble_background">Please Select Chat Bubble Background</string>
@@ -563,6 +851,8 @@
     <string name="dashboard">Dashboard</string>
     <string name="history">History</string>
     <string name="live_chat">Live Chat</string>
+    <string name="waiting">Waiting</string>
+    <string name="notification">Notification</string>
     <string name="chat_bubble_styles">Chat Bubble Styles</string>
     <string name="chat_bot_bg">Chat Bot Background</string>
     <string name="upload_bg_image_chat_screen">Upload Background Image for chat screen</string>

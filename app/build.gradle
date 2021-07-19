@@ -34,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dexOptions {
+        javaMaxHeapSize "4G"
+    }
     android.applicationVariants.all { variant ->
         if (variant.name != android.buildTypes.release.name) {
             variant.outputs.all {
