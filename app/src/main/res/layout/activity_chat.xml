@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:id="@+id/ll_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chat_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl_button_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_conversation_bar"
+            android:paddingBottom="@dimen/_6sdp"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_button_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_conversation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_button"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:allCornerSize="@dimen/_5sdp"
+                    app:cardBackgroundColor="@color/lightGray">
+
+                    <ImageView
+                        android:id="@+id/iv_rounded_flash"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/flash_small"
+                        tools:ignore="ContentDescription" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:id="@+id/cv_rounded"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    app:allCornerSize="@dimen/_5sdp"
+                    app:strokeColor="@color/lightGray"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="What is "
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/medium_text_size"
+                        app:customTextViewFont="@string/Roboto_Light"
+                        tools:ignore="HardcodedText" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:allCornerSize="@dimen/_5sdp"
+                    app:cardBackgroundColor="@color/lightGray">
+
+                    <ImageView
+                        android:id="@+id/iv_rounded_send_button"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/send_small"
+                        tools:ignore="ContentDescription" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_square"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_square_flash"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/flash_small"
+                    tools:ignore="ContentDescription" />
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:id="@+id/cv_square"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    app:strokeColor="@color/lightGray"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="What is "
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/medium_text_size"
+                        app:customTextViewFont="@string/Roboto_Light"
+                        tools:ignore="HardcodedText" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+                <ImageView
+                    android:id="@+id/iv_square_send"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/send_small"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_semi_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_semi_rounded_flash"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="end"
+                    android:background="@color/lightGray"
+                    android:src="@drawable/flash_small"
+                    app:shapeAppearanceOverlay="@style/TopLeftBottomRightRoundedCorners_10sdp"
+                    tools:ignore="ContentDescription" />
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:id="@+id/cv_semi_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:clickable="false"
+                    app:strokeColor="@color/lightGray"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:hint="What is "
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/medium_text_size"
+                        app:customTextViewFont="@string/Roboto_Light"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/iv_semi_rounded_send"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:src="@drawable/send_small"
+                        tools:ignore="ContentDescription" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_oval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:allCornerSize="50%"
+                    app:cardBackgroundColor="@color/lightGray">
+
+                    <ImageView
+                        android:id="@+id/iv_oval_flash"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/flash_small"
+                        tools:ignore="ContentDescription" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:id="@+id/cv_oval"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    app:allCornerSize="50%"
+                    app:strokeColor="@color/lightGray"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="What is "
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/medium_text_size"
+                        app:customTextViewFont="@string/Roboto_Light"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/iv_oval_send"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:src="@drawable/send_small"
+                        tools:ignore="ContentDescription" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:allCornerSize="50%"
+                    app:cardBackgroundColor="@color/lightGray">
+
+                    <ImageView
+                        android:id="@+id/iv_circle_flash"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/flash_small"
+                        tools:ignore="ContentDescription" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:id="@+id/cv_circle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:clickable="false"
+                    app:strokeColor="@color/lightGray"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:hint="What is "
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/medium_text_size"
+                        app:customTextViewFont="@string/Roboto_Light"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/iv_circle_send"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:src="@drawable/send_small"
+                        tools:ignore="ContentDescription" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_20sdp">
+
+            <com.example.corechatoperationconfigapp.customviews.CustomButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_left_corner_round"
+                android:onClick="onClick"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/darkGray"
+                app:customButtonFont="@string/Roboto_Light" />
+
+            <com.example.corechatoperationconfigapp.customviews.CustomButton
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_right_corner_round"
+                android:onClick="onClick"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/darkGray"
+                app:customButtonFont="@string/Roboto_Light"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

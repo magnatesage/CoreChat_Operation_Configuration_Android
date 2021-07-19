@@ -1,0 +1,429 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.corechatoperationconfigapp.R" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <include
+            android:id="@+id/header_layout"
+            layout="@layout/toolbar_layout" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_layout"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_font_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_font_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/font_type"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bold"
+                            android:textSize="@dimen/medium_text_size"
+                            app:customTextViewFont="@string/Roboto_Light" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"
+                            android:textColor="@color/darkGray"
+                            android:theme="@style/CustomSwitch" />
+
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_italic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:text="@string/italic"
+                            android:textSize="@dimen/medium_text_size"
+                            app:customTextViewFont="@string/Roboto_Light" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw_italic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"
+                            android:textColor="@color/darkGray"
+                            android:theme="@style/CustomSwitch" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                        android:id="@+id/et_account"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint="@string/side_menu_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customEditTextFont="@string/Roboto_LightItalic" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_account"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/dropdown_account_icon_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        app:customIconSpinner="@{R.array.dropdown_account_icon_array}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                        android:id="@+id/et_about_us"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint="@string/side_menu_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customEditTextFont="@string/Roboto_LightItalic" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_about_us"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/dropdown_about_us_icon_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        app:customIconSpinner="@{R.array.dropdown_about_us_icon_array}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                        android:id="@+id/et_select_topics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint="@string/side_menu_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customEditTextFont="@string/Roboto_LightItalic" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_select_topics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/dropdown_select_topics_icon_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        app:customIconSpinner="@{R.array.dropdown_select_topics_icon_array}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                        android:id="@+id/et_privacy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint="@string/side_menu_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customEditTextFont="@string/Roboto_LightItalic" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_privacy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/dropdown_privacy_icon_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        app:customIconSpinner="@{R.array.dropdown_privacy_icon_array}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                        android:id="@+id/et_t_and_c"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint="@string/side_menu_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customEditTextFont="@string/Roboto_LightItalic" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_t_and_c"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/dropdown_t_and_c_icon_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        app:customIconSpinner="@{R.array.dropdown_t_and_c_icon_array}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                        android:id="@+id/et_notification"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint="@string/side_menu_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customEditTextFont="@string/Roboto_LightItalic" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_notification"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/dropdown_notification_icon_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        app:customIconSpinner="@{R.array.dropdown_notification_icon_array}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                        android:id="@+id/et_eula"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint="@string/side_menu_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customEditTextFont="@string/Roboto_LightItalic" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_eula"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/dropdown_eula_icon_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        app:customIconSpinner="@{R.array.dropdown_eula_icon_array}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                        android:id="@+id/et_download_data"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_edit_text"
+                        android:hint="@string/side_menu_name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customEditTextFont="@string/Roboto_LightItalic" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_download_data"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/dropdown_download_data_icon_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        app:customIconSpinner="@{R.array.dropdown_download_data_icon_array}" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_left_corner_round"
+                        android:onClick="onClick"
+                        android:text="@string/back"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkGray"
+                        app:customButtonFont="@string/Roboto_Light" />
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                        android:id="@+id/btn_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/button_right_corner_round"
+                        android:onClick="onClick"
+                        android:text="@string/next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkGray"
+                        app:customButtonFont="@string/Roboto_Light"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>

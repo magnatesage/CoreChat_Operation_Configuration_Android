@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#666666</color>
+    <color name="colorPrimaryDark">#4d4d4d</color>
+    <color name="colorAccent">#b3b3b3</color>
+
+    <color name="darkGray">#666666</color>
+    <color name="lightGray">#b3b3b3</color>
+    <color name="colorBackground">#f2f2f2</color>
+    <color name="spinnerArrow">#2D6E96</color>
+    <color name="colorCheckMark">#39B54A</color>
+    <color name="colorTabBg">#2D6E96</color>
+    <color name="colorHeaderBg">#A3CAE7</color>
+    <color name="colorTabBar">#6DABD7</color>
+    <color name="colorToolBar">#6DABD7</color>
+    <color name="colorStatusBar">#2D6E96</color>
+    <color name="colorIconGrey">#808080</color>
+    <color name="colorActiveIconButton">#6DABD7</color>
+    <color name="colorGreenButton">#39B54A</color>
+    <color name="colorRedButton">#C1272D</color>
+    <color name="colorDisabledButton">#A1CDEA</color>
+    <color name="colorLightRed">#FFF0F1</color>
+    <color name="colorHint">#808080</color>
+
+</resources>

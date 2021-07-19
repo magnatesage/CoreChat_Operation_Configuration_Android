@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_chat_bubble_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+        android:id="@+id/cv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                android:id="@+id/check_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textColor="@color/colorCheckMark"
+                android:text="@string/circle_checkmark_icon"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="invisible"
+                app:customTextViewFont="@string/icons" />
+
+        </LinearLayout>
+        </RelativeLayout>
+    </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+</androidx.cardview.widget.CardView>

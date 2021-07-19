@@ -1,0 +1,448 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.corechatoperationconfigapp.R" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <include
+            android:id="@+id/header_layout"
+            layout="@layout/toolbar_layout" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header_layout"
+            android:fillViewport="true"
+            android:isScrollContainer="true"
+            android:measureAllChildren="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:id="@+id/rl_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_select_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="@string/select_button_style"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/small_text_size"
+                    app:customTextViewFont="@string/Roboto_Light" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_button_shapes"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_below="@id/tv_select_button_style"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fadeScrollbars="false"
+                    android:scrollbarSize="@dimen/_3sdp"
+                    android:scrollbarThumbVertical="@drawable/scrollbar"
+                    android:scrollbars="vertical" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/rv_button_shapes"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@color/lightGray" />
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_for_normal_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view1"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="@string/for_normal_button"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/small_text_size"
+                    app:customTextViewFont="@string/Roboto_Light" />
+
+                <LinearLayout
+                    android:id="@+id/ll_normal_button_text_border_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_below="@id/tv_for_normal_button"
+                    android:orientation="vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_normal_button_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_color"
+                        android:textColor="@color/lightGray"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:textSize="@dimen/small_text_size"
+                        app:customTextViewFont="@string/Roboto_Light" />
+
+                    <include
+                        android:id="@+id/normal_button_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_for_normal_button"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/ll_normal_button_text_border_color"
+                    android:orientation="vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_normal_border_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/border_size"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customTextViewFont="@string/Roboto_Light" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_normal_border_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/border_size_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:layout_margin="@dimen/_10sdp"
+                        app:customSpinner="@{R.array.border_size_array}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ll_normal_button_text_border_color"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_normal_text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/text_color"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customTextViewFont="@string/Roboto_Light" />
+
+                    <include
+                        android:id="@+id/normal_text_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_normal_border_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_normal_button_text_border_color"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/ll_normal_button_text_border_color"
+                    android:orientation="vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_normal_border_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/border_color"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customTextViewFont="@string/Roboto_Light" />
+
+                    <include
+                        android:id="@+id/normal_border_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/ll_normal_border_color"
+                    android:background="@color/lightGray"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_for_selected_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view2"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/for_selected_button"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/small_text_size"
+                    app:customTextViewFont="@string/Roboto_Light" />
+
+                <LinearLayout
+                    android:id="@+id/ll_selected_button_text_border_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_for_selected_button"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_selected_button_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/button_color"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customTextViewFont="@string/Roboto_Light" />
+
+                    <include
+                        android:id="@+id/selected_button_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_for_selected_button"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/ll_selected_button_text_border_color"
+                    android:orientation="vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_selected_border_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/border_size"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customTextViewFont="@string/Roboto_Light" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_selected_border_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/border_size_array"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:layout_margin="@dimen/_10sdp"
+                        app:customSpinner="@{R.array.border_size_array}"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_selected_button_text_border_color"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_selected_text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/text_color"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customTextViewFont="@string/Roboto_Light" />
+
+                    <include
+                        android:id="@+id/selected_text_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_selected_border_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_selected_button_text_border_color"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/ll_selected_button_text_border_color"
+                    android:orientation="vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_selected_border_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/border_color"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/small_text_size"
+                        app:customTextViewFont="@string/Roboto_Light" />
+
+                    <include
+                        android:id="@+id/selected_border_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/ll_selected_border_color"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/lightGray" />
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_button_placement_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view3"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="@string/button_placement_style"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/small_text_size"
+                    app:customTextViewFont="@string/Roboto_Light" />
+
+                <RadioGroup
+                    android:id="@+id/rg_horizontal_vertical_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_button_placement_style"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_horizontal_scroll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/spinnerArrow"
+                        android:text="@string/horizontal_scroll"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:id="@+id/rb_vertical_scroll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/spinnerArrow"
+                        android:text="@string/vertical_scroll"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/small_text_size"
+                        android:theme="@style/RadioButtonStyle" />
+
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/rg_horizontal_vertical_scroll"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@color/lightGray" />
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_drop_shadow"
+                    android:textColor="@color/lightGray"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view4"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="@string/drop_shadow"
+                    app:customTextViewFont="@string/Roboto_Light" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw_drop_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:theme="@style/CustomSwitch" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sw_drop_shadow"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_left_corner_round"
+                        android:onClick="onClick"
+                        android:text="@string/back"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkGray"
+                        app:customButtonFont="@string/Roboto_Light" />
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                        android:id="@+id/btn_preview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/button_right_corner_round"
+                        android:onClick="onClick"
+                        android:text="@string/preview"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkGray"
+                        app:customButtonFont="@string/Roboto_Light"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>

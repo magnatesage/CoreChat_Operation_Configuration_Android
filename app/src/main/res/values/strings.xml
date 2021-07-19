@@ -1,0 +1,602 @@
+<resources>
+    <string name="app_name">CC Operation Config</string>
+    <string name="error_internet_connection">Please check your internet connection.</string>
+    <string name="ok">OK</string>
+    <string name="error_api_msg">Something went wrong. Please try again.</string>
+
+    <!--========================================= Fonts =========================================-->
+    <string name="Roboto_Black" translatable="false">Roboto-Black.ttf</string>
+    <string name="Roboto_BlackItalic" translatable="false">Roboto-BlackItalic.ttf</string>
+    <string name="Roboto_Light" translatable="false">Roboto-Light.ttf</string>
+    <string name="Roboto_LightItalic" translatable="false">Roboto-LightItalic.ttf</string>
+    <string name="Roboto_Medium" translatable="false">Roboto-Medium.ttf</string>
+    <string name="Roboto_MediumItalic" translatable="false">Roboto-MediumItalic.ttf</string>
+    <string name="Roboto_Thin" translatable="false">Roboto-Thin.ttf</string>
+    <string name="Roboto_ThinItalic" translatable="false">Roboto-ThinItalic.ttf</string>
+    <string name="Roboto_Regular" translatable="false">Roboto-Regular.ttf</string>
+    <string name="Roboto_Bold" translatable="false">Roboto-Bold.ttf</string>
+    <string name="Roboto_Italic" translatable="false">Roboto-Italic.ttf</string>
+    <string name="Roboto_BoldItalic" translatable="false">Roboto-BoldItalic.ttf</string>
+    <string name="Ubuntu_Regular" translatable="false">Ubuntu-Regular.ttf</string>
+    <string name="Ubuntu_Bold" translatable="false">Ubuntu-Bold.ttf</string>
+    <string name="Ubuntu_Italic" translatable="false">Ubuntu-Italic.ttf</string>
+    <string name="Ubuntu_BoldItalic" translatable="false">Ubuntu-BoldItalic.ttf</string>
+    <string name="Raleway_Regular" translatable="false">Raleway-Regular.ttf</string>
+    <string name="Raleway_Bold" translatable="false">Raleway-Bold.ttf</string>
+    <string name="Raleway_Italic" translatable="false">Raleway-Italic.ttf</string>
+    <string name="Raleway_BoldItalic" translatable="false">Raleway-BoldItalic.ttf</string>
+    <string name="OpenSans_Regular" translatable="false">OpenSans-Regular.ttf</string>
+    <string name="OpenSans_Bold" translatable="false">OpenSans-Bold.ttf</string>
+    <string name="OpenSans_Italic" translatable="false">OpenSans-Italic.ttf</string>
+    <string name="OpenSans_BoldItalic" translatable="false">OpenSans-BoldItalic.ttf</string>
+    <string name="icons" translatable="false">icons_new.ttf</string>
+    <string name="font_icons" translatable="false">font_icons.ttf</string>
+
+    <!--========================================= Icons =========================================-->
+    <string name="circle_checkmark_icon" translatable="false">E</string>
+
+    <string name="profile_icon" translatable="false">f2bd</string>
+    <string name="profile_icon_1" translatable="false">e9b8</string>
+    <string name="profile_icon_2" translatable="false">e9b9</string>
+    <string name="profile_icon_3" translatable="false">e9ba</string>
+    <string name="profile_icon_4" translatable="false">e9bb</string>
+
+    <string name="notification_selected_icon" translatable="false">f0f3</string>
+    <string name="notification_selected_icon_1" translatable="false">ea06</string>
+    <string name="notification_selected_icon_2" translatable="false">ea08</string>
+    <string name="notification_selected_icon_3" translatable="false">ea04</string>
+    <string name="notification_selected_icon_4" translatable="false">ea12</string>
+
+    <string name="notification_unselected_icon" translatable="false">e927</string>
+    <string name="notification_unselected_icon_1" translatable="false">ea05</string>
+    <string name="notification_unselected_icon_2" translatable="false">ea03</string>
+    <string name="notification_unselected_icon_3" translatable="false">ea07</string>
+    <string name="notification_unselected_icon_4" translatable="false">ea13</string>
+
+    <string name="favourites_selected_icon" translatable="false">e973</string>
+    <string name="favourites_selected_icon_1" translatable="false">ea0a</string>
+    <string name="favourites_selected_icon_2" translatable="false">ea11</string>
+    <string name="favourites_selected_icon_3" translatable="false">ea0b</string>
+    <string name="favourites_selected_icon_4" translatable="false">ea15</string>
+
+    <string name="favourites_unselected_icon" translatable="false">e972</string>
+    <string name="favourites_unselected_icon_1" translatable="false">ea0c</string>
+    <string name="favourites_unselected_icon_2" translatable="false">ea0e</string>
+    <string name="favourites_unselected_icon_3" translatable="false">ea0d</string>
+    <string name="favourites_unselected_icon_4" translatable="false">ea14</string>
+
+    <string name="notes_icon" translatable="false">e912</string>
+    <string name="notes_icon_1" translatable="false">e960</string>
+    <string name="notes_icon_2" translatable="false">e961</string>
+    <string name="notes_icon_3" translatable="false">e962</string>
+    <string name="notes_icon_4" translatable="false">e963</string>
+
+    <string name="live_icon" translatable="false">e908</string>
+    <string name="live_icon_1" translatable="false">e9a8</string>
+    <string name="live_icon_2" translatable="false">e9a9</string>
+    <string name="live_icon_3" translatable="false">e9aa</string>
+    <string name="live_icon_4" translatable="false">e9ab</string>
+
+    <string name="timer_icon" translatable="false">e971</string>
+    <string name="timer_icon_1" translatable="false">e979</string>
+    <string name="timer_icon_2" translatable="false">e97a</string>
+    <string name="timer_icon_3" translatable="false">e97b</string>
+    <string name="timer_icon_4" translatable="false">e97d</string>
+
+    <string name="message_icon" translatable="false">f27a</string>
+    <string name="message_icon_1" translatable="false">e9b0</string>
+    <string name="message_icon_2" translatable="false">e9b1</string>
+    <string name="message_icon_3" translatable="false">e9b2</string>
+    <string name="message_icon_4" translatable="false">e9b3</string>
+
+    <string name="dashboard_icon" translatable="false">e902</string>
+    <string name="dashboard_icon_1" translatable="false">e9c5</string>
+    <string name="dashboard_icon_2" translatable="false">e9c7</string>
+    <string name="dashboard_icon_3" translatable="false">e9c8</string>
+    <string name="dashboard_icon_4" translatable="false">e9c6</string>
+
+    <string name="history_icon" translatable="false">e910</string>
+    <string name="history_icon_1" translatable="false">e9a0</string>
+    <string name="history_icon_2" translatable="false">e9a1</string>
+    <string name="history_icon_3" translatable="false">e99f</string>
+    <string name="history_icon_4" translatable="false">e9a3</string>
+
+    <string name="live_chat_icon" translatable="false">e917</string>
+    <string name="live_chat_icon_1" translatable="false">e9ac</string>
+    <string name="live_chat_icon_2" translatable="false">e9ad</string>
+    <string name="live_chat_icon_3" translatable="false">e9ae</string>
+    <string name="live_chat_icon_4" translatable="false">e9af</string>
+
+    <string name="account_icon" translatable="false">e90f</string>
+    <string name="account_icon_1" translatable="false">e9b8</string>
+    <string name="account_icon_2" translatable="false">e9b9</string>
+    <string name="account_icon_3" translatable="false">e9ba</string>
+    <string name="account_icon_4" translatable="false">e9bb</string>
+
+    <string name="about_us_icon" translatable="false">e90d</string>
+    <string name="about_us_icon_1" translatable="false">e9ca</string>
+    <string name="about_us_icon_2" translatable="false">e9cb</string>
+    <string name="about_us_icon_3" translatable="false">e9cc</string>
+    <string name="about_us_icon_4" translatable="false">e9cd</string>
+
+    <string name="select_topics_icon" translatable="false">e903</string>
+    <string name="select_topics_icon_1" translatable="false">e991</string>
+    <string name="select_topics_icon_2" translatable="false">e992</string>
+    <string name="select_topics_icon_3" translatable="false">e993</string>
+    <string name="select_topics_icon_4" translatable="false">e994</string>
+
+    <string name="privacy_icon" translatable="false">e907</string>
+    <string name="privacy_icon_1" translatable="false">e987</string>
+    <string name="privacy_icon_2" translatable="false">e988</string>
+    <string name="privacy_icon_3" translatable="false">e989</string>
+    <string name="privacy_icon_4" translatable="false">e98a</string>
+
+    <string name="t_and_C_icon" translatable="false">e900</string>
+    <string name="t_and_C_icon_1" translatable="false">e983</string>
+    <string name="t_and_C_icon_2" translatable="false">e984</string>
+    <string name="t_and_C_icon_3" translatable="false">e985</string>
+    <string name="t_and_C_icon_4" translatable="false">e986</string>
+
+    <string name="notification_icon" translatable="false">e90a</string>
+    <string name="notification_icon_1" translatable="false">e9b4</string>
+    <string name="notification_icon_2" translatable="false">e9b5</string>
+    <string name="notification_icon_3" translatable="false">e9b6</string>
+    <string name="notification_icon_4" translatable="false">e9b7</string>
+
+    <string name="eula_icon" translatable="false">e906</string>
+    <string name="eula_icon_1" translatable="false">ea18</string>
+    <string name="eula_icon_2" translatable="false">ea19</string>
+    <string name="eula_icon_3" translatable="false">ea1a</string>
+    <string name="eula_icon_4" translatable="false">ea1b</string>
+
+    <string name="download_data_icon" translatable="false">e974</string>
+    <string name="download_data_icon_1" translatable="false">f019</string>
+    <string name="download_data_icon_2" translatable="false">f381</string>
+    <string name="download_data_icon_3" translatable="false">f56d</string>
+    <string name="download_data_icon_4" translatable="false">ea16</string>
+
+    <string-array name="dropdown_font_list_array">
+        <item>@string/font_type</item>
+        <item>Ubuntu</item>
+        <item>OpenSans</item>
+        <item>Raleway</item>
+        <item>Roboto</item>
+    </string-array>
+
+    <string-array name="dropdown_title_header_font_size_array">
+        <item>@string/font_size</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="dropdown_splash_font_size_array">
+        <item>@string/font_size</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="dropdown_bottom_menu_font_size_array">
+        <item>@string/font_size</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+
+    <string-array name="dropdown_font_size_array">
+        <item>@string/font_size</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="border_size_array">
+        <item>@string/size</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="dropdown_bg_array">
+        <item>@string/type</item>
+        <item>@string/color</item>
+        <item>@string/image</item>
+    </string-array>
+
+    <string-array name="dropdown_profile_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/profile_icon</item>
+        <item>@string/profile_icon_1</item>
+        <item>@string/profile_icon_2</item>
+        <item>@string/profile_icon_3</item>
+        <item>@string/profile_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_notification_selected_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/notification_selected_icon</item>
+        <item>@string/notification_selected_icon_1</item>
+        <item>@string/notification_selected_icon_2</item>
+        <item>@string/notification_selected_icon_3</item>
+        <item>@string/notification_selected_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_notification_unselected_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/notification_unselected_icon</item>
+        <item>@string/notification_unselected_icon_1</item>
+        <item>@string/notification_unselected_icon_2</item>
+        <item>@string/notification_unselected_icon_3</item>
+        <item>@string/notification_unselected_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_favourites_selected_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/favourites_selected_icon</item>
+        <item>@string/favourites_selected_icon_1</item>
+        <item>@string/favourites_selected_icon_2</item>
+        <item>@string/favourites_selected_icon_3</item>
+        <item>@string/favourites_selected_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_favourites_unselected_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/favourites_unselected_icon</item>
+        <item>@string/favourites_unselected_icon_1</item>
+        <item>@string/favourites_unselected_icon_2</item>
+        <item>@string/favourites_unselected_icon_3</item>
+        <item>@string/favourites_unselected_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_notes_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/notes_icon</item>
+        <item>@string/notes_icon_1</item>
+        <item>@string/notes_icon_2</item>
+        <item>@string/notes_icon_3</item>
+        <item>@string/notes_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_live_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/live_icon</item>
+        <item>@string/live_icon_1</item>
+        <item>@string/live_icon_2</item>
+        <item>@string/live_icon_3</item>
+        <item>@string/live_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_timer_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/timer_icon</item>
+        <item>@string/timer_icon_1</item>
+        <item>@string/timer_icon_2</item>
+        <item>@string/timer_icon_3</item>
+        <item>@string/timer_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_message_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/message_icon</item>
+        <item>@string/message_icon_1</item>
+        <item>@string/message_icon_2</item>
+        <item>@string/message_icon_3</item>
+        <item>@string/message_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_dashboard_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/dashboard_icon</item>
+        <item>@string/dashboard_icon_1</item>
+        <item>@string/dashboard_icon_2</item>
+        <item>@string/dashboard_icon_3</item>
+        <item>@string/dashboard_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_history_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/history_icon</item>
+        <item>@string/history_icon_1</item>
+        <item>@string/history_icon_2</item>
+        <item>@string/history_icon_3</item>
+        <item>@string/history_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_live_chat_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/live_chat_icon</item>
+        <item>@string/live_chat_icon_1</item>
+        <item>@string/live_chat_icon_2</item>
+        <item>@string/live_chat_icon_3</item>
+        <item>@string/live_chat_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_account_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/account_icon</item>
+        <item>@string/account_icon_1</item>
+        <item>@string/account_icon_2</item>
+        <item>@string/account_icon_3</item>
+        <item>@string/account_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_about_us_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/about_us_icon</item>
+        <item>@string/about_us_icon_1</item>
+        <item>@string/about_us_icon_2</item>
+        <item>@string/about_us_icon_3</item>
+        <item>@string/about_us_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_select_topics_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/select_topics_icon</item>
+        <item>@string/select_topics_icon_1</item>
+        <item>@string/select_topics_icon_2</item>
+        <item>@string/select_topics_icon_3</item>
+        <item>@string/select_topics_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_privacy_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/privacy_icon</item>
+        <item>@string/privacy_icon_1</item>
+        <item>@string/privacy_icon_2</item>
+        <item>@string/privacy_icon_3</item>
+        <item>@string/privacy_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_t_and_c_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/t_and_C_icon</item>
+        <item>@string/t_and_C_icon_1</item>
+        <item>@string/t_and_C_icon_2</item>
+        <item>@string/t_and_C_icon_3</item>
+        <item>@string/t_and_C_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_notification_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/notification_icon</item>
+        <item>@string/notification_icon_1</item>
+        <item>@string/notification_icon_2</item>
+        <item>@string/notification_icon_3</item>
+        <item>@string/notification_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_eula_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/eula_icon</item>
+        <item>@string/eula_icon_1</item>
+        <item>@string/eula_icon_2</item>
+        <item>@string/eula_icon_3</item>
+        <item>@string/eula_icon_4</item>
+    </string-array>
+
+    <string-array name="dropdown_download_data_icon_array">
+        <item>@string/select_icon</item>
+        <item>@string/download_data_icon</item>
+        <item>@string/download_data_icon_1</item>
+        <item>@string/download_data_icon_2</item>
+        <item>@string/download_data_icon_3</item>
+        <item>@string/download_data_icon_4</item>
+    </string-array>
+
+    <!--========================================= Error Message =========================================-->
+    <string name="error_message_hexacolorcode_blank">Please enter value of HexaDecimal Color. It cannot be blank</string>
+    <string name="error_message_hexacolorcode_improper_value">Please Enter Proper Value of HexaDecimal Color. It should be either 6 letter or 8 letter excluding #</string>
+    <string name="error_message_select_text_field_font_size">Please Select Text Field Font Size</string>
+    <string name="error_message_select_button_font_size">Please Select Button Font Size</string>
+    <string name="error_message_select_title_header_font_size">Please Select Title Header Font Size</string>
+    <string name="error_message_select_header_font_size">Please Select Header Font Size</string>
+    <string name="error_message_select_sub_header_font_size">Please Select Sub Header Font Size</string>
+    <string name="error_message_select_side_menu_font_size">Please Select Side Menu Font Size</string>
+    <string name="error_message_select_bottom_menu_font_size">Please Select Bottom Menu Font Size</string>
+    <string name="error_message_select_tab_font_size">Please Select Tab Font Size</string>
+    <string name="error_message_select_common_font_size">Please Select Common Font Size</string>
+    <string name="error_message_select_background_image">Please Select Background Image</string>
+    <string name="error_message_select_background_color">Please Select Background Color</string>
+    <string name="error_message_select_background_type">Please Select Background Type</string>
+    <string name="error_message_select_shape">Please Select Shape</string>
+    <string name="error_message_select_font_size">Please Select Font Size</string>
+    <string name="error_message_select_font_type">Please Select Font Type</string>
+    <string name="error_message_add_organization_name">Please add Organization Name</string>
+    <string name="error_message_select_logo_for_organization">Please Select logo for Organization</string>
+    <string name="error_message_select_profile_icon">Please Select Profile Icon</string>
+    <string name="error_message_select_notification_selected_icon">Please Select Notification(Selected) Icon</string>
+    <string name="error_message_select_notification_unselected_icon">Please Select Notification(Unselected) Icon</string>
+    <string name="error_message_select_favourites_selected_icon">Please Select Favourites(Selected) Icon</string>
+    <string name="error_message_select_favourites_unselected_icon">Please Select Favourites(Unselected) Icon</string>
+    <string name="error_message_select_notes_icon">Please Select Notes Icon</string>
+    <string name="error_message_select_live_icon">Please Select Live Icon</string>
+    <string name="error_message_select_timer_icon">Please Select Timer Icon</string>
+    <string name="error_message_select_message_icon">Please Select Message Icon</string>
+    <string name="error_message_select_dashboard_icon">Please Select Dashboard Icon</string>
+    <string name="error_message_select_history_icon">Please Select History Icon</string>
+    <string name="error_message_select_live_chat_icon">Please Select Live Chat Icon</string>
+    <string name="error_message_add_dashboard_menu_name">Please add Dashboard Menu Name</string>
+    <string name="error_message_add_history_menu_name">Please add History Menu Name</string>
+    <string name="error_message_add_live_chat_menu_name">Please add Live Chat Menu Name</string>
+    <string name="error_message_add_account_menu_name">Please add Account Menu Name</string>
+    <string name="error_message_add_about_us_menu_name">Please add About Us Menu Name</string>
+    <string name="error_message_add_select_topics_menu_name">Please add Select Topics Menu Name</string>
+    <string name="error_message_add_privacy_menu_name">Please add Privacy Menu Name</string>
+    <string name="error_message_add_t_and_c_menu_name">Please add T&amp;Cs Menu Name</string>
+    <string name="error_message_add_notification_menu_name">Please add Notification Menu Name</string>
+    <string name="error_message_add_eula_menu_name">Please add EULA Menu Name</string>
+    <string name="error_message_add_download_data_menu_name">Please add Download Data Menu Name</string>
+    <string name="error_message_select_account_icon">Please Select Account Icon</string>
+    <string name="error_message_select_about_us_icon">Please Select About Us Icon</string>
+    <string name="error_message_select_topics_icon">Please Select Topics Icon</string>
+    <string name="error_message_select_privacy_icon">Please Select Privacy Icon</string>
+    <string name="error_message_select_t_and_c_icon">Please Select T&amp;Cs Icon</string>
+    <string name="error_message_select_notification_icon">Please Select Notification Icon</string>
+    <string name="error_message_select_eula_icon">Please Select EULA Icon</string>
+    <string name="error_message_select_download_data_icon">Please Select Download Data Icon</string>
+    <string name="error_message_select_chat_bot_background_image">Please Select Chat Bot Background Image</string>
+    <string name="error_message_select_chat_bot_background_type">Please Select Chat Bot Background Type</string>
+    <string name="error_message_select_chat_bubble_background">Please Select Chat Bubble Background</string>
+    <string name="error_message_select_button_placement_style">Please Select Button Placement Style</string>
+    <string name="error_message_select_normal_border_size">Please Select Normal Border Size</string>
+    <string name="error_message_select_selected_border_size">Please Select Selected Border Size</string>
+    <string name="error_message_select_button_background_shape">Please Select Button Background Shape</string>
+    <string name="error_message_select_cardview_footer_button_text_size">Please Select CardView Footer Button Text Size</string>
+    <string name="error_message_select_cardview_header_text_size">Please Select CardView Header Text Size</string>
+    <string name="error_message_select_cardview_background_shape">Please Select CardView Background Shape</string>
+    <string name="error_message_select_cardview_border_size">Please Select CardView Border Size</string>
+    <string name="error_message_upload_image_for_floating_icon_button">Please Upload Image for Floating Icon Button</string>
+    <string name="error_message_select_conversation_bar_style">Please Select Style for Conversation Bar</string>
+
+
+    <string name="change_color_text">Change Color</string>
+    <string name="sender_message">Sender Message</string>
+    <string name="receiver_message">Receiver Message</string>
+    <string name="select_color">Select color</string>
+    <string name="title">Title</string>
+    <string name="primary_color">Primary Color</string>
+    <string name="secondary_color">Secondary Color</string>
+    <string name="common_font_color">Common Font Color</string>
+    <string name="font_size">Font size</string>
+    <string name="font_type">Font type</string>
+    <string name="size">size</string>
+    <string name="color">Color</string>
+    <string name="image">Image</string>
+    <string name="color_font_size_configuration">Color-Font-Size Configuration</string>
+    <string name="text_field_font_size">Text Field Font Size</string>
+    <string name="button_font_size">Button Font Size</string>
+    <string name="title_header_font_size">Title Header Font Size</string>
+    <string name="header_font_size">Header Font Size</string>
+    <string name="sub_header_font_size">Sub header Font Size</string>
+    <string name="side_menu_font_size">Side Menu Font Size</string>
+    <string name="bottom_menu_font_size">Bottom Menu Font Size</string>
+    <string name="tab_font_size">Tab Font Size</string>
+    <string name="common_font_size">Common Font Size</string>
+    <string name="next">Next</string>
+    <string name="preview">Preview</string>
+    <string name="upload_organization_logo">Upload Organization LOGO</string>
+    <string name="upload_bg_image">Upload Background Image</string>
+    <string name="organization_name">Organization Name</string>
+    <string name="bold">Bold</string>
+    <string name="italic">Italic</string>
+    <string name="font_color">Font Color</string>
+    <string name="drop_shadow">Drop Shadow</string>
+    <string name="hint_organization_name">Organization Name</string>
+    <string name="background_text">Background</string>
+    <string name="select_shape_of_logo">Select shape for the LOGO</string>
+    <string name="splash_screen_config">Splash Screen Configuration</string>
+    <string name="select">Select</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="back">Back</string>
+    <string name="profile">Profile</string>
+    <string name="live">Live</string>
+    <string name="tickets">Tickets</string>
+    <string name="bot">Bot</string>
+    <string name="timer">Timer</string>
+    <string name="message">Message</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="schedule">Schedule</string>
+    <string name="all_time">All Time</string>
+    <string name="user">User</string>
+    <string name="info">Info</string>
+    <string name="notes">Notes</string>
+    <string name="remove">Remove</string>
+    <string name="training_mode">Training Mode</string>
+    <string name="end_session">End Session</string>
+    <string name="whisper">Whisper</string>
+    <string name="interact">Interact</string>
+    <string name="bot_start">Bot Start</string>
+    <string name="user_location">User Location</string>
+    <string name="manager">Manager</string>
+    <string name="supervisor">Supervisor</string>
+    <string name="agent">Agent</string>
+    <string name="green_flag">Green Flag</string>
+    <string name="umber_flag">Umber Flag</string>
+    <string name="red_flag">Red Flag</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="pause">Pause</string>
+    <string name="type">Type</string>
+    <string name="select_icon">Select Icon</string>
+    <string name="icons_configuration">Icons Configuration</string>
+    <string name="bottom_menu_configuration">Bottom menu Configuration</string>
+    <string name="side_menu_configuration">Side menu Configuration</string>
+    <string name="chat_bubble_configuration">Chat bubble Configuration</string>
+    <string name="chat_button_configuration">Chat button Configuration</string>
+    <string name="chat_cardview_configuration">Chat cardview Configuration</string>
+    <string name="chat_conversation_bar_configuration">Chat conversation bar Configuration</string>
+    <string name="chat_screen">Chat Screen</string>
+    <string name="bottom_menu_name">Bottom Menu Name</string>
+    <string name="side_menu_name">Side Menu Name</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="history">History</string>
+    <string name="live_chat">Live Chat</string>
+    <string name="chat_bubble_styles">Chat Bubble Styles</string>
+    <string name="chat_bot_bg">Chat Bot Background</string>
+    <string name="upload_bg_image_chat_screen">Upload Background Image for chat screen</string>
+    <string name="for_sender">For Sender</string>
+    <string name="for_receiver">For Receiver</string>
+    <string name="chat_bubble_color">Chat bubble color</string>
+    <string name="text_bubble_color">Text color</string>
+    <string name="lorem_ipsum">Lorem ipsum</string>
+    <string name="button">Button</string>
+    <string name="select_button_style">Select Button style</string>
+    <string name="button_placement_style">Button placement style</string>
+    <string name="button_color">Button Color</string>
+    <string name="text_color">Text Color</string>
+    <string name="border_color">Border Color</string>
+    <string name="border_size">Border size</string>
+    <string name="horizontal_scroll">Horizontal Scroll</string>
+    <string name="vertical_scroll">Vertical Scroll</string>
+    <string name="for_normal_button">For Normal Button</string>
+    <string name="for_selected_button">For Selected Button</string>
+    <string name="cardview">Card View</string>
+    <string name="select_cardview_style">Select Card View style</string>
+    <string name="border_size_and_color">Border Size and Color</string>
+    <string name="cardview_header">Card View Header</string>
+    <string name="cardview_footer_button">Card View Footer Button</string>
+    <string name="background_color">Background Color</string>
+    <string name="text_size">Text Size</string>
+    <string name="style">Style</string>
+    <string name="view_details">View details</string>
+    <string name="lorem_ipsum_paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of
+        type and scrambled it to make a type specimen book. It has survived not only five centuries
+    </string>
+    <string name="styles_option">Styles Options</string>
+    <string name="floating_button_icon">Floating Button Icon</string>
+    <string name="image_upload">Image Upload</string>
+
+</resources>
