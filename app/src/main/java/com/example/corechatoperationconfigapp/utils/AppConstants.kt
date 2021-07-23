@@ -97,4 +97,11 @@ object AppConstants {
     const val SEMI_ROUNDED = "style3"
     const val OVAL = "style4"
     const val CIRCLE = "style5"
+
+
+    const val DASHBOARD = "dashboard"
+    const val WAITING = "waiting"
+    const val HISTORY = "history"
+    const val LIVE_CHAT = "live_chat"
+    const val NOTIFICATION = "notification"
 }

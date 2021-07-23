@@ -22,7 +22,7 @@
             android:padding="@dimen/_5sdp"
             android:textColor="@android:color/white"
             android:textSize="@dimen/_18ssp"
-            app:customTextViewFont="@string/Roboto_Medium"
+            app:customFont="@string/Roboto_Medium"
             tools:text="Title" />
 
     </RelativeLayout>
@@ -44,7 +44,7 @@
             android:paddingBottom="@dimen/_15sdp"
             android:textColor="@color/darkGray"
             android:textSize="@dimen/_16ssp"
-            app:customTextViewFont="@string/Roboto_Regular"
+            app:customFont="@string/Roboto_Regular"
             tools:text="Message" />
 
     </LinearLayout>
@@ -73,7 +73,7 @@
             android:textColor="@color/darkGray"
             android:textSize="@dimen/_16ssp"
             android:visibility="gone"
-            app:customTextViewFont="@string/Roboto_Medium"
+            app:customFont="@string/Roboto_Medium"
             tools:text="Second" />
 
         <View
@@ -92,7 +92,7 @@
             android:padding="@dimen/_5sdp"
             android:textColor="@color/darkGray"
             android:textSize="@dimen/_16ssp"
-            app:customTextViewFont="@string/Roboto_Medium"
+            app:customFont="@string/Roboto_Medium"
             tools:text="First" />
 
     </LinearLayout>

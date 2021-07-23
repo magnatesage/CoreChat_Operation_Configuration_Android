@@ -11,7 +11,7 @@
         android:layout_marginStart="@dimen/_22sdp"
         android:layout_marginTop="@dimen/_5sdp"
         app:cardPreventCornerOverlap="false"
-        app:allCornerSize="50%"
+        app:cardAllCornerSize="50%"
         app:cardBackgroundColor="@color/colorBackground">
 
         <com.example.corechatoperationconfigapp.customviews.CustomTextView

@@ -101,9 +101,9 @@ data class Dashboard(
 
 data class MainTab1(
     @SerializedName("text_value")
-    val textValue: String,
+    var textValue: String,
     @SerializedName("font_type")
-    val fontType: String,
+    var fontType: String,
     @SerializedName("sub_tab_1")
     val subTab1: TextStyle,
     @SerializedName("sub_tab_2")
@@ -112,9 +112,9 @@ data class MainTab1(
 
 data class MainTab2(
     @SerializedName("text_value")
-    val textValue: String,
+    var textValue: String,
     @SerializedName("font_type")
-    val fontType: String,
+    var fontType: String,
     @SerializedName("sub_group_1")
     val subGroup1: TextStyle,
     @SerializedName("sub_group_2")
@@ -132,9 +132,9 @@ data class ChatListMembers(
 
 data class TextStyle(
     @SerializedName("text_value")
-    val textValue: String,
+    var textValue: String,
     @SerializedName("font_type")
-    val fontType: String,
+    var fontType: String,
 )
 
 data class Icons(

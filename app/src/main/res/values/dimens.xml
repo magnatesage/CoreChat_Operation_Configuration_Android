@@ -14,4 +14,13 @@
     <dimen name="medium_text_size">@dimen/_12ssp</dimen>
     <dimen name="large_text_size">@dimen/_14ssp</dimen>
 
+    <dimen name="icon_small_text_size">@dimen/_12ssp</dimen>
+    <dimen name="icon_medium_text_size">@dimen/_16ssp</dimen>
+    <dimen name="icon_large_text_size">@dimen/_20ssp</dimen>
+
+    <dimen name="margin_start_end">@dimen/_15sdp</dimen>
+
+    <dimen name="card_small_radius">@dimen/_5sdp</dimen>
+    <dimen name="card_medium_radius">@dimen/_10sdp</dimen>
+
 </resources>

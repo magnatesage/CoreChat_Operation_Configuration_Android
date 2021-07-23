@@ -38,7 +38,7 @@
                     android:text="@string/upload_organization_logo"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/medium_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                     android:id="@+id/cv_logo"
@@ -111,7 +111,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/bold"
                             android:textSize="@dimen/medium_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                         <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/sw_bold"
@@ -138,7 +138,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/italic"
                             android:textSize="@dimen/medium_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                         <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/sw_italic"
@@ -184,7 +184,7 @@
                         android:text="@string/font_color"
                         android:textColor="@color/darkGray"
                         android:textSize="@dimen/medium_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <include
                         android:id="@+id/select_font_color_layout"
@@ -217,7 +217,7 @@
                         android:text="@string/drop_shadow"
                         android:textColor="@color/darkGray"
                         android:textSize="@dimen/medium_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/sw_drop_shadow_toggle_switch"
@@ -243,7 +243,7 @@
                     android:text="@string/select_shape_of_logo"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/medium_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <LinearLayout
                     android:id="@+id/ll_bg_shape"
@@ -281,7 +281,7 @@
                             android:text="@string/circle_checkmark_icon"
                             android:textSize="@dimen/_10ssp"
                             android:visibility="invisible"
-                            app:customTextViewFont="@string/icons" />
+                            app:customFont="@string/icons" />
 
                     </RelativeLayout>
 
@@ -312,7 +312,7 @@
                             android:text="@string/circle_checkmark_icon"
                             android:textSize="@dimen/_10ssp"
                             android:visibility="invisible"
-                            app:customTextViewFont="@string/icons" />
+                            app:customFont="@string/icons" />
 
                     </RelativeLayout>
 
@@ -343,7 +343,7 @@
                             android:text="@string/circle_checkmark_icon"
                             android:textSize="@dimen/_10ssp"
                             android:visibility="invisible"
-                            app:customTextViewFont="@string/icons" />
+                            app:customFont="@string/icons" />
 
                     </RelativeLayout>
 
@@ -373,7 +373,7 @@
                             android:text="@string/circle_checkmark_icon"
                             android:textSize="@dimen/_10ssp"
                             android:visibility="invisible"
-                            app:customTextViewFont="@string/icons" />
+                            app:customFont="@string/icons" />
 
                     </RelativeLayout>
 
@@ -402,7 +402,7 @@
                     android:text="@string/background_text"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/medium_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/spinner_bg_type"
@@ -454,7 +454,7 @@
                             android:text="@string/upload_bg_image"
                             android:textColor="@color/darkGray"
                             android:textSize="@dimen/medium_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                     </LinearLayout>
 

@@ -49,28 +49,28 @@ class CustomMaterialButton : MaterialButton {
 
         allCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_allCornerSize,
+            R.styleable.CustomMaterialCardView_cardAllCornerSize,
             AbsoluteCornerSize(0F)
         )
 
         topLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_topLeftCornerSize,
+            R.styleable.CustomMaterialCardView_cardTopLeftCornerSize,
             allCornerSize
         )
         topRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_topRightCornerSize,
+            R.styleable.CustomMaterialCardView_cardTopRightCornerSize,
             allCornerSize
         )
         bottomLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_bottomLeftCornerSize,
+            R.styleable.CustomMaterialCardView_cardBottomLeftCornerSize,
             allCornerSize
         )
         bottomRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_bottomRightCornerSize,
+            R.styleable.CustomMaterialCardView_cardBottomRightCornerSize,
             allCornerSize
         )
         
@@ -100,7 +100,7 @@ class CustomMaterialButton : MaterialButton {
         var myTypeface: Typeface? = null
         try {
             if (!fontName.isNullOrBlank())
-                myTypeface = Typeface.createFromAsset(context.assets, "fonts/" + fontName)
+                myTypeface = Typeface.createFromAsset(context.assets, "fonts/$fontName")
         } catch (e: Exception) {
             e.printStackTrace()
         }

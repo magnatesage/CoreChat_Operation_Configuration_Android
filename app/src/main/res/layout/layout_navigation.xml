@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.graphics.Color"/>
+
+        <variable
+            name="dynamicUIModel"
+            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+    </data>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:fitsSystemWindows="true"
+        android:background="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:background="@{Color.parseColor(dynamicUIModel.themeColor.primaryColor)}">
+
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_end"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/margin_start_end">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomShapeableImageView
+                        android:id="@+id/iv_org_logo"
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        app:allCornerFamily="0"
+                        app:srcCompat="@drawable/group_hug" />
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_org_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_toEndOf="@id/iv_org_logo"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/company_title"
+                        app:textCustomColor="@{dynamicUIModel.themeColor.secondaryColor}"
+                        app:textCustomSize="@{dynamicUIModel.fontSize.common}"
+                        app:textCustomFont="@{dynamicUIModel.fontFamily}"/>
+
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rl1">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomShapeableImageView
+                        android:id="@+id/iv_profile_logo"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_centerInParent="true"
+                        app:allCornerFamily="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.3" />
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:text="@string/agent_name"
+                        app:textCustomColor="@{dynamicUIModel.themeColor.secondaryColor}"
+                        app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                        app:textCustomSize="@{dynamicUIModel.fontSize.common}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_profile_logo"
+                        app:layout_constraintVertical_bias="0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_side_menu"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/gray" />
+
+            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                android:id="@+id/tv_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/logout"
+                app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                app:textCustomColor="@{dynamicUIModel.themeColor.commonFontColor}"
+                app:textCustomSize="@{dynamicUIModel.fontSize.sideMenu}"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+</layout>

@@ -747,6 +747,12 @@
     <string name="error_message_add_select_admin_section_menu_name">Please add Admin Section Menu Name</string>
     <string name="error_message_add_privacy_menu_name">Please add Privacy Menu Name</string>
     <string name="error_message_add_t_and_c_menu_name">Please add T&amp;Cs Menu Name</string>
+    <string name="error_message_add_first_tab_name">Please add First Main Tab Name</string>
+    <string name="error_message_add_second_tab_name">Please add Second Main Tab Name</string>
+    <string name="error_message_add_first_main_first_sub_tab_name">Please add First Main\'s First Sub Tab Name</string>
+    <string name="error_message_add_first_main_second_sub_tab_name">Please add First Main\'s Second Sub Tab Name</string>
+    <string name="error_message_add_second_main_first_sub_tab_name">Please add Second Main\'s First Sub Tab Name</string>
+    <string name="error_message_add_second_main_second_sub_tab_name">Please add Second Main\'s Second Sub Tab Name</string>
     <string name="error_message_select_account_icon">Please Select Account Icon</string>
     <string name="error_message_select_settings_icon">Please Select Setting Icon</string>
     <string name="error_message_select_admin_section_icon">Please Select Admin Section Icon</string>
@@ -777,6 +783,11 @@
     <string name="common_font_color">Common Font Color</string>
     <string name="font_size">Font size</string>
     <string name="font_type">Font type</string>
+    <string name="main_tab">Main Tab</string>
+    <string name="first_main_tab_sub_tab">First Main Tab\'s Sub Tab</string>
+    <string name="first_sub_tab">First Sub Tab</string>
+    <string name="second_sub_tab">Second Sub Tab</string>
+    <string name="second_main_tab_sub_tab">Second Main Tab\'s Sub Tab</string>
     <string name="size">size</string>
     <string name="color">Color</string>
     <string name="image">Image</string>
@@ -845,9 +856,12 @@
     <string name="chat_button_configuration">Chat button Configuration</string>
     <string name="chat_cardview_configuration">Chat cardview Configuration</string>
     <string name="chat_conversation_bar_configuration">Chat conversation bar Configuration</string>
+    <string name="dashboard_tab_configuration">Dashboard Tab Configuration</string>
     <string name="chat_screen">Chat Screen</string>
     <string name="bottom_menu_name">Bottom Menu Name</string>
     <string name="side_menu_name">Side Menu Name</string>
+    <string name="first_main_tab_name">First Main Tab Name</string>
+    <string name="second_main_tab_name">Second Main Tab Name</string>
     <string name="dashboard">Dashboard</string>
     <string name="history">History</string>
     <string name="live_chat">Live Chat</string>
@@ -888,5 +902,46 @@
     <string name="styles_option">Styles Options</string>
     <string name="floating_button_icon">Floating Button Icon</string>
     <string name="image_upload">Image Upload</string>
+    <string name="logout">Logout</string>
+    <string name="company_title">Selected Company Title</string>
+    <string name="agent_name">Agent 1</string>
+    <string name="home">Home</string>
+    <string name="lbl_group_hug">Group Hug</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="settings">Settings</string>
+    <string name="group">Group</string>
+    <string name="lbl_notes">Notes</string>
+    <string name="lbl_help_4_farmers">Help 4 Farmers</string>
+    <string name="lbl_sender">Sender Name</string>
+    <string name="lbl_last_msg">Last Message</string>
+    <string name="lbl_search">Search</string>
+    <string name="lbl_remove">Remove</string>
+    <string name="user_name">User 1</string>
+    <string name="lbl_subject_line">Subject line</string>
+    <string name="lbl_group_name">Group Name</string>
+    <string name="lbl_value">05</string>
+    <string name="lbl_subject_line_chat">Subject line of chat session</string>
+    <string name="hr_doc_upload">HR Document Upload</string>
+    <string name="lbl_accept">Accept</string>
+    <string name="lbl_reject">Reject</string>
+    <string name="support_group">Support Group</string>
+    <string name="waiting_users">Waiting Users</string>
+    <string name="login">Login</string>
+    <string name="forgot_login_detail">Forgot Login Detail</string>
+    <string name="hint_email">Enter your Email</string>
+    <string name="hint_pwd">Enter your Password</string>
+    <string name="hint_phase1">Enter letter 4 of your security phrase</string>
+    <string name="hint_phase2">Enter letter 5 of your security phrase</string>
 
+<!--    Icons-->
+    <string name="icon_close">&#xf00D;</string>
+    <string name="icon_search">&#xf002;</string>
+    <string name="icon_filter">&#xf0b0;</string>
+    <string name="back_arrow_icon">&#xf053;</string>
+    <string name="icon_tick_check">&#xf00C;</string>
+
+<!--Value-->
+    <string name="value_sender_name">John Doe</string>
+    <string name="value_msg_time">00:30</string>
 </resources>

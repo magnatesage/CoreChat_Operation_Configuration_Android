@@ -36,32 +36,32 @@ class CustomMaterialCardView : MaterialCardView {
     private fun customAttr(context: Context, attrs: AttributeSet) {
         val a = context.obtainStyledAttributes(attrs, R.styleable.CustomMaterialCardView)
         cornerFamily =
-            a.getInteger(R.styleable.CustomMaterialCardView_allCornerFamily, CornerFamily.ROUNDED)
+            a.getInteger(R.styleable.CustomMaterialCardView_cardAllCornerFamily, CornerFamily.ROUNDED)
 
         allCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_allCornerSize,
+            R.styleable.CustomMaterialCardView_cardAllCornerSize,
             AbsoluteCornerSize(0F)
         )
 
         topLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_topLeftCornerSize,
+            R.styleable.CustomMaterialCardView_cardTopLeftCornerSize,
             allCornerSize
         )
         topRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_topRightCornerSize,
+            R.styleable.CustomMaterialCardView_cardTopRightCornerSize,
             allCornerSize
         )
         bottomLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_bottomLeftCornerSize,
+            R.styleable.CustomMaterialCardView_cardBottomLeftCornerSize,
             allCornerSize
         )
         bottomRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_bottomRightCornerSize,
+            R.styleable.CustomMaterialCardView_cardBottomRightCornerSize,
             allCornerSize
         )
         updateCardView()

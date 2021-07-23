@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.graphics.Color"/>
+
+        <variable
+            name="dynamicUIModel"
+            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.HomeFragment"
+        android:background="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/sub_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:elevation="@dimen/_8sdp"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="@dimen/_3sdp"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                android:background="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
+                app:tabRippleColor="@null"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/sub_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/sub_tab_layout" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.graphics.Color"/>
+
+        <variable
+            name="dynamicUIModel"
+            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.HistoryFragment"
+        android:background="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}">
+
+        <include
+            android:id="@+id/search_layout"
+            layout="@layout/layout_search_filter"
+            app:dynamicUIModel="@{dynamicUIModel}"/>
+
+        <View
+            android:id="@+id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@id/search_layout"
+            android:background="@color/gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_history_chat_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_view"
+            tools:listitem="@layout/layout_history_chat" />
+
+    </RelativeLayout>
+</layout>

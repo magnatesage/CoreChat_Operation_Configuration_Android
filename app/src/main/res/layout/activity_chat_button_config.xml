@@ -41,7 +41,7 @@
                     android:text="@string/select_button_style"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_button_shapes"
@@ -73,7 +73,7 @@
                     android:text="@string/for_normal_button"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <LinearLayout
                     android:id="@+id/ll_normal_button_text_border_color"
@@ -91,7 +91,7 @@
                         android:textColor="@color/lightGray"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <include
                         android:id="@+id/normal_button_color_layout"
@@ -119,7 +119,7 @@
                         android:text="@string/border_size"
                         android:textColor="@color/lightGray"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <androidx.appcompat.widget.AppCompatSpinner
                         android:id="@+id/spinner_normal_border_size"
@@ -150,7 +150,7 @@
                         android:text="@string/text_color"
                         android:textColor="@color/lightGray"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <include
                         android:id="@+id/normal_text_color_layout"
@@ -178,7 +178,7 @@
                         android:text="@string/border_color"
                         android:textColor="@color/lightGray"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <include
                         android:id="@+id/normal_border_color_layout"
@@ -207,7 +207,7 @@
                     android:text="@string/for_selected_button"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <LinearLayout
                     android:id="@+id/ll_selected_button_text_border_color"
@@ -225,7 +225,7 @@
                         android:text="@string/button_color"
                         android:textColor="@color/lightGray"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <include
                         android:id="@+id/selected_button_color_layout"
@@ -253,7 +253,7 @@
                         android:text="@string/border_size"
                         android:textColor="@color/lightGray"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <androidx.appcompat.widget.AppCompatSpinner
                         android:id="@+id/spinner_selected_border_size"
@@ -284,7 +284,7 @@
                         android:text="@string/text_color"
                         android:textColor="@color/lightGray"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <include
                         android:id="@+id/selected_text_color_layout"
@@ -313,7 +313,7 @@
                         android:text="@string/border_color"
                         android:textColor="@color/lightGray"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                     <include
                         android:id="@+id/selected_border_color_layout"
@@ -343,7 +343,7 @@
                     android:text="@string/button_placement_style"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <RadioGroup
                     android:id="@+id/rg_horizontal_vertical_scroll"
@@ -397,7 +397,7 @@
                     android:layout_below="@id/view4"
                     android:layout_margin="@dimen/_10sdp"
                     android:text="@string/drop_shadow"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/sw_drop_shadow"

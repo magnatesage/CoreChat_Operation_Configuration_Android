@@ -42,7 +42,7 @@
                     android:text="@string/styles_option"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <RelativeLayout
                     android:id="@+id/rl_rounded"
@@ -63,7 +63,7 @@
                         android:textColor="@color/colorCheckMark"
                         android:textSize="@dimen/small_text_size"
                         android:visibility="invisible"
-                        app:customTextViewFont="@string/icons"
+                        app:customFont="@string/icons"
                         tools:ignore="RelativeOverlap" />
 
                     <LinearLayout
@@ -76,7 +76,7 @@
                         <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:allCornerSize="@dimen/_5sdp"
+                            app:cardAllCornerSize="@dimen/_5sdp"
                             app:cardBackgroundColor="@color/lightGray">
 
                             <ImageView
@@ -96,7 +96,7 @@
                             android:layout_marginEnd="@dimen/_5sdp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            app:allCornerSize="@dimen/_5sdp">
+                            app:cardAllCornerSize="@dimen/_5sdp">
 
                             <com.example.corechatoperationconfigapp.customviews.CustomTextView
                                 android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                                 android:hint="What is "
                                 android:padding="@dimen/_5sdp"
                                 android:textSize="@dimen/medium_text_size"
-                                app:customTextViewFont="@string/Roboto_Light"
+                                app:customFont="@string/Roboto_Light"
                                 tools:ignore="HardcodedText" />
 
                         </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
@@ -113,7 +113,7 @@
                         <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:allCornerSize="@dimen/_5sdp"
+                            app:cardAllCornerSize="@dimen/_5sdp"
                             app:cardBackgroundColor="@color/lightGray">
 
                             <ImageView
@@ -148,7 +148,7 @@
                         android:textColor="@color/colorCheckMark"
                         android:textSize="@dimen/small_text_size"
                         android:visibility="invisible"
-                        app:customTextViewFont="@string/icons"
+                        app:customFont="@string/icons"
                         tools:ignore="RelativeOverlap" />
 
                     <LinearLayout
@@ -180,7 +180,7 @@
                                 android:hint="What is "
                                 android:padding="@dimen/_5sdp"
                                 android:textSize="@dimen/medium_text_size"
-                                app:customTextViewFont="@string/Roboto_Light"
+                                app:customFont="@string/Roboto_Light"
                                 tools:ignore="HardcodedText" />
 
                         </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
@@ -215,7 +215,7 @@
                         android:textColor="@color/colorCheckMark"
                         android:textSize="@dimen/small_text_size"
                         android:visibility="invisible"
-                        app:customTextViewFont="@string/icons"
+                        app:customFont="@string/icons"
                         tools:ignore="RelativeOverlap" />
 
                     <LinearLayout
@@ -250,7 +250,7 @@
                                 android:hint="What is "
                                 android:padding="@dimen/_5sdp"
                                 android:textSize="@dimen/medium_text_size"
-                                app:customTextViewFont="@string/Roboto_Light"
+                                app:customFont="@string/Roboto_Light"
                                 tools:ignore="HardcodedText" />
 
                             <ImageView
@@ -287,7 +287,7 @@
                         android:textColor="@color/colorCheckMark"
                         android:textSize="@dimen/small_text_size"
                         android:visibility="invisible"
-                        app:customTextViewFont="@string/icons"
+                        app:customFont="@string/icons"
                         tools:ignore="RelativeOverlap" />
 
                     <LinearLayout
@@ -300,7 +300,7 @@
                         <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:allCornerSize="50%"
+                            app:cardAllCornerSize="50%"
                             app:cardBackgroundColor="@color/lightGray">
 
                             <ImageView
@@ -319,7 +319,7 @@
                             android:layout_marginStart="@dimen/_5sdp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            app:allCornerSize="50%">
+                            app:cardAllCornerSize="50%">
 
                             <com.example.corechatoperationconfigapp.customviews.CustomTextView
                                 android:layout_width="match_parent"
@@ -328,7 +328,7 @@
                                 android:hint="What is "
                                 android:padding="@dimen/_5sdp"
                                 android:textSize="@dimen/medium_text_size"
-                                app:customTextViewFont="@string/Roboto_Light"
+                                app:customFont="@string/Roboto_Light"
                                 tools:ignore="HardcodedText" />
 
                             <ImageView
@@ -365,7 +365,7 @@
                         android:textColor="@color/colorCheckMark"
                         android:textSize="@dimen/small_text_size"
                         android:visibility="invisible"
-                        app:customTextViewFont="@string/icons"
+                        app:customFont="@string/icons"
                         tools:ignore="RelativeOverlap" />
 
                     <LinearLayout
@@ -378,7 +378,7 @@
                         <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:allCornerSize="50%"
+                            app:cardAllCornerSize="50%"
                             app:cardBackgroundColor="@color/lightGray">
 
                             <ImageView
@@ -405,7 +405,7 @@
                                 android:hint="What is "
                                 android:padding="@dimen/_5sdp"
                                 android:textSize="@dimen/medium_text_size"
-                                app:customTextViewFont="@string/Roboto_Light"
+                                app:customFont="@string/Roboto_Light"
                                 tools:ignore="HardcodedText" />
 
                             <ImageView
@@ -441,7 +441,7 @@
                     android:text="@string/floating_button_icon"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <LinearLayout
                     android:id="@+id/ll_upload_image"
@@ -464,7 +464,7 @@
                         android:text="@string/image_upload"
                         android:textColor="@color/darkGray"
                         android:textSize="@dimen/small_text_size"
-                        app:customTextViewFont="@string/Roboto_Light" />
+                        app:customFont="@string/Roboto_Light" />
 
                 </LinearLayout>
 

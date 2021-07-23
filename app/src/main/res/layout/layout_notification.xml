@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.graphics.Color"/>
+
+        <variable
+            name="dynamicUIModel"
+            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.corechatoperationconfigapp.customviews.CustomShapeableImageView
+                android:id="@+id/iv_user"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:allCornerFamily="0"
+                tools:srcCompat="@drawable/group_hug" />
+
+            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                android:id="@+id/tv_flag"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@id/iv_user"
+                android:background="@drawable/bg_flag"
+                android:gravity="center"
+                android:elevation="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/icon_small_text_size"
+                app:customFont="@string/font_icons"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toEndOf="@id/tv_flag"
+                android:layout_toStartOf="@id/tv_icon"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_3sdp">
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:lines="1"
+                    app:textCustomColor="@{dynamicUIModel.themeColor.commonFontColor}"
+                    app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                    app:textCustomSize="@{dynamicUIModel.fontSize.titleHeader}"/>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:visibility="gone"
+                    app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                    app:textCustomSize="@{dynamicUIModel.fontSize.common}"/>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_subtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:lines="2"
+                    android:textColor="@color/gray"
+                    app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                    app:textCustomSize="@{dynamicUIModel.fontSize.common}"/>
+
+            </LinearLayout>
+
+            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                android:id="@+id/tv_icon"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textSize="@dimen/icon_medium_text_size"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:customFont="@string/font_icons"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_accept_reject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                android:id="@+id/tv_accept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:lines="1"
+                android:text="@string/lbl_accept"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/colorGreenButton"
+                app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                app:textCustomSize="@{dynamicUIModel.fontSize.header}"/>
+
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/gray"/>
+
+            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                android:id="@+id/tv_reject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:lines="1"
+                android:text="@string/lbl_reject"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/colorRedButton"
+                app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                app:textCustomSize="@{dynamicUIModel.fontSize.header}"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_accept_reject"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"/>
+    </LinearLayout>
+
+</layout>

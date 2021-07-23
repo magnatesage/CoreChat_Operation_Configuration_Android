@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.graphics.Color"/>
+
+        <variable
+            name="dynamicModel"
+            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{Color.parseColor(dynamicModel.themeColor.secondaryColor)}"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".activity.LoginActivity">
+
+        <ScrollView
+            android:id="@+id/sv_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/rl_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                    android:id="@+id/cv_logo"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    app:cardElevation="0dp"
+                    android:layout_gravity="center_horizontal"
+                    app:shadow="@{dynamicModel.splash.logoBgDropShadow}"
+                    app:shape="@{dynamicModel.splash.logoBgShape}">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:loadImage="@{dynamicModel.splash.logoUrl}"
+                        tools:ignore="ContentDescription" />
+
+                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@{dynamicModel.splash.orgName}"
+                    app:textCustomColor="@{dynamicModel.splash.orgNameFontColor}"
+                    app:textCustomFont="@{dynamicModel.splash.orgNameFontType}"
+                    app:textCustomSize="@{dynamicModel.splash.orgNameFontSize}"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ipl_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_start_end"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/margin_start_end"
+                    app:boxStrokeColor="@{Color.parseColor(dynamicModel.themeColor.primaryColor)}"
+                    app:boxBackgroundColor="@{Color.parseColor(dynamicModel.themeColor.secondaryColor)}">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/gray"
+                        app:textCustomColor="@{dynamicModel.themeColor.commonFontColor}"
+                        app:textCustomSize="@{dynamicModel.fontSize.textField}"
+                        app:textCustomFont="@{dynamicModel.fontFamily}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ipl_pwd"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_start_end"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/margin_start_end"
+                    app:boxStrokeColor="@{Color.parseColor(dynamicModel.themeColor.primaryColor)}"
+                    app:boxBackgroundColor="@{Color.parseColor(dynamicModel.themeColor.secondaryColor)}">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_pwd"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/gray"
+                        app:textCustomColor="@{dynamicModel.themeColor.commonFontColor}"
+                        app:textCustomSize="@{dynamicModel.fontSize.textField}"
+                        app:textCustomFont="@{dynamicModel.fontFamily}"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ipl_phase1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_start_end"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/margin_start_end"
+                    app:boxStrokeColor="@{Color.parseColor(dynamicModel.themeColor.primaryColor)}"
+                    app:boxBackgroundColor="@{Color.parseColor(dynamicModel.themeColor.secondaryColor)}">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phase1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_phase1"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        app:textCustomColor="@{dynamicModel.themeColor.commonFontColor}"
+                        app:textCustomSize="@{dynamicModel.fontSize.textField}"
+                        app:textCustomFont="@{dynamicModel.fontFamily}"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ipl_phase2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_start_end"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/margin_start_end"
+                    app:boxStrokeColor="@{Color.parseColor(dynamicModel.themeColor.primaryColor)}"
+                    app:boxBackgroundColor="@{Color.parseColor(dynamicModel.themeColor.secondaryColor)}">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phase2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_phase2"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        app:textCustomColor="@{dynamicModel.themeColor.commonFontColor}"
+                        app:textCustomSize="@{dynamicModel.fontSize.textField}"
+                        app:textCustomFont="@{dynamicModel.fontFamily}"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_forgot_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/margin_start_end"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/forgot_login_detail"
+                    app:textCustomColor="@{dynamicModel.themeColor.primaryColor}"
+                    app:textCustomSize="@{dynamicModel.fontSize.header}"
+                    app:textCustomFont="@{dynamicModel.fontFamily}"
+                    android:onClick="onClick"/>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomMaterialButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="@dimen/margin_start_end"
+                    android:layout_marginEnd="@dimen/margin_start_end"
+                    app:textCustomColor="@{dynamicModel.themeColor.secondaryColor}"
+                    app:textCustomFont="@{dynamicModel.fontFamily}"
+                    app:textCustomSize="@{dynamicModel.fontSize.button}"
+                    app:buttonBackgroundColor="@{dynamicModel.themeColor.primaryColor}"
+                    android:onClick="onClick"
+                    app:icon="@drawable/ic_arrow_forward_24"
+                    app:iconGravity="end"
+                    app:iconPadding="-15dp"
+                    app:iconTint="@{Color.parseColor(dynamicModel.themeColor.secondaryColor)}"  />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/button_left_corner_round"
+                        android:onClick="onClick"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:text="@string/back"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkGray"
+                        app:customButtonFont="@string/Roboto_Light" />
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                        android:id="@+id/btn_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:background="@drawable/button_right_corner_round"
+                        android:onClick="onClick"
+                        android:text="@string/next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkGray"
+                        app:customButtonFont="@string/Roboto_Light" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

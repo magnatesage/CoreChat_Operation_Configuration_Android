@@ -6,7 +6,7 @@
     </declare-styleable>
 
     <declare-styleable name="CustomTextView">
-        <attr name="customTextViewFont" format="string" />
+        <attr name="customFont" format="string" />
     </declare-styleable>
 
     <declare-styleable name="CustomEditText">
@@ -18,12 +18,12 @@
     </declare-styleable>
 
     <declare-styleable name="CustomMaterialCardView">
-        <attr name="allCornerFamily" format="integer" />
-        <attr name="allCornerSize" format="dimension|fraction" />
-        <attr name="topLeftCornerSize" format="dimension|fraction" />
-        <attr name="topRightCornerSize" format="dimension|fraction" />
-        <attr name="bottomLeftCornerSize" format="dimension|fraction" />
-        <attr name="bottomRightCornerSize" format="dimension|fraction" />
+        <attr name="cardAllCornerFamily" format="integer" />
+        <attr name="cardAllCornerSize" format="dimension|fraction" />
+        <attr name="cardTopLeftCornerSize" format="dimension|fraction" />
+        <attr name="cardTopRightCornerSize" format="dimension|fraction" />
+        <attr name="cardBottomLeftCornerSize" format="dimension|fraction" />
+        <attr name="cardBottomRightCornerSize" format="dimension|fraction" />
     </declare-styleable>
 
     <declare-styleable name="CustomMaterialButton">
@@ -34,5 +34,29 @@
         <attr name="buttonTopRightCornerSize" format="dimension|fraction" />
         <attr name="buttonBottomLeftCornerSize" format="dimension|fraction" />
         <attr name="buttonBottomRightCornerSize" format="dimension|fraction" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomShapeableImageView">
+        <attr name="allCornerFamily" format="integer" />
+        <attr name="allCornerSize" format="dimension|fraction" />
+        <attr name="topLeftCornerSize" format="dimension|fraction" />
+        <attr name="topRightCornerSize" format="dimension|fraction" />
+        <attr name="bottomLeftCornerSize" format="dimension|fraction" />
+        <attr name="bottomRightCornerSize" format="dimension|fraction" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level" value="1" />
+        </attr>
+        <attr name="flingVelocity" format="integer" />
+        <attr name="minDistRequestDisallowParent" format="dimension" />
     </declare-styleable>
 </resources>

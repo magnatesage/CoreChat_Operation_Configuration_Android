@@ -60,7 +60,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/bold"
                             android:textSize="@dimen/medium_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                         <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/sw_bold"
@@ -79,7 +79,7 @@
                             android:layout_marginStart="@dimen/_20sdp"
                             android:text="@string/italic"
                             android:textSize="@dimen/medium_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                         <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/sw_italic"

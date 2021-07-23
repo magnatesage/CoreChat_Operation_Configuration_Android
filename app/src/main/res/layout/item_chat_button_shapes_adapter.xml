@@ -43,7 +43,7 @@
             android:text="@string/circle_checkmark_icon"
             android:textSize="@dimen/small_text_size"
             android:visibility="invisible"
-            app:customTextViewFont="@string/icons" />
+            app:customFont="@string/icons" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.graphics.Color"/>
+
+        <variable
+            name="dynamicUIModel"
+            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:background="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}">
+
+        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+            android:id="@+id/cv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardAllCornerFamily="0"
+            app:cardAllCornerSize="@dimen/card_medium_radius"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        app:cardAllCornerFamily="0"
+                        app:cardBackgroundColor="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
+                        app:cardBottomLeftCornerSize="@dimen/card_medium_radius"
+                        app:cardTopRightCornerSize="@dimen/_8sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                android:id="@+id/cv_user_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:textSize="@dimen/small_text_size"
+                                app:customFont="@string/font_icons" />
+
+                        </RelativeLayout>
+
+                    </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomShapeableImageView
+                        android:id="@+id/iv_user_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:allCornerFamily="0"
+                        android:scaleType="fitXY"
+                        app:bottomLeftCornerSize="0dp"
+                        app:bottomRightCornerSize="0dp"
+                        app:srcCompat="@drawable/ic_launcher_background"
+                        app:topLeftCornerSize="@dimen/_4sdp"
+                        app:topRightCornerSize="@dimen/_4sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:background="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
+                    android:gravity="center_vertical">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="@string/agent_name"
+                        app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                        app:textCustomSize="@{dynamicUIModel.fontSize.header}"
+                        app:textCustomColor="@{dynamicUIModel.themeColor.commonFontColor}" />
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/tv_group_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_user_name"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="@string/support_group"
+                        app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                        app:textCustomSize="@{dynamicUIModel.fontSize.common}"
+                        app:textCustomColor="@{dynamicUIModel.themeColor.commonFontColor}" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_accept_reject"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:orientation="horizontal">
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/icon_accept"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorGreenButton"
+                        android:gravity="center"
+                        android:text="@string/icon_tick_check"
+                        app:textCustomColor="@{dynamicUIModel.themeColor.secondaryColor}"
+                        android:textSize="@dimen/icon_medium_text_size"
+                        app:customFont="@string/font_icons" />
+
+                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                        android:id="@+id/icon_reject"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorRedButton"
+                        android:gravity="center"
+                        app:textCustomColor="@{dynamicUIModel.themeColor.secondaryColor}"
+                        android:textSize="@dimen/icon_medium_text_size"
+                        app:customFont="@string/font_icons" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+    </RelativeLayout>
+</layout>

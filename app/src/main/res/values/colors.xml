@@ -7,6 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="colorGreenButton">#149821</color>
+    <color name="colorRedButton">#FF0303</color>
+    <color name="blue">#0088FF</color>
+    <color name="primary_color_700">#111b30</color>
+    <color name="primary_color">#272d3d</color>
+    <color name="secondary_color">@color/white</color>
 
     <color name="colorPrimary">#666666</color>
     <color name="colorPrimaryDark">#4d4d4d</color>
@@ -24,8 +31,6 @@
     <color name="colorStatusBar">#2D6E96</color>
     <color name="colorIconGrey">#808080</color>
     <color name="colorActiveIconButton">#6DABD7</color>
-    <color name="colorGreenButton">#39B54A</color>
-    <color name="colorRedButton">#C1272D</color>
     <color name="colorDisabledButton">#A1CDEA</color>
     <color name="colorLightRed">#FFF0F1</color>
     <color name="colorHint">#808080</color>

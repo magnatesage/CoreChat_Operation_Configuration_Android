@@ -37,7 +37,7 @@
                     android:text="@string/chat_bubble_styles"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_chat_bubble"
@@ -73,7 +73,7 @@
                     android:text="@string/chat_bot_bg"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/spinner_bg_type"
@@ -124,7 +124,7 @@
                             android:text="@string/upload_bg_image_chat_screen"
                             android:textColor="@color/darkGray"
                             android:textSize="@dimen/small_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                     </LinearLayout>
 
@@ -150,7 +150,7 @@
                     android:text="@string/for_sender"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <LinearLayout
                     android:id="@+id/ll_for_sender"
@@ -176,7 +176,7 @@
                             android:text="@string/chat_bubble_color"
                             android:textColor="@color/lightGray"
                             android:textSize="@dimen/small_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                         <include
                             android:id="@+id/sender_chat_bubble_color_layout"
@@ -208,7 +208,7 @@
                             android:text="@string/text_bubble_color"
                             android:textColor="@color/lightGray"
                             android:textSize="@dimen/small_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                         <include
                             android:id="@+id/sender_text_color_layout"
@@ -242,7 +242,7 @@
                     android:text="@string/for_receiver"
                     android:textColor="@color/darkGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <LinearLayout
                     android:id="@+id/ll_for_receiver"
@@ -268,7 +268,7 @@
                             android:text="@string/chat_bubble_color"
                             android:textColor="@color/lightGray"
                             android:textSize="@dimen/small_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                         <include
                             android:id="@+id/receiver_chat_bubble_color_layout"
@@ -300,7 +300,7 @@
                             android:text="@string/text_bubble_color"
                             android:textColor="@color/lightGray"
                             android:textSize="@dimen/small_text_size"
-                            app:customTextViewFont="@string/Roboto_Light" />
+                            app:customFont="@string/Roboto_Light" />
 
                         <include
                             android:id="@+id/receiver_text_color_layout"
@@ -332,7 +332,7 @@
                     android:text="@string/drop_shadow"
                     android:textColor="@color/lightGray"
                     android:textSize="@dimen/small_text_size"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/sw_drop_shadow"

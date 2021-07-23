@@ -58,7 +58,7 @@
                 <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:allCornerSize="@dimen/_5sdp"
+                    app:cardAllCornerSize="@dimen/_5sdp"
                     app:cardBackgroundColor="@color/lightGray">
 
                     <ImageView
@@ -78,7 +78,7 @@
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_weight="1"
                     android:clickable="false"
-                    app:allCornerSize="@dimen/_5sdp"
+                    app:cardAllCornerSize="@dimen/_5sdp"
                     app:strokeColor="@color/lightGray"
                     app:strokeWidth="@dimen/_1sdp">
 
@@ -89,7 +89,7 @@
                         android:hint="What is "
                         android:padding="@dimen/_5sdp"
                         android:textSize="@dimen/medium_text_size"
-                        app:customTextViewFont="@string/Roboto_Light"
+                        app:customFont="@string/Roboto_Light"
                         tools:ignore="HardcodedText" />
 
                 </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
@@ -97,7 +97,7 @@
                 <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:allCornerSize="@dimen/_5sdp"
+                    app:cardAllCornerSize="@dimen/_5sdp"
                     app:cardBackgroundColor="@color/lightGray">
 
                     <ImageView
@@ -143,7 +143,7 @@
                         android:hint="What is "
                         android:padding="@dimen/_5sdp"
                         android:textSize="@dimen/medium_text_size"
-                        app:customTextViewFont="@string/Roboto_Light"
+                        app:customFont="@string/Roboto_Light"
                         tools:ignore="HardcodedText" />
 
                 </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
@@ -192,7 +192,7 @@
                         android:hint="What is "
                         android:padding="@dimen/_5sdp"
                         android:textSize="@dimen/medium_text_size"
-                        app:customTextViewFont="@string/Roboto_Light"
+                        app:customFont="@string/Roboto_Light"
                         tools:ignore="HardcodedText" />
 
                     <ImageView
@@ -219,7 +219,7 @@
                 <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:allCornerSize="50%"
+                    app:cardAllCornerSize="50%"
                     app:cardBackgroundColor="@color/lightGray">
 
                     <ImageView
@@ -238,7 +238,7 @@
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_weight="1"
                     android:clickable="false"
-                    app:allCornerSize="50%"
+                    app:cardAllCornerSize="50%"
                     app:strokeColor="@color/lightGray"
                     app:strokeWidth="@dimen/_1sdp">
 
@@ -249,7 +249,7 @@
                         android:hint="What is "
                         android:padding="@dimen/_5sdp"
                         android:textSize="@dimen/medium_text_size"
-                        app:customTextViewFont="@string/Roboto_Light"
+                        app:customFont="@string/Roboto_Light"
                         tools:ignore="HardcodedText" />
 
                     <ImageView
@@ -276,7 +276,7 @@
                 <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:allCornerSize="50%"
+                    app:cardAllCornerSize="50%"
                     app:cardBackgroundColor="@color/lightGray">
 
                     <ImageView
@@ -305,7 +305,7 @@
                         android:hint="What is "
                         android:padding="@dimen/_5sdp"
                         android:textSize="@dimen/medium_text_size"
-                        app:customTextViewFont="@string/Roboto_Light"
+                        app:customFont="@string/Roboto_Light"
                         tools:ignore="HardcodedText" />
 
                     <ImageView

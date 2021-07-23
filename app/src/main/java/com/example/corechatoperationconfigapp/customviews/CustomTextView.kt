@@ -21,20 +21,19 @@ class CustomTextView : AppCompatTextView {
         attrs,
         defStyle
     ) {
-        customAttr(context, attrs)
+        setCustomFont(context, attrs)
     }
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        customAttr(context, attrs)
+        setCustomFont(context, attrs)
     }
 
-    private fun customAttr(context: Context, attrs: AttributeSet) {
-        val a = context.obtainStyledAttributes(attrs, R.styleable.CustomTextView)
-        val customFont = a.getString(R.styleable.CustomTextView_customTextViewFont)
+    private fun setCustomFont(ctx: Context, attrs: AttributeSet) {
+        val a = ctx.obtainStyledAttributes(attrs, R.styleable.CustomTextView)
+        val customFont = a.getString(R.styleable.CustomTextView_customFont)
         setCustomFont(customFont)
         a.recycle()
     }
-
     fun setCustomFont(fontName: String?) {
         var myTypeface: Typeface? = null
         try {

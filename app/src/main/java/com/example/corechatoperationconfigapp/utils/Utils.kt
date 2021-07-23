@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Context
 import android.content.res.ColorStateList
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -17,6 +18,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
@@ -437,5 +442,63 @@ object Utils {
         } else {
             view.elevation = 0F
         }
+    }
+
+    /**
+     * This method used to get bold-italic font type
+     * @param fontStyle: String
+     */
+    fun getBoldItalicFontType(fontStyle: String?): String {
+        return when(fontStyle){
+            "bold" -> dynamicUIModel?.fontFamily!! + "-Bold"
+            "italic" -> dynamicUIModel?.fontFamily!! + "-Italic"
+            "bold-italic" -> dynamicUIModel?.fontFamily!! + "-BoldItalic"
+            else -> dynamicUIModel?.fontFamily!!
+        }
+    }
+
+    /**
+     * This method is used for getting current fragment
+     */
+    fun getCurrentFragment(activity: FragmentActivity): Fragment? {
+        if (!activity.supportFragmentManager.fragments.isNullOrEmpty()) {
+            return activity.supportFragmentManager.findFragmentById(R.id.fragment_container)
+        }
+        return null
+    }
+
+    /**
+     * This method is used for define vertical layout in recyclerview
+     */
+    fun getVerticalLayoutManager(context: Context): LinearLayoutManager {
+        return LinearLayoutManager(context)
+    }
+
+    /**
+     * This method is used for define horizontal layout in recyclerview
+     */
+    fun getHorizontalLayoutManager(context: Context): LinearLayoutManager {
+        return LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    }
+
+    /**
+     * This method is used for define grid layout in recyclerview
+     */
+    fun getGridLayoutManager(numOfColumns: Int,context: Context): GridLayoutManager {
+        return GridLayoutManager(context, numOfColumns)
+    }
+
+    /**
+     * This method is used for check device is tablet or not
+     */
+    fun isTablet(ctx: Context): Boolean {
+        return ctx.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK >= Configuration.SCREENLAYOUT_SIZE_LARGE
+    }
+
+    /**
+     * This method is used for check device is large tablet or not
+     */
+    fun isLargeTablet(context: Context): Boolean{
+        return context.resources.configuration.smallestScreenWidthDp >= 720
     }
 }

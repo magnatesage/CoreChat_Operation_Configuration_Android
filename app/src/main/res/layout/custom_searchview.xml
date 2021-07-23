@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.graphics.Color"/>
+
+        <variable
+            name="dynamicUIModel"
+            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+    </data>
+
+    <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardAllCornerSize="50%"
+        app:cardAllCornerFamily="0"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="@dimen/_1sdp">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                android:id="@+id/icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_search"
+                android:textSize="@dimen/icon_medium_text_size"
+                android:textColor="@color/gray"
+                android:layout_centerVertical="true"
+                app:customFont="@string/font_icons"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_5sdp"/>
+
+            <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:hint="@string/lbl_search"
+                android:textCursorDrawable="@null"
+                android:textColorHint="@color/gray"
+                android:focusableInTouchMode="true"
+                android:layout_toStartOf="@id/icon_close"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:textCustomColor="@{dynamicUIModel.themeColor.commonFontColor}"
+                app:textCustomSize="@{dynamicUIModel.fontSize.textField}"
+                app:textCustomFont="@{dynamicUIModel.fontFamily}"/>
+
+            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                android:id="@+id/icon_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_close"
+                android:textSize="@dimen/icon_medium_text_size"
+                android:textColor="@color/gray"
+                app:customFont="@string/font_icons"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+</layout>

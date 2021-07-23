@@ -3,6 +3,7 @@ package com.example.corechatoperationconfigapp.databinding
 import android.content.res.ColorStateList
 import android.graphics.BitmapFactory
 import android.graphics.Color
+import android.graphics.Typeface
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatSpinner
 import androidx.databinding.BindingAdapter
@@ -11,10 +12,7 @@ import com.example.corechatoperationconfigapp.R
 import com.example.corechatoperationconfigapp.adapter.CustomArrayAdapter
 import com.example.corechatoperationconfigapp.adapter.FontArrayAdapter
 import com.example.corechatoperationconfigapp.adapter.IconArrayAdapter
-import com.example.corechatoperationconfigapp.customviews.CustomButton
-import com.example.corechatoperationconfigapp.customviews.CustomEditText
-import com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
-import com.example.corechatoperationconfigapp.customviews.CustomTextView
+import com.example.corechatoperationconfigapp.customviews.*
 import com.example.corechatoperationconfigapp.utils.AppConstants
 import com.example.corechatoperationconfigapp.utils.AppPref
 import com.example.corechatoperationconfigapp.utils.Utils
@@ -105,8 +103,27 @@ fun setCustomSizeToEditText(customEditText: CustomEditText, fontSize: String) {
     Utils.setTextSizeInSSP(customEditText, Utils.getFontSizeInSSP(fontSize))
 }
 
+/**
+ * This method is used to set custom color to text of TextInputEditText
+ */
+@BindingAdapter("textCustomColor")
+fun setColorToTextInputEditText(textInputEditText: TextInputEditText, fontColor: String){
+    textInputEditText.setTextColor(Color.parseColor(fontColor))
+}
+
+/**
+ * This method is used to set custom font to text of TextInputEditText
+ */
+@BindingAdapter("textCustomFont")
+fun setFontToTextInputEditText(textInputEditText: TextInputEditText, fontType: String){
+    textInputEditText.typeface = Typeface.createFromAsset(textInputEditText.context.assets,"fonts/$fontType.ttf")
+}
+
+/**
+ * This method is used to set custom size to text of TextInputEditText
+ */
 @BindingAdapter("textCustomSize")
-fun setCustomSizeToTextInputEditText(textInputEditText: TextInputEditText, fontSize: String) {
+fun setSizeToTextInputEditText(textInputEditText: TextInputEditText, fontSize: String){
     Utils.setTextSizeInSSP(textInputEditText, Utils.getFontSizeInSSP(fontSize))
 }
 
@@ -135,6 +152,37 @@ fun setIconColorToTextInputLayout(textInputLayout: TextInputLayout, iconColor: S
     textInputLayout.setEndIconTintList(ColorStateList.valueOf(Color.parseColor(iconColor)))
 }
 
+/**
+ * This method is used to set custom color to CustomMaterialButton
+ */
+@BindingAdapter("textCustomColor")
+fun setColorToButton(customMaterialButton: CustomMaterialButton, fontColor: String){
+    customMaterialButton.setTextColor(Color.parseColor(fontColor))
+}
+
+/**
+ * This method is used to set custom font to CustomMaterialButton
+ */
+@BindingAdapter("textCustomFont")
+fun setFontToButton(customMaterialButton: CustomMaterialButton, fontType: String){
+    customMaterialButton.setCustomFont("$fontType.ttf")
+}
+
+/**
+ * This method is used to set custom size to CustomMaterialButton
+ */
+@BindingAdapter("textCustomSize")
+fun setSizeToButton(customMaterialButton: CustomMaterialButton, fontSize: String){
+    Utils.setTextSizeInSSP(customMaterialButton, Utils.getFontSizeInSSP(fontSize))
+}
+
+/**
+ * This method is used to set custom background color to CustomMaterialButton
+ */
+@BindingAdapter("buttonBackgroundColor")
+fun setButtonBackgroundColor(customMaterialButton: CustomMaterialButton, fontColor: String){
+    customMaterialButton.setBackgroundColor(Color.parseColor(fontColor))
+}
 
 @BindingAdapter("loadImage")
 fun loadImageToImageView(imageView: ImageView, imageUrl: String) {

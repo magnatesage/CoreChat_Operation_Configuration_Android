@@ -55,7 +55,7 @@
                     android:text="hello"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/_13ssp"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
             </LinearLayout>
 

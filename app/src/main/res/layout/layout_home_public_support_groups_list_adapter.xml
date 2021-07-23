@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.graphics.Color"/>
+
+        <variable
+            name="dynamicUIModel"
+            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}">
+
+        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+            android:id="@+id/cv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardAllCornerFamily="0"
+            app:cardAllCornerSize="@dimen/card_small_radius"
+            app:strokeColor="@color/gray"
+            app:cardBackgroundColor="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.corechatoperationconfigapp.customviews.CustomShapeableImageView
+                    android:id="@+id/iv_group_cover_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    app:allCornerFamily="0"
+                    app:bottomLeftCornerSize="0dp"
+                    app:bottomRightCornerSize="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    app:topLeftCornerSize="@dimen/_4sdp"
+                    app:topRightCornerSize="@dimen/_4sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/gray"
+                    android:layout_below="@id/iv_group_cover_logo"/>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/tv_group_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_72sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:maxLines="1"
+                    app:textCustomColor="@{dynamicUIModel.themeColor.secondaryColor}"
+                    app:textCustomSize="@{dynamicUIModel.fontSize.header}"
+                    app:textCustomFont="@{dynamicUIModel.fontFamily}"/>
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/icon_role_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_group_cover_logo"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/icon_large_text_size"
+                    app:customFont="@string/font_icons" />
+
+                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    android:id="@+id/icon_group_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_group_cover_logo"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/icon_role_profile"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_alignBaseline="@id/icon_role_profile"
+                    app:textCustomColor="@{dynamicUIModel.themeColor.primaryColor}"
+                    android:textSize="@dimen/icon_medium_text_size"
+                    app:customFont="@string/font_icons" />
+
+            </RelativeLayout>
+
+        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+
+    </RelativeLayout>
+</layout>

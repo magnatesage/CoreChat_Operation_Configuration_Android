@@ -57,7 +57,7 @@
                     android:background="@color/white"
                     android:textSize="@dimen/_8ssp"
                     android:gravity="center"
-                    app:customTextViewFont="@string/Roboto_Light" />
+                    app:customFont="@string/Roboto_Light" />
 
             </LinearLayout>
 
@@ -94,7 +94,7 @@
         android:textColor="@color/colorCheckMark"
         android:textSize="@dimen/_10ssp"
         android:visibility="invisible"
-        app:customTextViewFont="@string/icons"
+        app:customFont="@string/icons"
         tools:ignore="RelativeOverlap" />
 
 </RelativeLayout>

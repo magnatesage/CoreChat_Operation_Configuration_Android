@@ -70,13 +70,13 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
                         Utils.dynamicUIModel?.bottomTabBar?.get(0)?.textValue =
                             binding.etDashboard.text.toString()
                         Utils.dynamicUIModel?.bottomTabBar?.get(1)?.textValue =
-                            binding.etHistory.text.toString()
+                            binding.etWaiting.text.toString()
                         Utils.dynamicUIModel?.bottomTabBar?.get(2)?.textValue =
                             binding.etLiveChat.text.toString()
                         Utils.dynamicUIModel?.bottomTabBar?.get(3)?.textValue =
-                            binding.etLiveChat.text.toString()
+                            binding.etHistory.text.toString()
                         Utils.dynamicUIModel?.bottomTabBar?.get(4)?.textValue =
-                            binding.etLiveChat.text.toString()
+                            binding.etNotification.text.toString()
 
                         if (binding.swBold.isChecked && binding.swItalic.isChecked) {
                             for (i in 0 until Utils.dynamicUIModel?.bottomTabBar?.size!!) {

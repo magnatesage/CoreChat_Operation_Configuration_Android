@@ -94,7 +94,7 @@ class SideMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListene
                                 Utils.dynamicUIModel?.sideMenu?.get(i)?.fontType = "italic"
                             }
                         }
-                        startActivity(Intent(this, ChatBubbleConfigActivity::class.java))
+                        startActivity(Intent(this, DashboardTabConfigActivity::class.java))
                     }
                 }
             }
