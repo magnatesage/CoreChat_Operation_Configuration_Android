@@ -21,223 +21,268 @@
         android:fitsSystemWindows="true"
         tools:context=".activity.HomeActivity">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <FrameLayout
-                android:id="@+id/fragment_container"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_above="@id/rl_next">
 
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:id="@+id/ctr_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null">
-
-                <com.google.android.material.bottomappbar.BottomAppBar
-                    android:id="@+id/bottom_app_bar"
+                <FrameLayout
+                    android:id="@+id/fragment_container"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_50sdp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="@dimen/_25sdp"
-                    android:background="@{Color.parseColor(dynamicUIModel.themeColor.primaryColor)}"
-                    app:contentInsetStart="0dp"
-                    app:elevation="0dp"
-                    app:fabAlignmentMode="center"
-                    app:fabCradleRoundedCornerRadius="0dp">
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
 
-                    <LinearLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/ctr_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null">
+
+                    <com.google.android.material.bottomappbar.BottomAppBar
+                        android:id="@+id/bottom_app_bar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
-                        android:layout_marginEnd="@dimen/_2sdp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:background="@{Color.parseColor(dynamicUIModel.themeColor.primaryColor)}"
+                        app:contentInsetStart="0dp"
+                        app:elevation="0dp"
+                        app:fabAlignmentMode="center"
+                        app:fabCradleRoundedCornerRadius="0dp">
 
                         <LinearLayout
-                            android:id="@+id/ll_dashboard"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:onClick="onClick"
-                            android:orientation="vertical">
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                                android:id="@+id/icon_dashboard"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:id="@+id/ll_dashboard"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:textSize="@dimen/icon_medium_text_size"
-                                app:customFont="@string/font_icons" />
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:onClick="onClick"
+                                android:orientation="vertical">
 
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                                android:id="@+id/tv_dashboard"
-                                android:layout_width="wrap_content"
+                                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                    android:id="@+id/icon_dashboard"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/icon_medium_text_size"
+                                    app:customFont="@string/font_icons" />
+
+                                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                    android:id="@+id/tv_dashboard"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true"
+                                    app:textCustomColor="@{dynamicUIModel.themeColor.secondaryColor}"
+                                    app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                                    app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
+                                    android:text="@{dynamicUIModel.bottomTabBar.get(0).textValue}" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_waiting"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:singleLine="true"
-                                android:textAllCaps="true"
-                                app:textCustomColor="@{dynamicUIModel.themeColor.secondaryColor}"
-                                app:textCustomFont="@{dynamicUIModel.fontFamily}"
-                                app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
-                                android:text="@{dynamicUIModel.bottomTabBar.get(0).textValue}" />
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:onClick="onClick"
+                                android:orientation="vertical">
+
+                                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                    android:id="@+id/icon_waiting"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/icon_medium_text_size"
+                                    app:customFont="@string/font_icons" />
+
+                                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                    android:id="@+id/tv_waiting"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true"
+                                    app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                                    app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
+                                    android:text="@{dynamicUIModel.bottomTabBar.get(1).textValue}" />
+
+                            </LinearLayout>
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_history"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:onClick="onClick"
+                                android:orientation="vertical">
+
+                                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                    android:id="@+id/icon_history"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/icon_medium_text_size"
+                                    app:customFont="@string/font_icons" />
+
+                                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                    android:id="@+id/tv_history"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true"
+                                    app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                                    app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
+                                    android:text="@{dynamicUIModel.bottomTabBar.get(3).textValue}" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_notification"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:onClick="onClick"
+                                android:orientation="vertical">
+
+                                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                    android:id="@+id/icon_notification"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/icon_medium_text_size"
+                                    app:customFont="@string/font_icons" />
+
+                                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                    android:id="@+id/tv_notification"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true"
+                                    app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                                    app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
+                                    android:text="@{dynamicUIModel.bottomTabBar.get(4).textValue}"/>
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:id="@+id/ll_waiting"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:onClick="onClick"
-                            android:orientation="vertical">
+                    </com.google.android.material.bottomappbar.BottomAppBar>
 
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                                android:id="@+id/icon_waiting"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="@dimen/icon_medium_text_size"
-                                app:customFont="@string/font_icons" />
-
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                                android:id="@+id/tv_waiting"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:singleLine="true"
-                                android:textAllCaps="true"
-                                app:textCustomFont="@{dynamicUIModel.fontFamily}"
-                                app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
-                                android:text="@{dynamicUIModel.bottomTabBar.get(1).textValue}" />
-
-                        </LinearLayout>
-
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="0.5" />
-
-                        <LinearLayout
-                            android:id="@+id/ll_history"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:onClick="onClick"
-                            android:orientation="vertical">
-
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                                android:id="@+id/icon_history"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="@dimen/icon_medium_text_size"
-                                app:customFont="@string/font_icons" />
-
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                                android:id="@+id/tv_history"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:singleLine="true"
-                                android:textAllCaps="true"
-                                app:textCustomFont="@{dynamicUIModel.fontFamily}"
-                                app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
-                                android:text="@{dynamicUIModel.bottomTabBar.get(3).textValue}" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/ll_notification"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:onClick="onClick"
-                            android:orientation="vertical">
-
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                                android:id="@+id/icon_notification"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="@dimen/icon_medium_text_size"
-                                app:customFont="@string/font_icons" />
-
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                                android:id="@+id/tv_notification"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:ellipsize="end"
-                                android:singleLine="true"
-                                android:textAllCaps="true"
-                                app:textCustomFont="@{dynamicUIModel.fontFamily}"
-                                app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
-                                android:text="@{dynamicUIModel.bottomTabBar.get(4).textValue}"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </com.google.android.material.bottomappbar.BottomAppBar>
-
-                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
-                    android:id="@+id/cv_live_chat"
-                    android:layout_width="@dimen/_55sdp"
-                    android:layout_height="@dimen/_55sdp"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    app:cardElevation="0dp"
-                    app:cardAllCornerFamily="0"
-                    app:cardAllCornerSize="50%"
-                    app:strokeColor="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
-                    app:strokeWidth="@dimen/_2sdp"
-                    app:cardBackgroundColor="@{Color.parseColor(dynamicUIModel.themeColor.primaryColor)}">
-
-                    <LinearLayout
-                        android:id="@+id/ll_live_chat"
+                    <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        android:id="@+id/cv_live_chat"
                         android:layout_width="@dimen/_55sdp"
                         android:layout_height="@dimen/_55sdp"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
-                        android:onClick="onClick"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        app:cardElevation="0dp"
+                        app:cardAllCornerFamily="0"
+                        app:cardAllCornerSize="50%"
+                        app:strokeColor="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
+                        app:strokeWidth="@dimen/_2sdp"
+                        app:cardBackgroundColor="@{Color.parseColor(dynamicUIModel.themeColor.primaryColor)}">
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                            android:id="@+id/icon_live_chat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/icon_medium_text_size"
-                            app:customFont="@string/font_icons" />
+                        <LinearLayout
+                            android:id="@+id/ll_live_chat"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:orientation="vertical">
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                            android:id="@+id/tv_live_chat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:ellipsize="end"
-                            android:singleLine="true"
-                            android:textAllCaps="true"
-                            app:textCustomFont="@{dynamicUIModel.fontFamily}"
-                            app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
-                            android:text="@{dynamicUIModel.bottomTabBar.get(2).textValue}"/>
+                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                android:id="@+id/icon_live_chat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/icon_medium_text_size"
+                                app:customFont="@string/font_icons" />
 
-                    </LinearLayout>
+                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                                android:id="@+id/tv_live_chat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textAllCaps="true"
+                                app:textCustomFont="@{dynamicUIModel.fontFamily}"
+                                app:textCustomSize="@{dynamicUIModel.fontSize.bottomMenu}"
+                                android:text="@{dynamicUIModel.bottomTabBar.get(2).textValue}"/>
 
-                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </LinearLayout>
 
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                    </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
 
-        </LinearLayout>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <com.example.corechatoperationconfigapp.customviews.CustomButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:background="@drawable/button_left_corner_round"
+                    android:onClick="onClick"
+                    android:text="@string/back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkGray"
+                    app:customButtonFont="@string/Roboto_Light" />
+
+                <com.example.corechatoperationconfigapp.customviews.CustomButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:background="@drawable/button_right_corner_round"
+                    android:onClick="onClick"
+                    android:text="@string/preview"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkGray"
+                    app:customButtonFont="@string/Roboto_Light" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
 
         <include
             android:id="@+id/nav_layout"

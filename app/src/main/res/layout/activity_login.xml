@@ -17,21 +17,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@{Color.parseColor(dynamicModel.themeColor.secondaryColor)}"
-        android:gravity="center"
         android:orientation="vertical"
+        android:gravity="center"
         tools:context=".activity.LoginActivity">
 
         <ScrollView
             android:id="@+id/sv_login"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/rl_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_gravity="center_vertical"
                 android:paddingTop="@dimen/_10sdp"
                 android:paddingBottom="@dimen/_10sdp">
 
@@ -210,9 +209,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_20sdp"
                         android:background="@drawable/button_left_corner_round"
                         android:onClick="onClick"
-                        android:layout_marginStart="@dimen/_20sdp"
                         android:text="@string/back"
                         android:textAllCaps="false"
                         android:textColor="@color/darkGray"
@@ -227,7 +226,7 @@
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:background="@drawable/button_right_corner_round"
                         android:onClick="onClick"
-                        android:text="@string/next"
+                        android:text="@string/preview"
                         android:textAllCaps="false"
                         android:textColor="@color/darkGray"
                         app:customButtonFont="@string/Roboto_Light" />

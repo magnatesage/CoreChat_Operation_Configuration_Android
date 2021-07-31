@@ -771,6 +771,8 @@
     <string name="error_message_select_cardview_border_size">Please Select CardView Border Size</string>
     <string name="error_message_upload_image_for_floating_icon_button">Please Upload Image for Floating Icon Button</string>
     <string name="error_message_select_conversation_bar_style">Please Select Style for Conversation Bar</string>
+    <string name="error_message_add_background_app_timeout">Please add Background App Timeout</string>
+    <string name="error_message_add_foreground_app_timeout">Please add Foreground App Timeout</string>
 
 
     <string name="change_color_text">Change Color</string>
@@ -788,6 +790,7 @@
     <string name="first_sub_tab">First Sub Tab</string>
     <string name="second_sub_tab">Second Sub Tab</string>
     <string name="second_main_tab_sub_tab">Second Main Tab\'s Sub Tab</string>
+    <string name="setting">Setting</string>
     <string name="size">size</string>
     <string name="color">Color</string>
     <string name="image">Image</string>
@@ -933,6 +936,8 @@
     <string name="hint_pwd">Enter your Password</string>
     <string name="hint_phase1">Enter letter 4 of your security phrase</string>
     <string name="hint_phase2">Enter letter 5 of your security phrase</string>
+    <string name="background_app_timeout_in_minutes">Background App Timeout (In minutes)</string>
+    <string name="foreground_app_timeout_in_minutes">Foreground App Timeout (In minutes)</string>
 
 <!--    Icons-->
     <string name="icon_close">&#xf00D;</string>

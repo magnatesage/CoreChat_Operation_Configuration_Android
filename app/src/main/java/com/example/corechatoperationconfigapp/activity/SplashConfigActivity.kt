@@ -52,9 +52,6 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
     }
 
     override fun init() {
-        AppPref.deleteAllSharedPrefData(this)
-        Utils.getDefaultUIModel(this)
-
         getViewPermissionInterfaceInstance(this)
         binding.headerLayout.tvHeader.text = getString(R.string.splash_screen_config)
         binding.spinnerFontType.onItemSelectedListener = this
@@ -255,6 +252,10 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
                     Utils.getColorFromView(binding.selectBgColorLayout.displayColorView),
                     binding.selectBgColorLayout.llSelectColor
                 )
+            }
+
+            binding.btnBack ->{
+                onBackPressed()
             }
 
             binding.btnPreview -> {

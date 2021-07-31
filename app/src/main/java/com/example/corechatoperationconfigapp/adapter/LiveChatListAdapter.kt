@@ -25,7 +25,7 @@ class LiveChatListAdapter(val context: Activity, private val liveChatList: List<
         return LiveChatListViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = 10 //waitingUsersList.size
+    override fun getItemCount(): Int = 10
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(holder: LiveChatListViewHolder, position: Int) {

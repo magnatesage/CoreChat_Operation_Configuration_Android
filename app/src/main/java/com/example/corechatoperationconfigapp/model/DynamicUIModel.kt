@@ -8,6 +8,8 @@ data class DynamicUIModel(
     val companyId: String,
     @SerializedName("font_family")
     var fontFamily: String,
+    @SerializedName("setting")
+    var setting: Setting,
     @SerializedName("theme_color")
     val themeColor: ThemeColor,
     @SerializedName("font_size")
@@ -26,6 +28,14 @@ data class DynamicUIModel(
     val icons: Icons,
     @SerializedName("chat")
     val chat: Chat
+)
+
+data class Setting(
+    @SerializedName("backgroundAppTimeoutNotUsedMinutes")
+    var backgroundAppTimeoutNotUsedMinutes: Int,
+
+    @SerializedName("foregroundAppTimeoutNotUsedMinutes")
+    var foregroundAppTimeoutNotUsedMinutes: Int
 )
 
 data class ThemeColor(

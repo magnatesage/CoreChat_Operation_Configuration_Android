@@ -1,12 +1,11 @@
 package com.example.corechatoperationconfigapp.activity
 
 import android.annotation.SuppressLint
-import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.view.Window
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -36,7 +35,6 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
      * This method is used to initialization process of activity
      */
     override fun init() {
-        setListeners()
         context = this@HomeActivity
         binding.dynamicUIModel = Utils.dynamicUIModel
         setFragment(DashboardFragment.newInstance(), AppConstants.DASHBOARD)
@@ -47,24 +45,14 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
      * This method is called when user clicks on view
      */
     override fun onClick(view: View) {
-        when (view) {
-            binding.llDashboard -> setFragment(DashboardFragment.newInstance(), AppConstants.DASHBOARD)
-
-            binding.llWaiting -> setFragment(WaitingFragment.newInstance(), AppConstants.WAITING)
-
-            binding.llHistory -> setFragment(HistoryFragment.newInstance(), AppConstants.HISTORY)
-
-            binding.llNotification -> setFragment(NotificationFragment.newInstance(), AppConstants.NOTIFICATION)
-
-            binding.llLiveChat -> setFragment(LiveChatFragment.newInstance(), AppConstants.LIVE_CHAT)
+        when(view){
+            binding.btnBack ->{
+                onBackPressed()
+            }
+            binding.btnNext -> {
+                startActivity(Intent(context, WaitingActivity::class.java))
+            }
         }
-    }
-
-    /**
-     * This method is called for set listeners
-     */
-    private fun setListeners(){
-        binding.navLayout.tvLogout.setOnClickListener(this)
     }
 
     /**
@@ -106,22 +94,6 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
         when (fragment) {
             is DashboardFragment -> {
                 setBottomViewSelection(binding.iconDashboard,binding.tvDashboard,true)
-            }
-
-            is WaitingFragment -> {
-                setBottomViewSelection(binding.iconWaiting,binding.tvWaiting,true)
-            }
-
-            is HistoryFragment -> {
-                setBottomViewSelection(binding.iconHistory,binding.tvHistory,true)
-            }
-
-            is NotificationFragment -> {
-                setBottomViewSelection(binding.iconNotification,binding.tvNotification,true)
-            }
-
-            is LiveChatFragment -> {
-                setBottomViewSelection(binding.iconLiveChat,binding.tvLiveChat,true)
             }
         }
     }
