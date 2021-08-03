@@ -35,10 +35,6 @@ class IconsConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
         binding.spinnerRemove.onItemSelectedListener = this
         binding.spinnerTrainingMode.onItemSelectedListener = this
         binding.spinnerEndSession.onItemSelectedListener = this
-        binding.spinnerWhisper.onItemSelectedListener = this
-        binding.spinnerInteract.onItemSelectedListener = this
-        binding.spinnerBotStart.onItemSelectedListener = this
-        binding.spinnerUserLocation.onItemSelectedListener = this
         binding.spinnerManager.onItemSelectedListener = this
         binding.spinnerSupervisor.onItemSelectedListener = this
         binding.spinnerAgent.onItemSelectedListener = this
@@ -160,34 +156,6 @@ class IconsConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
                 it
             )
         }?.let { binding.spinnerEndSession.setSelection(it) }
-
-        Utils.dynamicUIModel?.icons?.whisper?.iconValue?.let {
-            Utils.getIndex(
-                Utils.getStringArrayFromXML(this, R.array.dropdown_whisper_icon_array),
-                it
-            )
-        }?.let { binding.spinnerWhisper.setSelection(it) }
-
-        Utils.dynamicUIModel?.icons?.interact?.iconValue?.let {
-            Utils.getIndex(
-                Utils.getStringArrayFromXML(this, R.array.dropdown_interact_icon_array),
-                it
-            )
-        }?.let { binding.spinnerInteract.setSelection(it) }
-
-        Utils.dynamicUIModel?.icons?.botStart?.iconValue?.let {
-            Utils.getIndex(
-                Utils.getStringArrayFromXML(this, R.array.dropdown_bot_start_icon_array),
-                it
-            )
-        }?.let { binding.spinnerBotStart.setSelection(it) }
-
-        Utils.dynamicUIModel?.icons?.userLocation?.iconValue?.let {
-            Utils.getIndex(
-                Utils.getStringArrayFromXML(this, R.array.dropdown_user_location_icon_array),
-                it
-            )
-        }?.let { binding.spinnerUserLocation.setSelection(it) }
 
         Utils.dynamicUIModel?.icons?.manager?.iconValue?.let {
             Utils.getIndex(
@@ -311,18 +279,6 @@ class IconsConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
                     }
                     Utils.dynamicUIModel?.icons?.endSession?.iconValue.isNullOrEmpty() -> {
                         showToast(resources.getString(R.string.error_message_select_end_session_icon))
-                    }
-                    Utils.dynamicUIModel?.icons?.whisper?.iconValue.isNullOrEmpty() -> {
-                        showToast(resources.getString(R.string.error_message_select_whisper_icon))
-                    }
-                    Utils.dynamicUIModel?.icons?.interact?.iconValue.isNullOrEmpty() -> {
-                        showToast(resources.getString(R.string.error_message_select_interact_icon))
-                    }
-                    Utils.dynamicUIModel?.icons?.botStart?.iconValue.isNullOrEmpty() -> {
-                        showToast(resources.getString(R.string.error_message_select_bot_start_icon))
-                    }
-                    Utils.dynamicUIModel?.icons?.userLocation?.iconValue.isNullOrEmpty() -> {
-                        showToast(resources.getString(R.string.error_message_select_user_location_icon))
                     }
                     Utils.dynamicUIModel?.icons?.manager?.iconValue.isNullOrEmpty() -> {
                         showToast(resources.getString(R.string.error_message_select_manager_icon))
@@ -482,38 +438,6 @@ class IconsConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
                         Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
                 } else {
                     Utils.dynamicUIModel?.icons?.endSession?.iconValue = ""
-                }
-            }
-            binding.spinnerWhisper -> {
-                if (position != 0) {
-                    Utils.dynamicUIModel?.icons?.whisper?.iconValue =
-                        Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
-                } else {
-                    Utils.dynamicUIModel?.icons?.whisper?.iconValue = ""
-                }
-            }
-            binding.spinnerInteract -> {
-                if (position != 0) {
-                    Utils.dynamicUIModel?.icons?.interact?.iconValue =
-                        Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
-                } else {
-                    Utils.dynamicUIModel?.icons?.interact?.iconValue = ""
-                }
-            }
-            binding.spinnerBotStart -> {
-                if (position != 0) {
-                    Utils.dynamicUIModel?.icons?.botStart?.iconValue =
-                        Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
-                } else {
-                    Utils.dynamicUIModel?.icons?.botStart?.iconValue = ""
-                }
-            }
-            binding.spinnerUserLocation -> {
-                if (position != 0) {
-                    Utils.dynamicUIModel?.icons?.userLocation?.iconValue =
-                        Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
-                } else {
-                    Utils.dynamicUIModel?.icons?.userLocation?.iconValue = ""
                 }
             }
             binding.spinnerManager -> {

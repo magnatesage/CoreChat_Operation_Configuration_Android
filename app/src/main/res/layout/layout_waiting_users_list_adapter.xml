@@ -149,6 +149,7 @@
                         android:layout_weight="1"
                         android:background="@color/colorRedButton"
                         android:gravity="center"
+                        android:text="@string/icon_close"
                         app:textCustomColor="@{dynamicUIModel.themeColor.secondaryColor}"
                         android:textSize="@dimen/icon_medium_text_size"
                         app:customFont="@string/font_icons" />

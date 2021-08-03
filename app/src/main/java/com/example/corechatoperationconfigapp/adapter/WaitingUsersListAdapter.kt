@@ -72,8 +72,6 @@ class WaitingUsersListAdapter(val context: Activity, private val waitingUsersLis
                 holder.binding.cvUserStatus.setTextColor(Color.parseColor(holder.binding.dynamicUIModel!!.themeColor.primaryColor))
             }
         }
-
-        "&#x${iconList.interact.iconValue}".also { holder.binding.iconReject.text = it }
     }
 
     class WaitingUsersListViewHolder(val binding: LayoutWaitingUsersListAdapterBinding) :

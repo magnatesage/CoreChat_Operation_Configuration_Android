@@ -49,23 +49,23 @@ data class ThemeColor(
 
 data class FontSize(
     @SerializedName("text_field")
-    var textField:String,
+    var textField: String,
     @SerializedName("button")
-    var button:String,
+    var button: String,
     @SerializedName("title_header")
-    var titleHeader:String,
+    var titleHeader: String,
     @SerializedName("header")
-    var header:String,
+    var header: String,
     @SerializedName("sub_header")
-    var subHeader:String,
+    var subHeader: String,
     @SerializedName("side_menu")
-    var sideMenu:String,
+    var sideMenu: String,
     @SerializedName("bottom_menu")
-    var bottomMenu:String,
+    var bottomMenu: String,
     @SerializedName("tab")
-    var tab:String,
+    var tab: String,
     @SerializedName("common")
-    var common:String
+    var common: String
 )
 
 data class Splash(
@@ -95,7 +95,7 @@ data class MenuItem(
     @SerializedName("text_value")
     var textValue: String,
     @SerializedName("icon_type")
-    val iconType: String,
+    var iconType: String,
     @SerializedName("icon_value")
     var iconValue: String,
     @SerializedName("font_type")
@@ -229,7 +229,11 @@ data class Chat(
     @SerializedName("card_view")
     val cardView: CardView,
     @SerializedName("conversation_bar")
-    val conversationBar: ConversationBar
+    val conversationBar: ConversationBar,
+    @SerializedName("top_menu")
+    val topMenu: ArrayList<String>,
+    @SerializedName("bottom_menu")
+    val bottomMenu: ArrayList<BottomMenuItem>,
 )
 
 data class ChatBubble(
@@ -306,4 +310,13 @@ data class ConversationBar(
     var conversationBarShape: String,
     @SerializedName("floating_icon_url")
     val floatingIconUrl: String
+)
+
+data class BottomMenuItem(
+    @SerializedName("text_value")
+    val textValue: String,
+    @SerializedName("icon_type")
+    val iconType: String,
+    @SerializedName("icon_value")
+    val iconValue: String
 )
