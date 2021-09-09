@@ -1,6 +1,7 @@
 package com.example.corechatoperationconfigapp.activity
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -29,6 +30,7 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
     private lateinit var chatBubbleStylesAdapter: ChatBubbleStylesAdapter
     private var mFileName = ""
     private var imageFile: File? = null
+    private lateinit var context: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +46,7 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
     }
 
     override fun init() {
+        context = this@ChatBubbleConfigActivity
         getViewPermissionInterfaceInstance(this)
 
         binding.headerLayout.tvHeader.text = getString(R.string.chat_bubble_configuration)
@@ -210,7 +213,7 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
 
             binding.btnBack -> onBackPressed()
 
-            binding.btnNext -> {
+            binding.btnPreview -> {
                 if (Utils.dynamicUIModel?.chat?.chatBubble?.chatBubbleStyle == null ||
                     Utils.dynamicUIModel?.chat?.chatBubble?.chatBubbleStyle == 0
                 ) {
@@ -235,6 +238,8 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
 
                     if (Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgType == AppConstants.IMAGE) {
                         Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgColor = ""
+                        Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgImageUrl =
+                            AppPref.getValue(context,AppConstants.CHAT_BOT_BG_IMAGE_PATH,"").toString()
                     }
 
                     if (Utils.dynamicUIModel?.chat?.chatBubble?.senderChatBubbleColor.isNullOrBlank()) {

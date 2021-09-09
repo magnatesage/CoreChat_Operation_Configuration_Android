@@ -22,7 +22,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoreChatOperationConfigApp"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="false"
+        android:requestLegacyExternalStorage="true">
 
         <activity android:name=".activity.LoginActivity"/>
         <activity android:name=".activity.HomeActivity"/>

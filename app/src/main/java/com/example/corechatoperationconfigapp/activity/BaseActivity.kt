@@ -1,5 +1,6 @@
 package com.example.corechatoperationconfigapp.activity
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
@@ -10,12 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import com.example.corechatoperationconfigapp.BuildConfig
 import com.example.corechatoperationconfigapp.R
-import com.example.corechatoperationconfigapp.utils.AppPref
-import com.example.corechatoperationconfigapp.utils.ImageCopyHelperClass
-import com.example.corechatoperationconfigapp.utils.PermissionHandler
+import com.example.corechatoperationconfigapp.utils.*
 import com.example.corechatoperationconfigapp.utils.Utils.createTempImageFile
 import com.example.corechatoperationconfigapp.utils.Utils.getStringFromXML
-import com.example.corechatoperationconfigapp.utils.ViewPermission
 import java.io.File
 import java.io.IOException
 
@@ -158,9 +156,10 @@ abstract class BaseActivity: AppCompatActivity(), ViewPermission.PermissionInter
     /**
      * Select image from gallery
      */
+    @SuppressLint("QueryPermissionsNeeded")
     private fun callGalleryIntent(fileName: String) {
         try {
-            mFile = createTempImageFile(this, fileName)
+            mFile = createTempImageFile(this,fileName)
         } catch (ex: IOException) {
             ex.printStackTrace()
         }

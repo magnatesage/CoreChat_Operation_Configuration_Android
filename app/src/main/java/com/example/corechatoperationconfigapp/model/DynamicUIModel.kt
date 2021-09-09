@@ -70,7 +70,7 @@ data class FontSize(
 
 data class Splash(
     @SerializedName("logo_url")
-    val logoUrl: String,
+    var logoUrl: String,
     @SerializedName("logo_bg_shape")
     var logoBgShape: String,
     @SerializedName("logo_bg_drop_shadow")
@@ -86,7 +86,7 @@ data class Splash(
     @SerializedName("splash_screen_bg_color")
     var splashScreenBgColor: String,
     @SerializedName("splash_screen_bg_image_url")
-    val splashScreenBgImageUrl: String,
+    var splashScreenBgImageUrl: String,
     @SerializedName("splash_screen_bg_type")
     var splashScreenBgType: String
 )
@@ -218,7 +218,7 @@ data class IconStyle(
     @SerializedName("icon_value")
     var iconValue: String,
     @SerializedName("icon_color")
-    val iconColor: String
+    var iconColor: String
 )
 
 data class Chat(
@@ -242,7 +242,7 @@ data class ChatBubble(
     @SerializedName("chat_screen_bg_color")
     var chatScreenBgColor: String,
     @SerializedName("chat_screen_bg_image_url")
-    val chatScreenBgImageUrl: String,
+    var chatScreenBgImageUrl: String,
     @SerializedName("chat_screen_bg_type")
     var chatScreenBgType: String,
     @SerializedName("chat_bubble_style")
@@ -309,7 +309,7 @@ data class ConversationBar(
     @SerializedName("conversation_bar_shape")
     var conversationBarShape: String,
     @SerializedName("floating_icon_url")
-    val floatingIconUrl: String
+    var floatingIconUrl: String
 )
 
 data class BottomMenuItem(

@@ -513,321 +513,461 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_manager"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/manager"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_manager"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_manager"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/manager"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_manager"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_manager_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_manager_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_manager_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_manager_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_manager_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_supervisor"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/supervisor"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_supervisor"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_supervisor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/supervisor"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_supervisor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_supervisor_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_supervisor_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_supervisor_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_supervisor_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_supervisor_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_agent"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/agent"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_agent"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_agent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/agent"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_agent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_agent_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_agent_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_agent_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_agent_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_agent_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_green_flag"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/green_flag"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_green_flag"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_green_flag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/green_flag"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_green_flag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_green_flag_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_green_flag_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_green_flag_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_green_flag_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_green_flag_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_umber_flag"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/umber_flag"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_umber_flag"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_umber_flag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/umber_flag"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_umber_flag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_umber_flag_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_umber_flag_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_umber_flag_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_umber_flag_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_umber_flag_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_red_flag"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/red_flag"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_red_flag"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_red_flag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/red_flag"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_red_flag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_red_flag_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_red_flag_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_red_flag_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_red_flag_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_red_flag_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_online"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/online"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_online"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_online"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/online"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_online"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_online_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_online_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_online_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_online_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_online_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_offline"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/offline"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_offline"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_offline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/offline"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_offline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_offline_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_offline_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_offline_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_offline_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_offline_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_upcoming"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/upcoming"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_upcoming"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_upcoming"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/upcoming"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_upcoming"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_upcoming_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_upcoming_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_upcoming_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_upcoming_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_upcoming_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
-                        android:id="@+id/tv_pause"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_weight="0.5"
-                        android:text="@string/pause"
-                        android:textColor="@color/darkGray"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinner_pause"
-                        android:layout_width="0dp"
+                        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            android:id="@+id/tv_pause"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="@string/pause"
+                            android:textColor="@color/darkGray"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_pause"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/dropdown_pause_icon_array"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            app:customIconSpinner="@{R.array.dropdown_pause_icon_array}" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/select_pause_icon_color_layout"
+                        layout="@layout/select_color_layout"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@drawable/bg_spinner"
-                        android:dropDownWidth="match_parent"
-                        android:entries="@array/dropdown_pause_icon_array"
-                        android:overlapAnchor="false"
-                        android:spinnerMode="dropdown"
-                        app:customIconSpinner="@{R.array.dropdown_pause_icon_array}" />
-
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"/>
                 </LinearLayout>
 
                 <RelativeLayout

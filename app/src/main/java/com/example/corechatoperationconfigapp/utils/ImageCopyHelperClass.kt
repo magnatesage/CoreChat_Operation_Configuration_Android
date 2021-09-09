@@ -39,10 +39,30 @@ object ImageCopyHelperClass {
         val source: FileChannel? = FileInputStream(sourceFile).channel
         val destination: FileChannel? = FileOutputStream(destFile).channel
         if (destination != null && source != null) {
+            source.transferTo(0,source.size(),destination)
             destination.transferFrom(source, 0, source.size())
         }
         source?.close()
         destination?.close()
+    }
+
+    /**
+     * This method will copy file from source to destination.
+     * @param src : file object which should be copied from
+     * @param dst : file object should be copied to
+     */
+    @Throws(IOException::class)
+    fun copy(src: File?, dst: File?) {
+        FileInputStream(src).use { `in` ->
+            FileOutputStream(dst).use { out ->
+                // Transfer bytes from in to out
+                val buf = ByteArray(1024)
+                var len: Int
+                while (`in`.read(buf).also { len = it } > 0) {
+                    out.write(buf, 0, len)
+                }
+            }
+        }
     }
 
     /**

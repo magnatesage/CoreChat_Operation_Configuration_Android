@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.LinearLayout
 import com.example.corechatoperationconfigapp.R
+import com.example.corechatoperationconfigapp.customviews.colorpicker.AmbilWarnaDialog
 import com.example.corechatoperationconfigapp.databinding.ActivityIconsConfigBinding
 import com.example.corechatoperationconfigapp.utils.Extensions.showToast
 import com.example.corechatoperationconfigapp.utils.Utils
@@ -226,10 +228,150 @@ class IconsConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
                 it
             )
         }?.let { binding.spinnerPause.setSelection(it) }
+
+        if (!Utils.dynamicUIModel?.icons?.manager?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectManagerIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.manager?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.supervisor?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectSupervisorIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.supervisor?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.agent?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectAgentIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.agent?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.greenFlag?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectGreenFlagIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.greenFlag?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.umberFlag?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectUmberFlagIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.umberFlag?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.redFlag?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectRedFlagIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.redFlag?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.online?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectOnlineIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.online?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.offline?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectOfflineIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.offline?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.upcoming?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectUpcomingIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.upcoming?.iconColor!!
+            )
+        }
+
+        if (!Utils.dynamicUIModel?.icons?.pause?.iconColor.isNullOrBlank()){
+            Utils.changeBg(
+                binding.selectPauseIconColorLayout.displayColorView,
+                Utils.dynamicUIModel?.icons?.pause?.iconColor!!
+            )
+        }
     }
 
     override fun onClick(view: View) {
         when (view) {
+            binding.selectManagerIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectManagerIconColorLayout.displayColorView),
+                    binding.selectManagerIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectSupervisorIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectSupervisorIconColorLayout.displayColorView),
+                    binding.selectSupervisorIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectAgentIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectAgentIconColorLayout.displayColorView),
+                    binding.selectAgentIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectGreenFlagIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectGreenFlagIconColorLayout.displayColorView),
+                    binding.selectGreenFlagIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectUmberFlagIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectUmberFlagIconColorLayout.displayColorView),
+                    binding.selectUmberFlagIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectRedFlagIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectRedFlagIconColorLayout.displayColorView),
+                    binding.selectRedFlagIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectOnlineIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectOnlineIconColorLayout.displayColorView),
+                    binding.selectOnlineIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectOfflineIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectOfflineIconColorLayout.displayColorView),
+                    binding.selectOfflineIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectUpcomingIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectUpcomingIconColorLayout.displayColorView),
+                    binding.selectUpcomingIconColorLayout.llSelectColor
+                )
+            }
+
+            binding.selectPauseIconColorLayout.llSelectColor -> {
+                callColorPickerDialog(
+                    Utils.getColorFromView(binding.selectPauseIconColorLayout.displayColorView),
+                    binding.selectPauseIconColorLayout.llSelectColor
+                )
+            }
+
             binding.btnBack -> onBackPressed()
 
             binding.btnNext -> {
@@ -310,7 +452,107 @@ class IconsConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
                     Utils.dynamicUIModel?.icons?.pause?.iconValue.isNullOrEmpty() -> {
                         showToast(resources.getString(R.string.error_message_select_pause_icon))
                     }
+                    Utils.dynamicUIModel?.icons?.manager?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.supervisor?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.agent?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.greenFlag?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.umberFlag?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.redFlag?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.online?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.offline?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.upcoming?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
+                    Utils.dynamicUIModel?.icons?.pause?.iconColor.isNullOrEmpty() -> {
+                        showToast(resources.getString(R.string.error_message_select_icon_color))
+                    }
                     else -> {
+                        if (Utils.dynamicUIModel?.icons?.manager?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.manager?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectManagerIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.supervisor?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.supervisor?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectSupervisorIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.agent?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.agent?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectAgentIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.greenFlag?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.greenFlag?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectGreenFlagIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.umberFlag?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.umberFlag?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectUmberFlagIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.redFlag?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.redFlag?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectRedFlagIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.online?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.online?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectOnlineIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.offline?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.offline?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectOfflineIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.upcoming?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.upcoming?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectUpcomingIconColorLayout.displayColorView)
+                            )
+                        }
+
+                        if (Utils.dynamicUIModel?.icons?.pause?.iconColor.isNullOrBlank()){
+                            Utils.dynamicUIModel?.icons?.pause?.iconColor = String.format(
+                                "#%08x",
+                                Utils.getColorFromView(binding.selectPauseIconColorLayout.displayColorView)
+                            )
+                        }
+
                         startActivity(Intent(this, BottomMenuConfigActivity::class.java))
                     }
                 }
@@ -524,7 +766,107 @@ class IconsConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
 
     }
 
-    override fun onNothingSelected(p0: AdapterView<*>?) {
+    override fun onNothingSelected(p0: AdapterView<*>?) {}
 
+    /**
+     * This method is called to open color picker dialog
+     */
+    private fun callColorPickerDialog(viewColor: Int, linearLayout: LinearLayout) {
+        val colorPickerDialog =
+            AmbilWarnaDialog(this, viewColor, true, object : AmbilWarnaDialog.OnAmbilWarnaListener {
+                override fun onCancel(dialog: AmbilWarnaDialog?) {
+                }
+
+                override fun onOk(dialog: AmbilWarnaDialog?, mColor: Int) {
+                    setSelectedColor(mColor, linearLayout)
+                }
+            })
+        colorPickerDialog.show()
+    }
+
+    private fun setSelectedColor(color: Int, linearLayout: LinearLayout) {
+        val selectedColor = String.format("#%08x", color)
+
+        when (linearLayout) {
+            binding.selectManagerIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectManagerIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.manager?.iconColor = selectedColor
+            }
+
+            binding.selectSupervisorIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectSupervisorIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.supervisor?.iconColor = selectedColor
+            }
+
+            binding.selectAgentIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectAgentIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.agent?.iconColor = selectedColor
+            }
+
+            binding.selectGreenFlagIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectGreenFlagIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.greenFlag?.iconColor = selectedColor
+            }
+
+            binding.selectUmberFlagIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectUmberFlagIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.umberFlag?.iconColor = selectedColor
+            }
+
+            binding.selectRedFlagIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectRedFlagIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.redFlag?.iconColor = selectedColor
+            }
+
+            binding.selectOnlineIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectOnlineIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.online?.iconColor = selectedColor
+            }
+
+            binding.selectOfflineIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectOfflineIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.offline?.iconColor = selectedColor
+            }
+
+            binding.selectUpcomingIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectUpcomingIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.upcoming?.iconColor = selectedColor
+            }
+
+            binding.selectPauseIconColorLayout.llSelectColor -> {
+                Utils.changeBg(
+                    binding.selectPauseIconColorLayout.displayColorView,
+                    selectedColor
+                )
+                Utils.dynamicUIModel?.icons?.pause?.iconColor = selectedColor
+            }
+        }
     }
 }

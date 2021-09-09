@@ -1,12 +1,16 @@
 package com.example.corechatoperationconfigapp.activity
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.Environment
 import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -19,16 +23,24 @@ import com.example.corechatoperationconfigapp.adapter.ChatButtonListAdapter
 import com.example.corechatoperationconfigapp.adapter.ChatListAdapter
 import com.example.corechatoperationconfigapp.databinding.ActivityChatBinding
 import com.example.corechatoperationconfigapp.model.MessageModel
-import com.example.corechatoperationconfigapp.utils.AppConstants
+import com.example.corechatoperationconfigapp.utils.*
+import com.example.corechatoperationconfigapp.utils.AppConstants.CHAT_BOT_BG_IMAGE_PATH
+import com.example.corechatoperationconfigapp.utils.AppConstants.FLOATING_ICON_IMAGE_PATH
 import com.example.corechatoperationconfigapp.utils.AppConstants.HORIZONTAL
-import com.example.corechatoperationconfigapp.utils.AppPref
+import com.example.corechatoperationconfigapp.utils.AppConstants.SPLASH_SCREEN_BG_IMAGE_PATH
+import com.example.corechatoperationconfigapp.utils.AppConstants.SPLASH_SCREEN_LOGO_IMAGE_PATH
 import com.example.corechatoperationconfigapp.utils.Extensions.visible
-import com.example.corechatoperationconfigapp.utils.Utils
+import com.example.corechatoperationconfigapp.utils.Utils.dynamicUIModel
 import com.example.corechatoperationconfigapp.utils.Utils.getParsedColorValue
 import com.example.corechatoperationconfigapp.utils.Utils.getSizeInSDP
+import com.google.gson.GsonBuilder
+import org.json.JSONObject
+import java.io.File
 
 class ChatActivity : BaseActivity() {
     private lateinit var binding: ActivityChatBinding
+    private lateinit var context: Context
+    private val newJson = JSONObject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,14 +49,15 @@ class ChatActivity : BaseActivity() {
     }
 
     override fun init() {
+        context = this@ChatActivity
         binding.headerLayout.tvHeader.text = getString(R.string.chat_screen)
-        binding.headerLayout.tvHeader.setCustomFont("${Utils.dynamicUIModel?.fontFamily}.ttf")
+        binding.headerLayout.tvHeader.setCustomFont("${dynamicUIModel?.fontFamily}.ttf")
         Utils.setTextSizeInSSP(
             binding.headerLayout.tvHeader,
-            Utils.getFontSizeInSSP(Utils.dynamicUIModel?.fontSize?.titleHeader!!)
+            Utils.getFontSizeInSSP(dynamicUIModel?.fontSize?.titleHeader!!)
         )
-        binding.headerLayout.tvHeader.setTextColor(Color.parseColor(Utils.dynamicUIModel?.themeColor?.primaryColor))
-        binding.headerLayout.toolbar.setBackgroundColor(Color.parseColor(Utils.dynamicUIModel?.themeColor?.secondaryColor))
+        binding.headerLayout.tvHeader.setTextColor(Color.parseColor(dynamicUIModel?.themeColor?.primaryColor))
+        binding.headerLayout.toolbar.setBackgroundColor(Color.parseColor(dynamicUIModel?.themeColor?.secondaryColor))
 
         setBackgroundOfRecyclerView()
 
@@ -64,7 +77,7 @@ class ChatActivity : BaseActivity() {
         if (intent.extras != null) {
             if (intent.getBooleanExtra(AppConstants.FROM_CHAT_BUTTON_CONFIG, false)) {
                 binding.rlButtonList.visible()
-                if (Utils.dynamicUIModel?.chat?.button?.buttonPlacementStyle == HORIZONTAL) {
+                if (dynamicUIModel?.chat?.button?.buttonPlacementStyle == HORIZONTAL) {
                     binding.rvButtonList.apply {
                         layoutManager =
                             LinearLayoutManager(
@@ -94,7 +107,9 @@ class ChatActivity : BaseActivity() {
                     false
                 )
             ) {
-                when (Utils.dynamicUIModel?.chat?.conversationBar?.conversationBarShape) {
+                binding.btnNext.text = getString(R.string.save)
+                binding.headerLayout.ivExport.visibility = View.VISIBLE
+                when (dynamicUIModel?.chat?.conversationBar?.conversationBarShape) {
                     AppConstants.ROUNDED -> {
                         binding.llRounded.visible()
                         loadFloatingIconUrl(binding.ivRoundedFlash)
@@ -123,14 +138,14 @@ class ChatActivity : BaseActivity() {
     private fun loadFloatingIconUrl(imageView: ImageView) {
         val imageFilePath = AppPref.getValue(
             this,
-            AppConstants.FLOATING_ICON_IMAGE_PATH, ""
+            FLOATING_ICON_IMAGE_PATH,""
         )
         if (imageFilePath?.isNotBlank() == true) {
             val bitmap = BitmapFactory.decodeFile(imageFilePath)
             imageView.setImageBitmap(bitmap)
-        } else if (!Utils.dynamicUIModel?.chat?.conversationBar?.floatingIconUrl.isNullOrEmpty()) {
+        } else if (!dynamicUIModel?.chat?.conversationBar?.floatingIconUrl.isNullOrEmpty()) {
             Glide.with(this)
-                .load(Utils.dynamicUIModel?.chat?.conversationBar?.floatingIconUrl)
+                .load(dynamicUIModel?.chat?.conversationBar?.floatingIconUrl)
                 .placeholder(R.drawable.flash_small)
                 .into(imageView)
         }
@@ -141,12 +156,12 @@ class ChatActivity : BaseActivity() {
      */
     @SuppressLint("CheckResult")
     private fun setBackgroundOfRecyclerView() {
-        if (Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgType == AppConstants.COLOR) {
-            binding.rvChatList.setBackgroundColor(getParsedColorValue(Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgColor!!))
+        if (dynamicUIModel?.chat?.chatBubble?.chatScreenBgType == AppConstants.COLOR) {
+            binding.rvChatList.setBackgroundColor(getParsedColorValue(dynamicUIModel?.chat?.chatBubble?.chatScreenBgColor!!))
         } else {
-            if (!Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgImageUrl.isNullOrEmpty()) {
+            if (!dynamicUIModel?.chat?.chatBubble?.chatScreenBgImageUrl.isNullOrEmpty()) {
                 Glide.with(this)
-                    .load(Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgImageUrl)
+                    .load(dynamicUIModel?.chat?.chatBubble?.chatScreenBgImageUrl)
                     .into(object : CustomTarget<Drawable>() {
                         override fun onResourceReady(
                             resource: Drawable,
@@ -161,7 +176,7 @@ class ChatActivity : BaseActivity() {
             } else {
                 val imageFilePath = AppPref.getValue(
                     this,
-                    AppConstants.CHAT_BOT_BG_IMAGE_PATH, ""
+                    CHAT_BOT_BG_IMAGE_PATH,""
                 )
                 if (imageFilePath?.isNotBlank() == true) {
                     val drawable = BitmapDrawable(resources, imageFilePath)
@@ -179,15 +194,83 @@ class ChatActivity : BaseActivity() {
                 if (intent.extras != null) {
                     if (intent.getBooleanExtra(AppConstants.FROM_CHAT_BUTTON_CONFIG, false)) {
                         startActivity(Intent(this, ChatCardViewConfigActivity::class.java))
-                    } else if (intent.getBooleanExtra(AppConstants.FROM_CHAT_CARDVIEW_CONFIG, false)) {
+                    } else if (intent.getBooleanExtra(
+                            AppConstants.FROM_CHAT_CARDVIEW_CONFIG,
+                            false
+                        )
+                    ) {
                         startActivity(Intent(this, ChatConversationBarConfigActivity::class.java))
-                    } else {
-                        startActivity(Intent(this, ChatButtonConfigActivity::class.java))
+                    } else if (intent.getBooleanExtra(
+                            AppConstants.FROM_CHAT_CONVERSATION_BAR_CONFIG,
+                            false
+                        )
+                    ) {
                     }
                 } else {
                     startActivity(Intent(this, ChatButtonConfigActivity::class.java))
                 }
             }
+            binding.headerLayout.ivExport -> {
+                exportJsonAndImageData()
+            }
         }
+    }
+
+    @SuppressLint("ObsoleteSdkInt")
+    private fun exportJsonAndImageData() {
+        val file : ArrayList<Uri> = ArrayList()
+
+        val builder = GsonBuilder()
+        val json = builder.setPrettyPrinting().create()
+        val response = json.toJson(dynamicUIModel)
+
+        val storageDir = context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)
+        val mFileName = "$storageDir/jsonData.txt"
+
+        val jsonDataFile = File(mFileName)
+        jsonDataFile.writeText(response)
+
+        val splashScreenLogoImage = AppPref.getValue(context,SPLASH_SCREEN_LOGO_IMAGE_PATH,"")
+        val splashScreenBgImage = AppPref.getValue(context,SPLASH_SCREEN_BG_IMAGE_PATH,"")
+        val floatingIconImage = AppPref.getValue(context,FLOATING_ICON_IMAGE_PATH,"")
+        val chatBotBgImage = AppPref.getValue(context,CHAT_BOT_BG_IMAGE_PATH,"")
+
+        if(splashScreenLogoImage != ""){
+            val splashScreenLogoImageFile = File(splashScreenLogoImage)
+            file.add(
+                ImageCopyHelperClass.getUriOfFile(context,splashScreenLogoImageFile)
+            )
+        }
+
+        if(splashScreenBgImage != ""){
+            val splashScreenBgImageFile = File(splashScreenBgImage)
+            file.add(
+                ImageCopyHelperClass.getUriOfFile(context,splashScreenBgImageFile)
+            )
+        }
+
+        if(floatingIconImage != ""){
+            val floatingIconImageFile = File(floatingIconImage)
+            file.add(
+                ImageCopyHelperClass.getUriOfFile(context,floatingIconImageFile)
+            )
+        }
+
+        if(chatBotBgImage != ""){
+            val chatBotBgImageFile = File(chatBotBgImage)
+            file.add(
+                ImageCopyHelperClass.getUriOfFile(context,chatBotBgImageFile)
+            )
+        }
+
+        file.add(ImageCopyHelperClass.getUriOfFile(context,jsonDataFile))
+
+        val sharingIntent = Intent(Intent.ACTION_SEND_MULTIPLE)
+        sharingIntent.type = "*/*"
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+        sharingIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, file)
+        startActivity(Intent.createChooser(sharingIntent, "Share using"))
     }
 }

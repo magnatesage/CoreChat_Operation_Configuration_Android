@@ -732,6 +732,7 @@
     <string name="error_message_select_offline_icon">Please Select Offline Icon</string>
     <string name="error_message_select_upcoming_icon">Please Select Upcoming Icon</string>
     <string name="error_message_select_pause_icon">Please Select Pause Icon</string>
+    <string name="error_message_select_icon_color">Please Select Icon Color</string>
     <string name="error_message_select_dashboard_icon">Please Select Dashboard Icon</string>
     <string name="error_message_select_history_icon">Please Select History Icon</string>
     <string name="error_message_select_live_chat_icon">Please Select Live Chat Icon</string>
@@ -806,6 +807,7 @@
     <string name="common_font_size">Common Font Size</string>
     <string name="next">Next</string>
     <string name="preview">Preview</string>
+    <string name="save">Save</string>
     <string name="upload_organization_logo">Upload Organization LOGO</string>
     <string name="upload_bg_image">Upload Background Image</string>
     <string name="organization_name">Organization Name</string>

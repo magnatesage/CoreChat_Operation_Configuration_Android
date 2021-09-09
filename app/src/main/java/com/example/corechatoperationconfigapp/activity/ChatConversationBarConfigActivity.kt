@@ -1,6 +1,7 @@
 package com.example.corechatoperationconfigapp.activity
 
 import android.Manifest.permission.*
+import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -34,6 +35,7 @@ class ChatConversationBarConfigActivity : BaseActivity() {
     private lateinit var binding: ActivityChatConversationBarConfigBinding
     private var mFileName = ""
     private var imageFile: File? = null
+    private lateinit var context: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +44,7 @@ class ChatConversationBarConfigActivity : BaseActivity() {
     }
 
     override fun init() {
+        context = this@ChatConversationBarConfigActivity
         binding.headerLayout.tvHeader.text = getString(R.string.chat_conversation_bar_configuration)
         requiredPermissions(arrayOf(READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, CAMERA))
         getViewPermissionInterfaceInstance(this)
@@ -105,6 +108,8 @@ class ChatConversationBarConfigActivity : BaseActivity() {
                     }
 
                     else -> {
+                        Utils.dynamicUIModel?.chat?.conversationBar?.floatingIconUrl =
+                            AppPref.getValue(context,AppConstants.FLOATING_ICON_IMAGE_PATH,"").toString()
                         val intent = Intent(this, ChatActivity::class.java)
                         intent.putExtra(AppConstants.FROM_CHAT_CONVERSATION_BAR_CONFIG, true)
                         startActivity(intent)
