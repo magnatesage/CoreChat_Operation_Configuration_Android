@@ -19,6 +19,9 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         binding.headerLayout.tvHeader.text = getString(R.string.bottom_menu_configuration)
         binding.spinnerDashboard.onItemSelectedListener = this
@@ -30,6 +33,9 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.btnBack -> onBackPressed()
@@ -99,6 +105,9 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is used to set the values in views
+     */
     private fun setValuesToViews() {
         if (Utils.dynamicUIModel?.bottomTabBar?.size == 5) {
             for (i in 0 until Utils.dynamicUIModel?.bottomTabBar!!.size) {
@@ -187,6 +196,9 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is called when user select item in spinner
+     */
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (parent) {
             binding.spinnerDashboard -> {
@@ -218,6 +230,9 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is called when user nothing select anything in spinner
+     */
     override fun onNothingSelected(p0: AdapterView<*>?) {
 
     }

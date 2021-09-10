@@ -20,6 +20,9 @@ class DashboardTabConfigActivity : BaseActivity() {
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         binding.headerLayout.tvHeader.text = getString(R.string.dashboard_tab_configuration)
 
@@ -28,6 +31,9 @@ class DashboardTabConfigActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.btnBack -> onBackPressed()
@@ -113,6 +119,9 @@ class DashboardTabConfigActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         if (Utils.dynamicUIModel?.dashboard?.mainTab1?.fontType?.contains(
                 AppConstants.BOLD.lowercase()

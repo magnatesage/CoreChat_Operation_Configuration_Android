@@ -24,6 +24,9 @@ class ColorFontSizeConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLi
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         binding.headerLayout.tvHeader.text = getString(R.string.color_font_size_configuration)
         binding.spinnerFontType.onItemSelectedListener = this
@@ -42,6 +45,9 @@ class ColorFontSizeConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLi
         }
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         Utils.dynamicUIModel?.themeColor?.primaryColor?.let {
             changeBg(
@@ -135,6 +141,9 @@ class ColorFontSizeConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLi
         }?.let { binding.spinnerCommonFontSize.setSelection(it) }
     }
 
+    /**
+     * This method is used when user select item in spinner
+     */
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (parent) {
             binding.spinnerFontType -> {
@@ -220,9 +229,14 @@ class ColorFontSizeConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLi
         }
     }
 
-    override fun onNothingSelected(p0: AdapterView<*>?) {
-    }
+    /**
+     * This method is called when user nothing select anything in spinner
+     */
+    override fun onNothingSelected(p0: AdapterView<*>?) {}
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.btnNext -> {
@@ -323,6 +337,9 @@ class ColorFontSizeConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLi
         colorPickerDialog.show()
     }
 
+    /**
+     * This method is called to set the selected color
+     */
     private fun setSelectedColor(color: Int, linearLayout: LinearLayout) {
         val selectedColor = String.format("#%08x", color)
 

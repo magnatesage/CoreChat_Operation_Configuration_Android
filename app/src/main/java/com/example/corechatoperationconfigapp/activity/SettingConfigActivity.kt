@@ -18,6 +18,9 @@ class SettingConfigActivity : BaseActivity() {
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         AppPref.deleteAllSharedPrefData(this)
         Utils.getDefaultUIModel(this)
@@ -25,11 +28,17 @@ class SettingConfigActivity : BaseActivity() {
         setValuesToViews()
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         binding.etBackgroundAppTimeout.setText(Utils.dynamicUIModel?.setting?.backgroundAppTimeoutNotUsedMinutes.toString())
         binding.etForegroundAppTimeout.setText(Utils.dynamicUIModel?.setting?.foregroundAppTimeoutNotUsedMinutes.toString())
     }
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when(view) {
             binding.btnNext -> {

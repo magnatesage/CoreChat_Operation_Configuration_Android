@@ -43,6 +43,9 @@ class ChatConversationBarConfigActivity : BaseActivity() {
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         context = this@ChatConversationBarConfigActivity
         binding.headerLayout.tvHeader.text = getString(R.string.chat_conversation_bar_configuration)
@@ -54,6 +57,9 @@ class ChatConversationBarConfigActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         if (!Utils.dynamicUIModel?.chat?.conversationBar?.conversationBarShape.isNullOrBlank()) {
             setSelectedView(Utils.dynamicUIModel?.chat?.conversationBar?.conversationBarShape!!)
@@ -74,6 +80,9 @@ class ChatConversationBarConfigActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.rlRounded -> setSelectedView(ROUNDED)
@@ -120,6 +129,9 @@ class ChatConversationBarConfigActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is called to set style in selected views
+     */
     private fun setSelectedView(selectedStyle: String) {
         Utils.dynamicUIModel?.chat?.conversationBar?.conversationBarShape = selectedStyle
 
@@ -192,6 +204,9 @@ class ChatConversationBarConfigActivity : BaseActivity() {
         materialCardView.strokeWidth = getSizeInSDP(this, R.dimen._1sdp)
     }
 
+    /**
+     * This method is used to load the image in floating icon
+     */
     private fun loadFloatingIconUrl(imageView: ImageView) {
         val imageFilePath = AppPref.getValue(
             this,
@@ -218,6 +233,9 @@ class ChatConversationBarConfigActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is called to get the result
+     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == RESULT_OK) {
             when (requestCode) {

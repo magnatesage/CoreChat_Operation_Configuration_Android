@@ -19,6 +19,9 @@ class SideMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListene
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         binding.headerLayout.tvHeader.text = getString(R.string.side_menu_configuration)
         binding.spinnerAccount.onItemSelectedListener = this
@@ -32,6 +35,9 @@ class SideMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListene
         }
     }
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.btnBack -> onBackPressed()
@@ -101,6 +107,9 @@ class SideMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListene
         }
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         if (Utils.dynamicUIModel?.sideMenu?.size == 5) {
             for (i in 0 until Utils.dynamicUIModel?.sideMenu!!.size) {
@@ -189,6 +198,9 @@ class SideMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListene
         }
     }
 
+    /**
+     * This method is used when user select item in spinner
+     */
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (parent) {
             binding.spinnerAccount -> {
@@ -238,7 +250,8 @@ class SideMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListene
         }
     }
 
-    override fun onNothingSelected(p0: AdapterView<*>?) {
-
-    }
+    /**
+     * This method is called when user nothing select anything in spinner
+     */
+    override fun onNothingSelected(p0: AdapterView<*>?) {}
 }

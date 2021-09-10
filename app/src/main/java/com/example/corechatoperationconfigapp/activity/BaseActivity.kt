@@ -9,7 +9,7 @@ import android.provider.MediaStore
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
-import com.example.corechatoperationconfigapp.BuildConfig
+import com.androidnetworking.BuildConfig
 import com.example.corechatoperationconfigapp.R
 import com.example.corechatoperationconfigapp.utils.*
 import com.example.corechatoperationconfigapp.utils.Utils.createTempImageFile
@@ -39,6 +39,7 @@ abstract class BaseActivity: AppCompatActivity(), ViewPermission.PermissionInter
     fun getViewPermissionInterfaceInstance(activityReference: ViewPermission.PermissionInterface) {
         ViewPermission().setOnPermissionInterface(activityReference)
     }
+
 
     override fun setContentView(view: View?) {
         super.setContentView(view)
@@ -106,6 +107,9 @@ abstract class BaseActivity: AppCompatActivity(), ViewPermission.PermissionInter
      */
     open fun permissionGranted() {}
 
+    /**
+     * This method will be used to get permission result on request.
+     */
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,

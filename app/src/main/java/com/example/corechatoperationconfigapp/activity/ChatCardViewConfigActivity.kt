@@ -24,6 +24,9 @@ class ChatCardViewConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLis
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         binding.headerLayout.tvHeader.text = getString(R.string.chat_cardview_configuration)
         binding.spinnerBorderSize.onItemSelectedListener = this
@@ -44,6 +47,9 @@ class ChatCardViewConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLis
         setValuesToViews()
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         if (!Utils.dynamicUIModel?.chat?.cardView?.cardViewBorderSize.isNullOrBlank()) {
             val selectedPosition = Utils.getIndex(
@@ -125,6 +131,9 @@ class ChatCardViewConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLis
         }
     }
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.borderColorLayout.llSelectColor -> {
@@ -244,6 +253,9 @@ class ChatCardViewConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLis
         colorPickerDialog.show()
     }
 
+    /**
+     * This method is called to set the selected color
+     */
     private fun setSelectedColor(color: Int, linearLayout: LinearLayout) {
         val selectedColor = String.format("#%08x", color)
 
@@ -292,6 +304,9 @@ class ChatCardViewConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLis
         }
     }
 
+    /**
+     * This method is used when user select item in spinner
+     */
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (parent) {
             binding.spinnerBorderSize -> {
@@ -323,7 +338,8 @@ class ChatCardViewConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLis
         }
     }
 
-    override fun onNothingSelected(p0: AdapterView<*>?) {
-
-    }
+    /**
+     * This method is called when user nothing select anything in spinner
+     */
+    override fun onNothingSelected(p0: AdapterView<*>?) {}
 }

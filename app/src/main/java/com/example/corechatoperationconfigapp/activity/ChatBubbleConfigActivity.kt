@@ -45,6 +45,9 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         )
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         context = this@ChatBubbleConfigActivity
         getViewPermissionInterfaceInstance(this)
@@ -69,6 +72,9 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         if (!Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgType.isNullOrBlank()) {
             Utils.dynamicUIModel?.chat?.chatBubble?.chatScreenBgType?.let {
@@ -137,6 +143,9 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is used when user select item in spinner
+     */
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (parent) {
             binding.spinnerBgType -> {
@@ -165,10 +174,14 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
-    override fun onNothingSelected(p0: AdapterView<*>?) {
+    /**
+     * This method is called when user nothing select anything in spinner
+     */
+    override fun onNothingSelected(p0: AdapterView<*>?) {}
 
-    }
-
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.selectBgColorLayout.llSelectColor -> {
@@ -293,6 +306,9 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         colorPickerDialog.show()
     }
 
+    /**
+     * This method is called to set the selected color
+     */
     private fun setSelectedColor(color: Int, linearLayout: LinearLayout) {
         val selectedColor = String.format("#%08x", color)
 
@@ -335,6 +351,9 @@ class ChatBubbleConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is called for get result
+     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == RESULT_OK) {
             when (requestCode) {

@@ -40,7 +40,6 @@ import java.io.File
 class ChatActivity : BaseActivity() {
     private lateinit var binding: ActivityChatBinding
     private lateinit var context: Context
-    private val newJson = JSONObject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +47,9 @@ class ChatActivity : BaseActivity() {
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         context = this@ChatActivity
         binding.headerLayout.tvHeader.text = getString(R.string.chat_screen)
@@ -135,6 +137,9 @@ class ChatActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is used to load floating icon url
+     */
     private fun loadFloatingIconUrl(imageView: ImageView) {
         val imageFilePath = AppPref.getValue(
             this,
@@ -186,6 +191,9 @@ class ChatActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is used when user clicks on view.
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.btnBack -> onBackPressed()
@@ -216,10 +224,14 @@ class ChatActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is used to export the save JSON data and images in text file format.
+     */
     @SuppressLint("ObsoleteSdkInt")
     private fun exportJsonAndImageData() {
-        val file : ArrayList<Uri> = ArrayList()
+        val fileArrayList : ArrayList<Uri> = ArrayList()
 
+        //Convert Java object into Json
         val builder = GsonBuilder()
         val json = builder.setPrettyPrinting().create()
         val response = json.toJson(dynamicUIModel)
@@ -237,40 +249,40 @@ class ChatActivity : BaseActivity() {
 
         if(splashScreenLogoImage != ""){
             val splashScreenLogoImageFile = File(splashScreenLogoImage)
-            file.add(
+            fileArrayList.add(
                 ImageCopyHelperClass.getUriOfFile(context,splashScreenLogoImageFile)
             )
         }
 
         if(splashScreenBgImage != ""){
             val splashScreenBgImageFile = File(splashScreenBgImage)
-            file.add(
+            fileArrayList.add(
                 ImageCopyHelperClass.getUriOfFile(context,splashScreenBgImageFile)
             )
         }
 
         if(floatingIconImage != ""){
             val floatingIconImageFile = File(floatingIconImage)
-            file.add(
+            fileArrayList.add(
                 ImageCopyHelperClass.getUriOfFile(context,floatingIconImageFile)
             )
         }
 
         if(chatBotBgImage != ""){
             val chatBotBgImageFile = File(chatBotBgImage)
-            file.add(
+            fileArrayList.add(
                 ImageCopyHelperClass.getUriOfFile(context,chatBotBgImageFile)
             )
         }
 
-        file.add(ImageCopyHelperClass.getUriOfFile(context,jsonDataFile))
+        fileArrayList.add(ImageCopyHelperClass.getUriOfFile(context,jsonDataFile))
 
-        val sharingIntent = Intent(Intent.ACTION_SEND_MULTIPLE)
-        sharingIntent.type = "*/*"
+        val shareIntent = Intent(Intent.ACTION_SEND_MULTIPLE)
+        shareIntent.type = "*/*"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }
-        sharingIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, file)
-        startActivity(Intent.createChooser(sharingIntent, "Share using"))
+        shareIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, fileArrayList)
+        startActivity(Intent.createChooser(shareIntent, getString(R.string.share_using)))
     }
 }

@@ -51,6 +51,9 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         requiredPermissions(arrayOf(READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, CAMERA))
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         context = this@SplashConfigActivity
         getViewPermissionInterfaceInstance(this)
@@ -87,6 +90,9 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         }
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         if (!Utils.dynamicUIModel?.splash?.logoUrl.isNullOrBlank()) {
             Utils.loadImageURL(
@@ -163,6 +169,9 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         setShapeOfLogo(Utils.dynamicUIModel?.splash?.logoBgShape!!)
     }
 
+    /**
+     * This method is used when user select item in spinner
+     */
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (parent) {
             binding.spinnerFontType -> {
@@ -207,8 +216,14 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         }
     }
 
+    /**
+     * This method is called when user nothing select anything in spinner
+     */
     override fun onNothingSelected(p0: AdapterView<*>?) {}
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.rlShapeNone -> {
@@ -343,6 +358,9 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         colorPickerDialog.show()
     }
 
+    /**
+     * This method is called to set the selected color
+     */
     private fun setSelectedColor(color: Int, linearLayout: LinearLayout) {
         val selectedColor = String.format("#%08x", color)
 
@@ -405,6 +423,9 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         setShapeToImageView(shapeOfLogo)
     }
 
+    /**
+     * This method is used to set the shape into imageview
+     */
     private fun setShapeToImageView(shapeOfLogo: String) {
         if (binding.ivLogo.drawable.constantState != ResourcesCompat.getDrawable(
                 resources,
@@ -475,6 +496,9 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         }
     }
 
+    /**
+     * This method is used to get the result
+     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == RESULT_OK) {
             when (requestCode) {

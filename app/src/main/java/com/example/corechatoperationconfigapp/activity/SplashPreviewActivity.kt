@@ -23,6 +23,9 @@ class SplashPreviewActivity : BaseActivity() {
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         binding.dynamicUIModel = Utils.dynamicUIModel
 
@@ -56,6 +59,9 @@ class SplashPreviewActivity : BaseActivity() {
         }
     }
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.btnBack -> onBackPressed()

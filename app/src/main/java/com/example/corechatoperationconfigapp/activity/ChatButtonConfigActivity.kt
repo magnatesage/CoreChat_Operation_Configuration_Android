@@ -27,6 +27,9 @@ class ChatButtonConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         setContentView(binding.root)
     }
 
+    /**
+     * This method is used to initialization process of activity
+     */
     override fun init() {
         binding.headerLayout.tvHeader.text = getString(R.string.chat_button_configuration)
 
@@ -61,6 +64,9 @@ class ChatButtonConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is used to set the values to views
+     */
     private fun setValuesToViews() {
         if (!Utils.dynamicUIModel?.chat?.button?.normalBorderSize.isNullOrBlank()) {
             Utils.dynamicUIModel?.chat?.button?.normalBorderSize?.let {
@@ -142,6 +148,9 @@ class ChatButtonConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is called when user clicks on view
+     */
     override fun onClick(view: View) {
         when (view) {
             binding.normalButtonColorLayout.llSelectColor -> {
@@ -266,6 +275,9 @@ class ChatButtonConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         colorPickerDialog.show()
     }
 
+    /**
+     * This method is called to set the selected color
+     */
     private fun setSelectedColor(color: Int, linearLayout: LinearLayout) {
         val selectedColor = String.format("#%08x", color)
 
@@ -320,6 +332,9 @@ class ChatButtonConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
+    /**
+     * This method is used when user select item in spinner
+     */
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (parent) {
             binding.spinnerNormalBorderSize -> {
@@ -342,7 +357,8 @@ class ChatButtonConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         }
     }
 
-    override fun onNothingSelected(p0: AdapterView<*>?) {
-
-    }
+    /**
+     * This method is called when user nothing select anything in spinner
+     */
+    override fun onNothingSelected(p0: AdapterView<*>?) {}
 }
