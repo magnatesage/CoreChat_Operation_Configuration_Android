@@ -76,7 +76,7 @@
                         <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:cardAllCornerSize="@dimen/_5sdp"
+                            app:allCornerSize="@dimen/_5sdp"
                             app:cardBackgroundColor="@color/lightGray">
 
                             <ImageView
@@ -96,7 +96,7 @@
                             android:layout_marginEnd="@dimen/_5sdp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            app:cardAllCornerSize="@dimen/_5sdp">
+                            app:allCornerSize="@dimen/_5sdp">
 
                             <com.example.corechatoperationconfigapp.customviews.CustomTextView
                                 android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                         <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:cardAllCornerSize="@dimen/_5sdp"
+                            app:allCornerSize="@dimen/_5sdp"
                             app:cardBackgroundColor="@color/lightGray">
 
                             <ImageView
@@ -300,7 +300,7 @@
                         <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:cardAllCornerSize="50%"
+                            app:allCornerSize="50%"
                             app:cardBackgroundColor="@color/lightGray">
 
                             <ImageView
@@ -319,7 +319,7 @@
                             android:layout_marginStart="@dimen/_5sdp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            app:cardAllCornerSize="50%">
+                            app:allCornerSize="50%">
 
                             <com.example.corechatoperationconfigapp.customviews.CustomTextView
                                 android:layout_width="match_parent"
@@ -378,7 +378,7 @@
                         <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:cardAllCornerSize="50%"
+                            app:allCornerSize="50%"
                             app:cardBackgroundColor="@color/lightGray">
 
                             <ImageView

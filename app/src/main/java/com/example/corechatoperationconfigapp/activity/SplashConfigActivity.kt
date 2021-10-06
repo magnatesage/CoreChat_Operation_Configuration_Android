@@ -30,7 +30,6 @@ import com.example.corechatoperationconfigapp.utils.Extensions.showToast
 import com.example.corechatoperationconfigapp.utils.Extensions.visible
 import com.example.corechatoperationconfigapp.utils.Utils.getDesiredColorFromXML
 import com.example.corechatoperationconfigapp.utils.Utils.getDesiredDrawableFromXML
-import com.example.corechatoperationconfigapp.utils.Utils.getOriginalFontValue
 import com.soundcloud.android.crop.Crop
 import java.io.File
 
@@ -115,7 +114,7 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
         binding.etOrgName.setText(Utils.dynamicUIModel?.splash?.orgName)
 
         if (!Utils.dynamicUIModel?.splash?.orgNameFontType.isNullOrBlank()) {
-            getOriginalFontValue(Utils.dynamicUIModel?.splash?.orgNameFontType!!).let {
+            Utils.getOriginalFontValue(Utils.dynamicUIModel?.splash?.orgNameFontType!!).let {
                 Utils.getIndex(
                     Utils.getStringArrayFromXML(this, R.array.dropdown_font_list_array),
                     it
@@ -268,9 +267,7 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
                 )
             }
 
-            binding.btnBack ->{
-                onBackPressed()
-            }
+            binding.btnBack -> onBackPressed()
 
             binding.btnPreview -> {
                 when {
@@ -312,7 +309,7 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
                             AppPref.getValue(context,SPLASH_SCREEN_LOGO_IMAGE_PATH,"").toString()
 
                         Utils.dynamicUIModel?.splash?.orgNameFontType =
-                            getOriginalFontValue(Utils.dynamicUIModel?.splash?.orgNameFontType!!)
+                            Utils.getOriginalFontValue(Utils.dynamicUIModel?.splash?.orgNameFontType!!)
                         Utils.dynamicUIModel?.splash?.orgNameFontType += boldItalicString
 
                         if (Utils.dynamicUIModel?.splash?.orgNameFontColor.isNullOrBlank()) {
@@ -517,7 +514,7 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
                 REQUEST_GALLERY_PHOTO -> {
                     try {
                         val newFile = ImageCopyHelperClass.getBitmapFile(this, data!!)
-                        ImageCopyHelperClass.copyFile(newFile,mFile!!)
+                        ImageCopyHelperClass.copyFile(newFile, mFile!!)
                         imageUri = ImageCopyHelperClass.getUriOfFile(this, mFile!!)
                         imageFile = mFile!!
                         Crop.of(imageUri!!, imageUri!!).asSquare().start(this)
@@ -537,7 +534,7 @@ class SplashConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListener 
                             key = SPLASH_SCREEN_BG_IMAGE_PATH
                             binding.selectBgImageLayout.uploadImage.setImageBitmap(bitmap)
                         }
-                        AppPref.setValue(context, key, imageFile?.absolutePath)
+                        AppPref.setValue(this, key, imageFile?.absolutePath!!)
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }

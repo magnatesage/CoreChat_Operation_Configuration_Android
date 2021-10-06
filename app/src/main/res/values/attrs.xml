@@ -18,12 +18,12 @@
     </declare-styleable>
 
     <declare-styleable name="CustomMaterialCardView">
-        <attr name="cardAllCornerFamily" format="integer" />
-        <attr name="cardAllCornerSize" format="dimension|fraction" />
-        <attr name="cardTopLeftCornerSize" format="dimension|fraction" />
-        <attr name="cardTopRightCornerSize" format="dimension|fraction" />
-        <attr name="cardBottomLeftCornerSize" format="dimension|fraction" />
-        <attr name="cardBottomRightCornerSize" format="dimension|fraction" />
+        <attr name="allCornerFamily" format="integer" />
+        <attr name="allCornerSize" format="dimension|fraction" />
+        <attr name="topLeftCornerSize" format="dimension|fraction" />
+        <attr name="topRightCornerSize" format="dimension|fraction" />
+        <attr name="bottomLeftCornerSize" format="dimension|fraction" />
+        <attr name="bottomRightCornerSize" format="dimension|fraction" />
     </declare-styleable>
 
     <declare-styleable name="CustomMaterialButton">
@@ -37,12 +37,12 @@
     </declare-styleable>
 
     <declare-styleable name="CustomShapeableImageView">
-        <attr name="allCornerFamily" format="integer" />
-        <attr name="allCornerSize" format="dimension|fraction" />
-        <attr name="topLeftCornerSize" format="dimension|fraction" />
-        <attr name="topRightCornerSize" format="dimension|fraction" />
-        <attr name="bottomLeftCornerSize" format="dimension|fraction" />
-        <attr name="bottomRightCornerSize" format="dimension|fraction" />
+        <attr name="shapeableAllCornerFamily" format="integer" />
+        <attr name="shapeableAllCornerSize" format="dimension|fraction" />
+        <attr name="shapeableTopLeftCornerSize" format="dimension|fraction" />
+        <attr name="shapeableTopRightCornerSize" format="dimension|fraction" />
+        <attr name="shapeableBottomLeftCornerSize" format="dimension|fraction" />
+        <attr name="shapeableBottomRightCornerSize" format="dimension|fraction" />
     </declare-styleable>
 
     <declare-styleable name="SwipeRevealLayout">

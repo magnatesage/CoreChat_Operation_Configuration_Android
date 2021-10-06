@@ -23,8 +23,8 @@
             android:id="@+id/cv_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardAllCornerFamily="0"
-            app:cardAllCornerSize="@dimen/card_medium_radius"
+            app:allCornerFamily="0"
+            app:allCornerSize="@dimen/card_medium_radius"
             app:cardElevation="0dp"
             app:strokeColor="@color/gray"
             app:strokeWidth="@dimen/_1sdp">
@@ -47,10 +47,10 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:layout_marginEnd="@dimen/_2sdp"
-                        app:cardAllCornerFamily="0"
+                        app:allCornerFamily="0"
                         app:cardBackgroundColor="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
-                        app:cardBottomLeftCornerSize="@dimen/card_medium_radius"
-                        app:cardTopRightCornerSize="@dimen/_8sdp">
+                        app:bottomLeftCornerSize="@dimen/card_medium_radius"
+                        app:topRightCornerSize="@dimen/_8sdp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"

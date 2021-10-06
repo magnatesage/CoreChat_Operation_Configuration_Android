@@ -12,12 +12,12 @@ import com.google.android.material.shape.CornerSize
 import com.google.android.material.shape.RelativeCornerSize
 
 class CustomMaterialCardView : MaterialCardView {
-    private var cornerFamily: Int = CornerFamily.ROUNDED
-    private var allCornerSize: CornerSize = AbsoluteCornerSize(0F)
-    private var topLeftCornerSize: CornerSize = allCornerSize
-    private var topRightCornerSize: CornerSize = allCornerSize
-    private var bottomRightCornerSize: CornerSize = allCornerSize
-    private var bottomLeftCornerSize: CornerSize = allCornerSize
+    private var cardCornerFamily: Int = CornerFamily.ROUNDED
+    private var cardAllCornerSize: CornerSize = AbsoluteCornerSize(0F)
+    private var cardTopLeftCornerSize: CornerSize = cardAllCornerSize
+    private var cardTopRightCornerSize: CornerSize = cardAllCornerSize
+    private var cardBottomRightCornerSize: CornerSize = cardAllCornerSize
+    private var cardBottomLeftCornerSize: CornerSize = cardAllCornerSize
 
     constructor(context: Context?) : super(context) {}
 
@@ -35,34 +35,34 @@ class CustomMaterialCardView : MaterialCardView {
 
     private fun customAttr(context: Context, attrs: AttributeSet) {
         val a = context.obtainStyledAttributes(attrs, R.styleable.CustomMaterialCardView)
-        cornerFamily =
-            a.getInteger(R.styleable.CustomMaterialCardView_cardAllCornerFamily, CornerFamily.ROUNDED)
+        cardCornerFamily =
+            a.getInteger(R.styleable.CustomMaterialCardView_allCornerFamily, CornerFamily.ROUNDED)
 
-        allCornerSize = getCornerSize(
+        cardAllCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardAllCornerSize,
+            R.styleable.CustomMaterialCardView_allCornerSize,
             AbsoluteCornerSize(0F)
         )
 
-        topLeftCornerSize = getCornerSize(
+        cardTopLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardTopLeftCornerSize,
-            allCornerSize
+            R.styleable.CustomMaterialCardView_topLeftCornerSize,
+            cardAllCornerSize
         )
-        topRightCornerSize = getCornerSize(
+        cardTopRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardTopRightCornerSize,
-            allCornerSize
+            R.styleable.CustomMaterialCardView_topRightCornerSize,
+            cardAllCornerSize
         )
-        bottomLeftCornerSize = getCornerSize(
+        cardBottomLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardBottomLeftCornerSize,
-            allCornerSize
+            R.styleable.CustomMaterialCardView_bottomLeftCornerSize,
+            cardAllCornerSize
         )
-        bottomRightCornerSize = getCornerSize(
+        cardBottomRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardBottomRightCornerSize,
-            allCornerSize
+            R.styleable.CustomMaterialCardView_bottomRightCornerSize,
+            cardAllCornerSize
         )
         updateCardView()
         a.recycle()
@@ -87,74 +87,74 @@ class CustomMaterialCardView : MaterialCardView {
     }
 
     fun setCornerFamily(cornerFamily: Int) {
-        this.cornerFamily = cornerFamily
+        this.cardCornerFamily = cornerFamily
         updateCardView()
     }
 
     fun setAllCorners(allCornerSize: Float) {
-        this.allCornerSize = AbsoluteCornerSize(allCornerSize)
-        this.topLeftCornerSize = AbsoluteCornerSize(allCornerSize)
-        this.topRightCornerSize = AbsoluteCornerSize(allCornerSize)
-        this.bottomLeftCornerSize = AbsoluteCornerSize(allCornerSize)
-        this.bottomRightCornerSize = AbsoluteCornerSize(allCornerSize)
+        this.cardAllCornerSize = AbsoluteCornerSize(allCornerSize)
+        this.cardTopLeftCornerSize = AbsoluteCornerSize(allCornerSize)
+        this.cardTopRightCornerSize = AbsoluteCornerSize(allCornerSize)
+        this.cardBottomLeftCornerSize = AbsoluteCornerSize(allCornerSize)
+        this.cardBottomRightCornerSize = AbsoluteCornerSize(allCornerSize)
         updateCardView()
     }
 
     fun setAllCornersInPercent(allCornerSize: Float) {
-        this.allCornerSize = RelativeCornerSize(allCornerSize)
-        this.topLeftCornerSize = RelativeCornerSize(allCornerSize)
-        this.topRightCornerSize = RelativeCornerSize(allCornerSize)
-        this.bottomLeftCornerSize = RelativeCornerSize(allCornerSize)
-        this.bottomRightCornerSize = RelativeCornerSize(allCornerSize)
+        this.cardAllCornerSize = RelativeCornerSize(allCornerSize)
+        this.cardTopLeftCornerSize = RelativeCornerSize(allCornerSize)
+        this.cardTopRightCornerSize = RelativeCornerSize(allCornerSize)
+        this.cardBottomLeftCornerSize = RelativeCornerSize(allCornerSize)
+        this.cardBottomRightCornerSize = RelativeCornerSize(allCornerSize)
         updateCardView()
     }
 
     fun setTopLeftCorner(topLeftCornerSize: Float) {
-        this.topLeftCornerSize = AbsoluteCornerSize(topLeftCornerSize)
+        this.cardTopLeftCornerSize = AbsoluteCornerSize(topLeftCornerSize)
         updateCardView()
     }
 
     fun setTopLeftCornerInPercent(topLeftCornerSize: Float) {
-        this.topLeftCornerSize = RelativeCornerSize(topLeftCornerSize)
+        this.cardTopLeftCornerSize = RelativeCornerSize(topLeftCornerSize)
         updateCardView()
     }
 
     fun setTopRightCorner(topRightCornerSize: Float) {
-        this.topRightCornerSize = AbsoluteCornerSize(topRightCornerSize)
+        this.cardTopRightCornerSize = AbsoluteCornerSize(topRightCornerSize)
         updateCardView()
     }
 
     fun setTopRightCornerInPercent(topRightCornerSize: Float) {
-        this.topRightCornerSize = RelativeCornerSize(topRightCornerSize)
+        this.cardTopRightCornerSize = RelativeCornerSize(topRightCornerSize)
         updateCardView()
     }
 
     fun setBottomLeftCorner(bottomLeftCornerSize: Float) {
-        this.bottomLeftCornerSize = AbsoluteCornerSize(bottomLeftCornerSize)
+        this.cardBottomLeftCornerSize = AbsoluteCornerSize(bottomLeftCornerSize)
         updateCardView()
     }
 
     fun setBottomLeftCornerInPercent(bottomLeftCornerSize: Float) {
-        this.bottomLeftCornerSize = RelativeCornerSize(bottomLeftCornerSize)
+        this.cardBottomLeftCornerSize = RelativeCornerSize(bottomLeftCornerSize)
         updateCardView()
     }
 
     fun setBottomRightCorner(bottomRightCornerSize: Float) {
-        this.bottomRightCornerSize = AbsoluteCornerSize(bottomRightCornerSize)
+        this.cardBottomRightCornerSize = AbsoluteCornerSize(bottomRightCornerSize)
         updateCardView()
     }
 
-     fun setBottomRightCornerInPercent(bottomRightCornerSize: Float) {
-        this.bottomRightCornerSize = RelativeCornerSize(bottomRightCornerSize)
+    fun setBottomRightCornerInPercent(bottomRightCornerSize: Float) {
+        this.cardBottomRightCornerSize = RelativeCornerSize(bottomRightCornerSize)
         updateCardView()
     }
 
     private fun updateCardView() {
         shapeAppearanceModel = shapeAppearanceModel.toBuilder()
-            .setTopLeftCorner(cornerFamily, topLeftCornerSize)
-            .setTopRightCorner(cornerFamily, topRightCornerSize)
-            .setBottomLeftCorner(cornerFamily, bottomLeftCornerSize)
-            .setBottomRightCorner(cornerFamily, bottomRightCornerSize)
+            .setTopLeftCorner(cardCornerFamily, cardTopLeftCornerSize)
+            .setTopRightCorner(cardCornerFamily, cardTopRightCornerSize)
+            .setBottomLeftCorner(cardCornerFamily, cardBottomLeftCornerSize)
+            .setBottomRightCorner(cardCornerFamily, cardBottomRightCornerSize)
             .build()
     }
 }

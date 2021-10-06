@@ -24,8 +24,8 @@
             android:id="@+id/cv_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardAllCornerFamily="0"
-            app:cardAllCornerSize="@dimen/card_small_radius"
+            app:allCornerFamily="0"
+            app:allCornerSize="@dimen/card_small_radius"
             app:strokeColor="@color/gray"
             app:cardBackgroundColor="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
             app:strokeWidth="@dimen/_1sdp">

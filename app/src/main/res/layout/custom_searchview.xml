@@ -14,8 +14,8 @@
     <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardAllCornerSize="50%"
-        app:cardAllCornerFamily="0"
+        app:allCornerSize="50%"
+        app:allCornerFamily="0"
         app:cardElevation="0dp"
         app:strokeColor="@color/gray"
         app:strokeWidth="@dimen/_1sdp">

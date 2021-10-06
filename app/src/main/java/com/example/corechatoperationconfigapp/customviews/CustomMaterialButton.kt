@@ -49,28 +49,28 @@ class CustomMaterialButton : MaterialButton {
 
         allCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardAllCornerSize,
+            R.styleable.CustomMaterialCardView_allCornerSize,
             AbsoluteCornerSize(0F)
         )
 
         topLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardTopLeftCornerSize,
+            R.styleable.CustomMaterialCardView_topLeftCornerSize,
             allCornerSize
         )
         topRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardTopRightCornerSize,
+            R.styleable.CustomMaterialCardView_topRightCornerSize,
             allCornerSize
         )
         bottomLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardBottomLeftCornerSize,
+            R.styleable.CustomMaterialCardView_bottomLeftCornerSize,
             allCornerSize
         )
         bottomRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomMaterialCardView_cardBottomRightCornerSize,
+            R.styleable.CustomMaterialCardView_bottomRightCornerSize,
             allCornerSize
         )
         

@@ -37,32 +37,32 @@ class CustomShapeableImageView : ShapeableImageView {
     private fun customAttr(context: Context, attrs: AttributeSet) {
         val a = context.obtainStyledAttributes(attrs, R.styleable.CustomShapeableImageView)
         cornerFamily =
-            a.getInteger(R.styleable.CustomShapeableImageView_allCornerFamily, CornerFamily.ROUNDED)
+            a.getInteger(R.styleable.CustomShapeableImageView_shapeableAllCornerFamily, CornerFamily.ROUNDED)
 
         allCornerSize = getCornerSize(
             a,
-            R.styleable.CustomShapeableImageView_allCornerSize,
+            R.styleable.CustomShapeableImageView_shapeableAllCornerSize,
             AbsoluteCornerSize(0F)
         )
 
         topLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomShapeableImageView_topLeftCornerSize,
+            R.styleable.CustomShapeableImageView_shapeableTopLeftCornerSize,
             allCornerSize
         )
         topRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomShapeableImageView_topRightCornerSize,
+            R.styleable.CustomShapeableImageView_shapeableTopRightCornerSize,
             allCornerSize
         )
         bottomLeftCornerSize = getCornerSize(
             a,
-            R.styleable.CustomShapeableImageView_bottomLeftCornerSize,
+            R.styleable.CustomShapeableImageView_shapeableBottomLeftCornerSize,
             allCornerSize
         )
         bottomRightCornerSize = getCornerSize(
             a,
-            R.styleable.CustomShapeableImageView_bottomRightCornerSize,
+            R.styleable.CustomShapeableImageView_shapeableBottomRightCornerSize,
             allCornerSize
         )
         updateShapeableImageView()

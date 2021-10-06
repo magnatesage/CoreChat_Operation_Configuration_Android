@@ -13,7 +13,7 @@
         android:layout_marginEnd="@dimen/_22sdp"
         app:cardPreventCornerOverlap="false"
         app:cardBackgroundColor="@color/colorPrimary"
-        app:cardAllCornerSize="50%">
+        app:allCornerSize="50%">
 
         <com.example.corechatoperationconfigapp.customviews.CustomTextView
             android:id="@+id/tv_chat_bubble"

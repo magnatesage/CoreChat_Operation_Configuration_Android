@@ -23,32 +23,65 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoreChatOperationConfigApp"
         android:usesCleartextTraffic="true"
-        android:hardwareAccelerated="false"
         android:requestLegacyExternalStorage="true">
 
-        <activity android:name=".activity.LoginActivity"/>
-        <activity android:name=".activity.HomeActivity"/>
-        <activity android:name=".activity.DashboardTabConfigActivity"/>
-        <activity android:name=".activity.ChatConversationBarConfigActivity"/>
-        <activity android:name=".activity.ChatCardViewConfigActivity" />
-        <activity android:name=".activity.ChatButtonConfigActivity" />
-        <activity android:name=".activity.ChatActivity" />
-        <activity android:name=".activity.ChatBubbleConfigActivity" />
-        <activity android:name=".activity.SideMenuConfigActivity" />
-        <activity android:name=".activity.BottomMenuConfigActivity" />
-        <activity android:name=".activity.IconsConfigActivity" />
-        <activity android:name=".activity.SplashPreviewActivity" />
-        <activity android:name=".activity.SplashConfigActivity"/>
-        <activity android:name=".activity.LiveChatActivity"/>
-        <activity android:name=".activity.WaitingActivity"/>
-        <activity android:name=".activity.SettingConfigActivity">
+        <activity android:name=".activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".activity.HomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".activity.DashboardTabConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".activity.ChatConversationBarConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".activity.ChatCardViewConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+
+        <activity android:name=".activity.ChatButtonConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".activity.ChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+
+        <activity android:name=".activity.ChatBubbleConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+
+        <activity android:name=".activity.SideMenuConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+
+        <activity android:name=".activity.BottomMenuConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+
+        <activity android:name=".activity.IconsConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+
+        <activity android:name=".activity.SplashPreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+
+        <activity android:name=".activity.SplashConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".activity.LiveChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".activity.WaitingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name=".activity.SettingConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ColorFontSizeConfigActivity" />
+
+        <activity android:name=".activity.ColorFontSizeConfigActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
 
         <provider

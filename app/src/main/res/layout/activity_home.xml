@@ -202,8 +202,8 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         app:cardElevation="0dp"
-                        app:cardAllCornerFamily="0"
-                        app:cardAllCornerSize="50%"
+                        app:allCornerFamily="0"
+                        app:allCornerSize="50%"
                         app:strokeColor="@{Color.parseColor(dynamicUIModel.themeColor.secondaryColor)}"
                         app:strokeWidth="@dimen/_2sdp"
                         app:cardBackgroundColor="@{Color.parseColor(dynamicUIModel.themeColor.primaryColor)}">
