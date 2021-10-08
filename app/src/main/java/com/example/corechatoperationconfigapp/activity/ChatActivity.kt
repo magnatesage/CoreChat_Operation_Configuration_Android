@@ -211,9 +211,7 @@ class ChatActivity : BaseActivity() {
                     } else if (intent.getBooleanExtra(
                             AppConstants.FROM_CHAT_CONVERSATION_BAR_CONFIG,
                             false
-                        )
-                    ) {
-                    }
+                        )) { }
                 } else {
                     startActivity(Intent(this, ChatButtonConfigActivity::class.java))
                 }

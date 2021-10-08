@@ -141,7 +141,7 @@ abstract class BaseActivity: AppCompatActivity(), ViewPermission.PermissionInter
             if (photoFile != null) {
                 photoURI = FileProvider.getUriForFile(
                     this,
-                    BuildConfig.APPLICATION_ID + ".provider",
+                    com.example.corechatoperationconfigapp.BuildConfig.APPLICATION_ID + ".provider",
                     photoFile
                 )
                 mPhotoFile = photoFile

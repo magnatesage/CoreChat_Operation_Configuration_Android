@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../../layout/custom_preview.xml" value="0.27239583333333334" />
+        <entry key="app/src/main/res/layout/activity_bottom_menu_config.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.23055555555555557" />
         <entry key="app/src/main/res/layout/activity_chat_bubble_config.xml" value="0.23055555555555557" />
         <entry key="app/src/main/res/layout/activity_chat_conversation_bar_config.xml" value="0.12604166666666666" />

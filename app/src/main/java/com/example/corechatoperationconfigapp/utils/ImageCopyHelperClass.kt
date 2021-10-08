@@ -22,7 +22,7 @@ object ImageCopyHelperClass {
      * This method return content URI of a file
      */
     fun getUriOfFile(context: Context, file: File): Uri {
-        return FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".provider", file)
+        return FileProvider.getUriForFile(context, com.example.corechatoperationconfigapp.BuildConfig.APPLICATION_ID + ".provider", file)
     }
 
     /**

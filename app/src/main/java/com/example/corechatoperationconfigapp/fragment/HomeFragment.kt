@@ -43,7 +43,6 @@ class HomeFragment : BaseFragment(), TabLayout.OnTabSelectedListener {
     /**
      * This method is used to initialization process of activity
      */
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun init() {
         binding.dynamicUIModel = Utils.dynamicUIModel
         binding.subTabLayout.addOnTabSelectedListener(this)
@@ -78,7 +77,6 @@ class HomeFragment : BaseFragment(), TabLayout.OnTabSelectedListener {
     /**
      * This method is used for customize tab layout
      */
-    @RequiresApi(Build.VERSION_CODES.M)
     private fun customizeTabLayout() {
         binding.subTabLayout.setSelectedTabIndicatorColor(Color.parseColor(Utils.dynamicUIModel?.themeColor?.primaryColor))
 
@@ -130,7 +128,6 @@ class HomeFragment : BaseFragment(), TabLayout.OnTabSelectedListener {
     /**
      * This method is called when tab unselected
      */
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onTabUnselected(tab: TabLayout.Tab?) {
         if (tab?.customView is CustomTextView){
             (tab.customView as CustomTextView).setTextColor(requireContext().getColor(R.color.gray))

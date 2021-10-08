@@ -119,6 +119,7 @@ class ChatConversationBarConfigActivity : BaseActivity() {
                     else -> {
                         Utils.dynamicUIModel?.chat?.conversationBar?.floatingIconUrl =
                             AppPref.getValue(context,AppConstants.FLOATING_ICON_IMAGE_PATH,"").toString()
+
                         val intent = Intent(this, ChatActivity::class.java)
                         intent.putExtra(AppConstants.FROM_CHAT_CONVERSATION_BAR_CONFIG, true)
                         startActivity(intent)
@@ -283,5 +284,4 @@ class ChatConversationBarConfigActivity : BaseActivity() {
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
-
 }

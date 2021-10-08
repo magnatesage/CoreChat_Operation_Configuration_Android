@@ -44,7 +44,6 @@ class DashboardFragment : BaseFragment(), TabLayout.OnTabSelectedListener{
     /**
      * This method is used to initialization process of activity
      */
-    @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("SetTextI18n")
     override fun init() {
         binding.dynamicUIModel = Utils.dynamicUIModel
@@ -75,7 +74,6 @@ class DashboardFragment : BaseFragment(), TabLayout.OnTabSelectedListener{
     /**
      * This method is used for customize tab layout
      */
-    @RequiresApi(Build.VERSION_CODES.M)
     private fun customizeTabLayout(){
         binding.mainTabLayout.setSelectedTabIndicatorColor(Color.parseColor(Utils.dynamicUIModel?.themeColor?.primaryColor))
 

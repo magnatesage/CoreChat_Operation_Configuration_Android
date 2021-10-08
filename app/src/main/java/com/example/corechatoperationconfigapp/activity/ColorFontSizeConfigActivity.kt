@@ -369,5 +369,4 @@ class ColorFontSizeConfigActivity : BaseActivity(), AdapterView.OnItemSelectedLi
             }
         }
     }
-
 }

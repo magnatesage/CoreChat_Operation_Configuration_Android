@@ -26,51 +26,67 @@
         android:requestLegacyExternalStorage="true">
 
         <activity android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name=".activity.DashboardTabConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name=".activity.ChatConversationBarConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name=".activity.ChatCardViewConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
         <activity android:name=".activity.ChatButtonConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
         <activity android:name=".activity.ChatBubbleConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
         <activity android:name=".activity.SideMenuConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
         <activity android:name=".activity.BottomMenuConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
         <activity android:name=".activity.IconsConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
         <activity android:name=".activity.SplashPreviewActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
         <activity android:name=".activity.SplashConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name=".activity.LiveChatActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name=".activity.WaitingActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name=".activity.SettingConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,6 +96,7 @@
         </activity>
 
         <activity android:name=".activity.ColorFontSizeConfigActivity"
+            android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" />

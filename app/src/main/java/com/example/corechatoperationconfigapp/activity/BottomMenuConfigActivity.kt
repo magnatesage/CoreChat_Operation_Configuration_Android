@@ -27,6 +27,8 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
         binding.spinnerDashboard.onItemSelectedListener = this
         binding.spinnerHistory.onItemSelectedListener = this
         binding.spinnerLiveChat.onItemSelectedListener = this
+        binding.spinnerWaiting.onItemSelectedListener = this
+        binding.spinnerNotification.onItemSelectedListener = this
 
         binding.root.post {
             setValuesToViews()
@@ -227,13 +229,29 @@ class BottomMenuConfigActivity : BaseActivity(), AdapterView.OnItemSelectedListe
                     Utils.dynamicUIModel?.bottomTabBar?.get(2)?.iconValue = ""
                 }
             }
+
+            binding.spinnerWaiting -> {
+                if (position != 0) {
+                    Utils.dynamicUIModel?.bottomTabBar?.get(3)?.iconValue =
+                        Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
+                } else {
+                    Utils.dynamicUIModel?.bottomTabBar?.get(3)?.iconValue = ""
+                }
+            }
+
+            binding.spinnerNotification -> {
+                if (position != 0) {
+                    Utils.dynamicUIModel?.bottomTabBar?.get(4)?.iconValue =
+                        Utils.getOriginalIconValue(parent.getItemAtPosition(position).toString())
+                } else {
+                    Utils.dynamicUIModel?.bottomTabBar?.get(4)?.iconValue = ""
+                }
+            }
         }
     }
 
     /**
      * This method is called when user nothing select anything in spinner
      */
-    override fun onNothingSelected(p0: AdapterView<*>?) {
-
-    }
+    override fun onNothingSelected(p0: AdapterView<*>?) { }
 }
