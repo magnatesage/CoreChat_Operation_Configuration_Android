@@ -236,8 +236,8 @@ data class Chat(
     val bottomMenu: ArrayList<BottomMenuItem>,
     @SerializedName("flag_popup")
     var flagPopup: Boolean,
-    @SerializedName("usrelist_popup")
-    var usreListPopup: Boolean
+    @SerializedName("user_list_popup")
+    var userListPopup: Boolean
 )
 
 data class ChatBubble(

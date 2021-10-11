@@ -5,6 +5,7 @@ import android.graphics.Typeface
 import android.text.Html
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.core.text.HtmlCompat
 import com.example.corechatoperationconfigapp.R
 
 /**
@@ -49,6 +50,6 @@ class CustomTextView : AppCompatTextView {
     }
 
     override fun setText(text: CharSequence, type: BufferType?) {
-        super.setText(Html.fromHtml(text.toString()), type)
+        super.setText(HtmlCompat.fromHtml(text.toString().replace("\n", "<br/>"), HtmlCompat.FROM_HTML_MODE_LEGACY).toString(), type)
     }
 }
