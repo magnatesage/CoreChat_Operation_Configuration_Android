@@ -9,7 +9,7 @@
 
         <variable
             name="dynamicUIModel"
-            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+            type="com.magnates.operationConfig.model.DynamicUIModel" />
 
     </data>
 
@@ -41,7 +41,7 @@
             android:gravity="center_vertical"
             android:layout_marginBottom="@dimen/_5sdp">
 
-            <com.example.corechatoperationconfigapp.customviews.CustomButton
+            <com.magnates.operationConfig.customviews.CustomButton
                 android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                 android:textColor="@color/darkGray"
                 app:customButtonFont="@string/Roboto_Light" />
 
-            <com.example.corechatoperationconfigapp.customviews.CustomButton
+            <com.magnates.operationConfig.customviews.CustomButton
                 android:id="@+id/btn_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -9,7 +9,7 @@
 
         <variable
             name="dynamicUIModel"
-            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+            type="com.magnates.operationConfig.model.DynamicUIModel" />
 
     </data>
 

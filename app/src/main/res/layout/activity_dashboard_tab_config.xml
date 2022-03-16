@@ -4,7 +4,7 @@
 
     <data>
 
-        <import type="com.example.corechatoperationconfigapp.R" />
+        <import type="com.magnates.operationConfig.R" />
 
     </data>
 
@@ -32,7 +32,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_font_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                     android:gravity="end"
                     android:orientation="horizontal">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                         android:textColor="@color/darkGray"
                         android:theme="@style/CustomSwitch" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_italic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+            <com.magnates.operationConfig.customviews.CustomTextView
                 android:id="@+id/tv_main_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                <com.magnates.operationConfig.customviews.CustomEditText
                     android:id="@+id/et_home"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                     android:textSize="@dimen/small_text_size"
                     app:customEditTextFont="@string/Roboto_LightItalic" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                <com.magnates.operationConfig.customviews.CustomEditText
                     android:id="@+id/et_group"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
 
             </LinearLayout>
 
-            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+            <com.magnates.operationConfig.customviews.CustomTextView
                 android:id="@+id/tv_sub_tab_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                <com.magnates.operationConfig.customviews.CustomEditText
                     android:id="@+id/et_first_main_tab_sub_tab_1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                     android:textSize="@dimen/small_text_size"
                     app:customEditTextFont="@string/Roboto_LightItalic" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                <com.magnates.operationConfig.customviews.CustomEditText
                     android:id="@+id/et_first_main_tab_sub_tab_2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -187,7 +187,7 @@
 
             </LinearLayout>
 
-            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+            <com.magnates.operationConfig.customviews.CustomTextView
                 android:id="@+id/tv_sub_tab_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -203,7 +203,7 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                <com.magnates.operationConfig.customviews.CustomEditText
                     android:id="@+id/et_second_main_tab_sub_tab_1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
                     android:textSize="@dimen/small_text_size"
                     app:customEditTextFont="@string/Roboto_LightItalic" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomEditText
+                <com.magnates.operationConfig.customviews.CustomEditText
                     android:id="@+id/et_second_main_tab_sub_tab_2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -244,7 +244,7 @@
             android:layout_margin="@dimen/_20sdp"
             android:layout_alignParentBottom="true">
 
-            <com.example.corechatoperationconfigapp.customviews.CustomButton
+            <com.magnates.operationConfig.customviews.CustomButton
                 android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
                 android:textColor="@color/darkGray"
                 app:customButtonFont="@string/Roboto_Light" />
 
-            <com.example.corechatoperationconfigapp.customviews.CustomButton
+            <com.magnates.operationConfig.customviews.CustomButton
                 android:id="@+id/btn_preview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

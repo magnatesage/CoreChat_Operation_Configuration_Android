@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+    <com.magnates.operationConfig.customviews.CustomMaterialCardView
         android:id="@+id/cv_chat_bubble"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         app:cardBackgroundColor="@color/colorPrimary"
         app:allCornerSize="50%">
 
-        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+        <com.magnates.operationConfig.customviews.CustomTextView
             android:id="@+id/tv_chat_bubble"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             android:textColor="@color/white"
             android:text="@string/lorem_ipsum" />
 
-    </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+    </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
     <RelativeLayout
         android:layout_width="@dimen/_25sdp"

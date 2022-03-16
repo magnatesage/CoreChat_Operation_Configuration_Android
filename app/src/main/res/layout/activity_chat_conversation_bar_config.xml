@@ -5,7 +5,7 @@
 
     <data>
 
-        <import type="com.example.corechatoperationconfigapp.R" />
+        <import type="com.magnates.operationConfig.R" />
 
     </data>
 
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_styles_option"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                     android:onClick="onClick"
                     android:padding="@dimen/_5sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_check_img_rounded"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                         android:orientation="horizontal"
                         android:padding="@dimen/_10sdp">
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:allCornerSize="@dimen/_5sdp"
@@ -86,9 +86,9 @@
                                 android:src="@drawable/flash_small"
                                 tools:ignore="ContentDescription" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:id="@+id/cv_rounded"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -98,7 +98,7 @@
                             android:clickable="false"
                             app:allCornerSize="@dimen/_5sdp">
 
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            <com.magnates.operationConfig.customviews.CustomTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center_vertical"
@@ -108,9 +108,9 @@
                                 app:customFont="@string/Roboto_Light"
                                 tools:ignore="HardcodedText" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:allCornerSize="@dimen/_5sdp"
@@ -123,7 +123,7 @@
                                 android:src="@drawable/send_small"
                                 tools:ignore="ContentDescription" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
                     </LinearLayout>
 
@@ -137,7 +137,7 @@
                     android:onClick="onClick"
                     android:padding="@dimen/_5sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_check_img_square"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
                             android:src="@drawable/flash_small"
                             tools:ignore="ContentDescription" />
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:id="@+id/cv_square"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -173,7 +173,7 @@
                             android:layout_marginEnd="@dimen/_5sdp"
                             android:layout_weight="1">
 
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            <com.magnates.operationConfig.customviews.CustomTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center_vertical"
@@ -183,7 +183,7 @@
                                 app:customFont="@string/Roboto_Light"
                                 tools:ignore="HardcodedText" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
                         <ImageView
                             android:id="@+id/iv_square_send"
@@ -204,7 +204,7 @@
                     android:onClick="onClick"
                     android:padding="@dimen/_5sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_check_img_semi_rounded"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -235,14 +235,14 @@
                             android:layout_gravity="end"
                             app:shapeAppearanceOverlay="@style/TopLeftBottomRightRoundedCorners_10sdp"/>
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:id="@+id/cv_semi_rounded"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:clickable="false">
 
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            <com.magnates.operationConfig.customviews.CustomTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -262,7 +262,7 @@
                                 android:src="@drawable/send_small"
                                 tools:ignore="ContentDescription" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
                     </LinearLayout>
 
@@ -276,7 +276,7 @@
                     android:onClick="onClick"
                     android:padding="@dimen/_5sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_check_img_oval"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -297,7 +297,7 @@
                         android:orientation="horizontal"
                         android:padding="@dimen/_10sdp">
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:allCornerSize="50%"
@@ -310,9 +310,9 @@
                                 android:src="@drawable/flash_small"
                                 tools:ignore="ContentDescription" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:id="@+id/cv_oval"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -321,7 +321,7 @@
                             android:clickable="false"
                             app:allCornerSize="50%">
 
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            <com.magnates.operationConfig.customviews.CustomTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center_vertical"
@@ -340,7 +340,7 @@
                                 android:src="@drawable/send_small"
                                 tools:ignore="ContentDescription" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
                     </LinearLayout>
 
@@ -354,7 +354,7 @@
                     android:onClick="onClick"
                     android:padding="@dimen/_5sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_check_img_circle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -375,7 +375,7 @@
                         android:orientation="vertical"
                         android:padding="@dimen/_10sdp">
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:allCornerSize="50%"
@@ -388,16 +388,16 @@
                                 android:src="@drawable/flash_small"
                                 tools:ignore="ContentDescription" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
-                        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                        <com.magnates.operationConfig.customviews.CustomMaterialCardView
                             android:id="@+id/cv_circle"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:clickable="false">
 
-                            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                            <com.magnates.operationConfig.customviews.CustomTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center_vertical"
@@ -417,7 +417,7 @@
                                 android:src="@drawable/send_small"
                                 tools:ignore="ContentDescription" />
 
-                        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
                     </LinearLayout>
 
@@ -432,7 +432,7 @@
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:background="@color/lightGray" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_floating_button_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -455,7 +455,7 @@
                         android:id="@+id/floating_icon_layout"
                         layout="@layout/upload_image_layout" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_upload_bg_image"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -476,7 +476,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                    <com.magnates.operationConfig.customviews.CustomButton
                         android:id="@+id/btn_back"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -487,7 +487,7 @@
                         android:textColor="@color/darkGray"
                         app:customButtonFont="@string/Roboto_Light" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                    <com.magnates.operationConfig.customviews.CustomButton
                         android:id="@+id/btn_preview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

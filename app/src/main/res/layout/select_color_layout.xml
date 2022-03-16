@@ -43,7 +43,7 @@
                     android:background="@android:color/darker_gray"
                     android:orientation="horizontal" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_select_color"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

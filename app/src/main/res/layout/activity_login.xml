@@ -9,7 +9,7 @@
 
         <variable
             name="dynamicModel"
-            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+            type="com.magnates.operationConfig.model.DynamicUIModel" />
 
     </data>
 
@@ -34,7 +34,7 @@
                 android:paddingTop="@dimen/_10sdp"
                 android:paddingBottom="@dimen/_10sdp">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+                <com.magnates.operationConfig.customviews.CustomMaterialCardView
                     android:id="@+id/cv_logo"
                     android:layout_width="@dimen/_100sdp"
                     android:layout_height="@dimen/_100sdp"
@@ -49,9 +49,9 @@
                         android:layout_height="match_parent"
                         tools:ignore="ContentDescription" />
 
-                </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+                </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_company_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -163,7 +163,7 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_forgot_pwd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
                     app:textCustomFont="@{dynamicModel.fontFamily}"
                     android:onClick="onClick"/>
 
-                <com.example.corechatoperationconfigapp.customviews.CustomMaterialButton
+                <com.magnates.operationConfig.customviews.CustomMaterialButton
                     android:id="@+id/btn_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -203,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                    <com.magnates.operationConfig.customviews.CustomButton
                         android:id="@+id/btn_back"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
                         android:textColor="@color/darkGray"
                         app:customButtonFont="@string/Roboto_Light" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                    <com.magnates.operationConfig.customviews.CustomButton
                         android:id="@+id/btn_next"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

@@ -43,7 +43,7 @@
             android:scaleType="fitXY"
             android:src="@drawable/ambilwarna_hue" />
 
-        <com.example.corechatoperationconfigapp.customviews.colorpicker.AmbilWarnaSquare
+        <com.magnates.operationConfig.customviews.colorpicker.AmbilWarnaSquare
             android:id="@+id/ambilwarna_viewSatBri"
             android:layout_width="@dimen/_185sdp"
             android:layout_height="@dimen/_185sdp"
@@ -132,7 +132,7 @@
             android:orientation="horizontal"
             android:paddingBottom="@dimen/ambilwarna_spacer">
 
-            <com.example.corechatoperationconfigapp.customviews.CustomButton
+            <com.magnates.operationConfig.customviews.CustomButton
                 android:id="@+id/get_color_from_edittext"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_30sdp"
@@ -145,7 +145,7 @@
                 android:textSize="@dimen/_10ssp"
                 app:customButtonFont="@string/Roboto_Light" />
 
-            <com.example.corechatoperationconfigapp.customviews.CustomEditText
+            <com.magnates.operationConfig.customviews.CustomEditText
                 android:id="@+id/ambilwarna_color_hexcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

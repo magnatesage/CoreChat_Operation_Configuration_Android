@@ -13,7 +13,7 @@
         android:scaleType="fitXY"
         android:src="@drawable/ambilwarna_alphacheckered_tiled" />
 
-    <com.example.corechatoperationconfigapp.customviews.colorpicker.widget.AmbilWarnaPrefWidgetView
+    <com.magnates.operationConfig.customviews.colorpicker.widget.AmbilWarnaPrefWidgetView
         android:id="@+id/ambilwarna_pref_widget_box"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
