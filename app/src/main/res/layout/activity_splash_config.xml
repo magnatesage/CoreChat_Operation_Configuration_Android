@@ -47,6 +47,7 @@
                     android:layout_below="@id/tv_upload_logo_text"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="@dimen/_10sdp"
+                    android:backgroundTint="@android:color/transparent"
                     app:cardElevation="0dp">
 
                     <ImageView
