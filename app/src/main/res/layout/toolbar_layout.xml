@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize">
 
-        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+        <com.magnates.operationConfig.customviews.CustomTextView
             android:id="@+id/tv_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

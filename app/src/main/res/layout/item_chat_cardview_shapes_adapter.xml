@@ -6,7 +6,7 @@
     android:layout_width="@dimen/_150sdp"
     android:layout_height="@dimen/_130sdp">
 
-    <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+    <com.magnates.operationConfig.customviews.CustomMaterialCardView
         android:id="@+id/cv_parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.example.corechatoperationconfigapp.customviews.CustomMaterialButton
+            <com.magnates.operationConfig.customviews.CustomMaterialButton
                 android:id="@+id/btn_header"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -46,7 +46,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="4">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_content"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -61,7 +61,7 @@
 
             </LinearLayout>
 
-            <com.example.corechatoperationconfigapp.customviews.CustomMaterialButton
+            <com.magnates.operationConfig.customviews.CustomMaterialButton
                 android:id="@+id/btn_footer"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -81,9 +81,9 @@
                 app:customMaterialButtonFont="@string/Roboto_Light"/>
 
         </LinearLayout>
-    </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+    </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
-    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+    <com.magnates.operationConfig.customviews.CustomTextView
         android:id="@+id/check_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

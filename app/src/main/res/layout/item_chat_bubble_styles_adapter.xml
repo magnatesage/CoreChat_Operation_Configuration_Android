@@ -7,7 +7,7 @@
     android:layout_margin="@dimen/_5sdp"
     app:cardCornerRadius="@dimen/_8sdp">
 
-    <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+    <com.magnates.operationConfig.customviews.CustomMaterialCardView
         android:id="@+id/cv_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,7 +32,7 @@
             android:layout_alignParentEnd="true"
             android:orientation="horizontal">
 
-            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+            <com.magnates.operationConfig.customviews.CustomTextView
                 android:id="@+id/check_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,5 +46,5 @@
 
         </LinearLayout>
         </RelativeLayout>
-    </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+    </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 </androidx.cardview.widget.CardView>

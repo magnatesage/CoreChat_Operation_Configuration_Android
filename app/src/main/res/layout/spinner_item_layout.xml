@@ -6,7 +6,7 @@
     android:orientation="horizontal"
     android:gravity="center_vertical">
 
-    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+    <com.magnates.operationConfig.customviews.CustomTextView
         android:id="@+id/tv_item"
         android:layout_width="0dp"
         android:layout_weight="1"

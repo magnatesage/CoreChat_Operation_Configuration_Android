@@ -8,7 +8,7 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.example.corechatoperationconfigapp"
+        applicationId "com.magnates.operationconfig"
         minSdkVersion 23
         targetSdkVersion 31
         versionCode 1
@@ -41,7 +41,7 @@ android {
         if (variant.name != android.buildTypes.release.name) {
             variant.outputs.all {
                 def timeStamp = new Date().format('dd_MM');
-                outputFileName = "Kotlin_Chat_Demo_${timeStamp}.apk"
+                outputFileName = "OPERATION_CONFIG_${timeStamp}.apk"
             }
         }
     }

@@ -8,7 +8,7 @@
 
         <variable
             name="dynamicUIModel"
-            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+            type="com.magnates.operationConfig.model.DynamicUIModel" />
     </data>
 
     <com.google.android.material.navigation.NavigationView
@@ -38,14 +38,14 @@
                     android:layout_marginTop="@dimen/_30sdp"
                     android:layout_marginEnd="@dimen/margin_start_end">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomShapeableImageView
+                    <com.magnates.operationConfig.customviews.CustomShapeableImageView
                         android:id="@+id/iv_org_logo"
                         android:layout_width="@dimen/_26sdp"
                         android:layout_height="@dimen/_26sdp"
                         app:allCornerFamily="0"
                         app:srcCompat="@drawable/group_hug" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_org_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                     android:layout_height="match_parent"
                     android:layout_below="@id/rl1">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomShapeableImageView
+                    <com.magnates.operationConfig.customviews.CustomShapeableImageView
                         android:id="@+id/iv_profile_logo"
                         android:layout_width="@dimen/_70sdp"
                         android:layout_height="@dimen/_70sdp"
@@ -79,7 +79,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.3" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -109,7 +109,7 @@
                 android:layout_height="@dimen/_1sdp"
                 android:background="@color/gray" />
 
-            <com.example.corechatoperationconfigapp.customviews.CustomTextView
+            <com.magnates.operationConfig.customviews.CustomTextView
                 android:id="@+id/tv_logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

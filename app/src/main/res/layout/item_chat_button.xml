@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.example.corechatoperationconfigapp.customviews.CustomMaterialButton
+    <com.magnates.operationConfig.customviews.CustomMaterialButton
         android:id="@+id/custom_material_button"
         android:layout_width="@dimen/_150sdp"
         android:layout_height="wrap_content"

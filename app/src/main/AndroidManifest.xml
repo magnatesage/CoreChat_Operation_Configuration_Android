@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.corechatoperationconfigapp">
+    package="com.magnates.operationConfig">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -15,7 +15,7 @@
     <uses-feature android:name="android.hardware.camera.flash" />
 
     <application
-        android:name=".App"
+        android:name="com.magnates.operationConfig.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,67 +25,67 @@
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true">
 
-        <activity android:name=".activity.LoginActivity"
+        <activity android:name="com.magnates.operationConfig.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <activity android:name=".activity.HomeActivity"
+        <activity android:name="com.magnates.operationConfig.activity.HomeActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <activity android:name=".activity.DashboardTabConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.DashboardTabConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <activity android:name=".activity.ChatConversationBarConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.ChatConversationBarConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <activity android:name=".activity.ChatCardViewConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.ChatCardViewConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
-        <activity android:name=".activity.ChatButtonConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.ChatButtonConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <activity android:name=".activity.ChatActivity"
+        <activity android:name="com.magnates.operationConfig.activity.ChatActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
-        <activity android:name=".activity.ChatBubbleConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.ChatBubbleConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
-        <activity android:name=".activity.SideMenuConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.SideMenuConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
-        <activity android:name=".activity.BottomMenuConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.BottomMenuConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
-        <activity android:name=".activity.IconsConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.IconsConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
-        <activity android:name=".activity.SplashPreviewActivity"
+        <activity android:name="com.magnates.operationConfig.activity.SplashPreviewActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"  />
 
-        <activity android:name=".activity.SplashConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.SplashConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <activity android:name=".activity.LiveChatActivity"
+        <activity android:name="com.magnates.operationConfig.activity.LiveChatActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <activity android:name=".activity.WaitingActivity"
+        <activity android:name="com.magnates.operationConfig.activity.WaitingActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
-        <activity android:name=".activity.SettingConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.SettingConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true">
@@ -96,7 +96,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.ColorFontSizeConfigActivity"
+        <activity android:name="com.magnates.operationConfig.activity.ColorFontSizeConfigActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 

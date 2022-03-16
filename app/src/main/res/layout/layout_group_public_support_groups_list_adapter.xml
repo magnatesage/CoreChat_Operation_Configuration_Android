@@ -8,7 +8,7 @@
 
         <variable
             name="dynamicUIModel"
-            type="com.example.corechatoperationconfigapp.model.DynamicUIModel" />
+            type="com.magnates.operationConfig.model.DynamicUIModel" />
     </data>
 
     <RelativeLayout
@@ -18,7 +18,7 @@
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_6sdp">
 
-        <com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView
+        <com.magnates.operationConfig.customviews.CustomMaterialCardView
             android:id="@+id/cv_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomShapeableImageView
+                <com.magnates.operationConfig.customviews.CustomShapeableImageView
                     android:id="@+id/iv_group_cover_logo"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_115sdp"
@@ -53,7 +53,7 @@
                     android:background="@color/gray"
                     android:layout_below="@id/iv_group_cover_logo" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_group_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                     android:layout_below="@id/static_view"
                     android:orientation="horizontal">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/icon_role_profile"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -86,7 +86,7 @@
                         android:textSize="@dimen/icon_small_text_size"
                         app:customFont="@string/font_icons" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_user_role"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -106,7 +106,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="@dimen/_4sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/icon_info"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -117,7 +117,7 @@
                         android:textSize="@dimen/icon_small_text_size"
                         app:customFont="@string/font_icons" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_info_label"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -133,7 +133,7 @@
 
             </RelativeLayout>
 
-        </com.example.corechatoperationconfigapp.customviews.CustomMaterialCardView>
+        </com.magnates.operationConfig.customviews.CustomMaterialCardView>
 
     </RelativeLayout>
 </layout>

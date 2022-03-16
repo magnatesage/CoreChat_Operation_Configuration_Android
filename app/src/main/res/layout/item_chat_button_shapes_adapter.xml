@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.example.corechatoperationconfigapp.customviews.CustomMaterialButton
+    <com.magnates.operationConfig.customviews.CustomMaterialButton
         android:id="@+id/custom_material_button"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         android:layout_alignParentEnd="true"
         tools:ignore="RelativeOverlap">
 
-        <com.example.corechatoperationconfigapp.customviews.CustomTextView
+        <com.magnates.operationConfig.customviews.CustomTextView
             android:id="@+id/check_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

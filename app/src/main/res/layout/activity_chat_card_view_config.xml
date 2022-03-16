@@ -4,7 +4,7 @@
 
     <data>
 
-        <import type="com.example.corechatoperationconfigapp.R" />
+        <import type="com.magnates.operationConfig.R" />
 
     </data>
 
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp">
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_select_button_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:background="@color/lightGray" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_border_size_and_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                     android:layout_below="@id/tv_border_size_and_color"
                     android:orientation="vertical">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_border_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                     android:layout_toEndOf="@id/ll_border_color"
                     android:orientation="vertical">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_border_size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_10sdp"/>
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_cardview_header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
                     android:layout_margin="@dimen/_10sdp"
                     android:orientation="vertical">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_header_background_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                     android:layout_toEndOf="@id/ll_header_bg_color"
                     android:orientation="vertical">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_header_text_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -222,7 +222,7 @@
                     android:layout_margin="@dimen/_10sdp"
                     android:orientation="vertical">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_header_text_size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:background="@color/lightGray" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_cardview_footer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -275,7 +275,7 @@
                     android:layout_margin="@dimen/_10sdp"
                     android:orientation="vertical">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_footer_background_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -304,7 +304,7 @@
                     android:layout_toEndOf="@id/ll_footer_bg_color"
                     android:orientation="vertical">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_footer_text_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -333,7 +333,7 @@
                     android:layout_margin="@dimen/_10sdp"
                     android:orientation="vertical">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                    <com.magnates.operationConfig.customviews.CustomTextView
                         android:id="@+id/tv_footer_text_size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -366,7 +366,7 @@
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:background="@color/lightGray" />
 
-                <com.example.corechatoperationconfigapp.customviews.CustomTextView
+                <com.magnates.operationConfig.customviews.CustomTextView
                     android:id="@+id/tv_drop_shadow"
                     android:textColor="@color/lightGray"
                     android:textSize="@dimen/small_text_size"
@@ -392,7 +392,7 @@
                     android:layout_below="@+id/sw_drop_shadow"
                     android:layout_margin="@dimen/_10sdp">
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                    <com.magnates.operationConfig.customviews.CustomButton
                         android:id="@+id/btn_back"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -403,7 +403,7 @@
                         android:textColor="@color/darkGray"
                         app:customButtonFont="@string/Roboto_Light" />
 
-                    <com.example.corechatoperationconfigapp.customviews.CustomButton
+                    <com.magnates.operationConfig.customviews.CustomButton
                         android:id="@+id/btn_preview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
