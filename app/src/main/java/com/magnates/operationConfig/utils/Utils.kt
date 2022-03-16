@@ -1,3 +1,38 @@
+////////////////////////////////////////////////////////////////
+// ++_COPYRIGHT_START_++
+//   (C) Copyright XYZ Systems 202l
+//
+//   C O P Y R I G H T     N O T I C E
+//   --------------------------------
+//   The contents of this file are protected by copyright.
+//   Any unauthorised copying, duplication of its
+//   contents are breach of the copyright.
+//
+//
+//   C O N F I D E N T I A L I T Y    O F    S O F T W A R E
+//   -------------------------------------------------------
+//   This Software file is CONFIDENTIAL.
+//   The XYZ Systems Software and all information pertaining to it,
+//   to the extent not published by XYZ Systems, is Confidential.
+//   Full Title to the XYZ Systems Software remains
+//   at all times in XYZ Systems.
+//   The following is deemed Confidential Information with or
+//   without marking or written confirmation:
+//   (i)   the Software and other related materials furnished
+//         by XYZ Systems;
+//   (ii)  the oral and visual information relating to the Software
+//         and provided in the Software Developers Kanban Tasks
+//         including all attachments, designs and descriptions; and
+//   (iii) XYZ Systems representation methods of modelled data
+//         and databases.
+//   Software Developers will not disclose such information
+//   to any other party and by doing so will be a violation
+//   of this Confidentiality Of Software.
+//   By opening this file, you are bound to this
+//   Confidentiality of Software.
+// ++_COPYRIGHT_END_++
+////////////////////////////////////////////////////////////////
+
 package com.magnates.operationConfig.utils
 
 import android.app.Activity
@@ -27,6 +62,10 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
+import com.google.android.material.textfield.TextInputEditText
+import com.google.gson.GsonBuilder
 import com.magnates.operationConfig.R
 import com.magnates.operationConfig.customviews.CustomButton
 import com.magnates.operationConfig.customviews.CustomEditText
@@ -36,10 +75,6 @@ import com.magnates.operationConfig.model.DynamicUIModel
 import com.magnates.operationConfig.utils.AppConstants.BOLD
 import com.magnates.operationConfig.utils.AppConstants.BOLD_ITALIC
 import com.magnates.operationConfig.utils.AppConstants.ITALIC
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.card.MaterialCardView
-import com.google.android.material.textfield.TextInputEditText
-import com.google.gson.GsonBuilder
 import java.io.File
 import java.io.IOException
 import java.nio.charset.StandardCharsets

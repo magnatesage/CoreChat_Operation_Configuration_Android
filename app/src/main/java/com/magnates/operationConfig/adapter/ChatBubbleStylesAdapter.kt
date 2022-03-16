@@ -1,3 +1,38 @@
+////////////////////////////////////////////////////////////////
+// ++_COPYRIGHT_START_++
+//   (C) Copyright XYZ Systems 202l
+//
+//   C O P Y R I G H T     N O T I C E
+//   --------------------------------
+//   The contents of this file are protected by copyright.
+//   Any unauthorised copying, duplication of its
+//   contents are breach of the copyright.
+//
+//
+//   C O N F I D E N T I A L I T Y    O F    S O F T W A R E
+//   -------------------------------------------------------
+//   This Software file is CONFIDENTIAL.
+//   The XYZ Systems Software and all information pertaining to it,
+//   to the extent not published by XYZ Systems, is Confidential.
+//   Full Title to the XYZ Systems Software remains
+//   at all times in XYZ Systems.
+//   The following is deemed Confidential Information with or
+//   without marking or written confirmation:
+//   (i)   the Software and other related materials furnished
+//         by XYZ Systems;
+//   (ii)  the oral and visual information relating to the Software
+//         and provided in the Software Developers Kanban Tasks
+//         including all attachments, designs and descriptions; and
+//   (iii) XYZ Systems representation methods of modelled data
+//         and databases.
+//   Software Developers will not disclose such information
+//   to any other party and by doing so will be a violation
+//   of this Confidentiality Of Software.
+//   By opening this file, you are bound to this
+//   Confidentiality of Software.
+// ++_COPYRIGHT_END_++
+////////////////////////////////////////////////////////////////
+
 package com.magnates.operationConfig.adapter
 
 import android.app.Activity
@@ -7,6 +42,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.shape.CornerFamily
 import com.magnates.operationConfig.R
 import com.magnates.operationConfig.customviews.CustomMaterialCardView
 import com.magnates.operationConfig.customviews.CustomTextView
@@ -17,7 +53,6 @@ import com.magnates.operationConfig.utils.Extensions.visible
 import com.magnates.operationConfig.utils.Utils
 import com.magnates.operationConfig.utils.Utils.getLayoutFromInflater
 import com.magnates.operationConfig.utils.Utils.getSizeInSDP
-import com.google.android.material.shape.CornerFamily
 
 class ChatBubbleStylesAdapter(
     val context: Activity
@@ -60,7 +95,7 @@ class ChatBubbleStylesAdapter(
         lateinit var senderLayout: RelativeLayout
         lateinit var receiverLayout: RelativeLayout
 
-        val chatBubbleSenderShape = when (chatBubbleShapeList[holder.adapterPosition]) {
+        val chatBubbleSenderShape = when (chatBubbleShapeList[position]) {
             AppConstants.CHAT_BUBBLE_SLOPE -> R.layout.item_chat_bubble_image
             AppConstants.CHAT_BUBBLE_TALKIE_TOP -> R.layout.item_chat_bubble_image
             AppConstants.CHAT_BUBBLE_TALKIE_BOTTOM -> R.layout.item_chat_bubble_image
@@ -68,7 +103,7 @@ class ChatBubbleStylesAdapter(
             else -> R.layout.item_chat_bubble_cardview
         }
 
-        val chatBubbleReceiverShape = when (chatBubbleShapeList[holder.adapterPosition]) {
+        val chatBubbleReceiverShape = when (chatBubbleShapeList[position]) {
             AppConstants.CHAT_BUBBLE_SLOPE -> R.layout.item_chat_bubble_image
             AppConstants.CHAT_BUBBLE_TALKIE_TOP -> R.layout.item_chat_bubble_image
             AppConstants.CHAT_BUBBLE_TALKIE_BOTTOM -> R.layout.item_chat_bubble_image
@@ -120,7 +155,7 @@ class ChatBubbleStylesAdapter(
         tvReceiverChatBubble.setPadding(startEndPadding, topBottomPadding, startEndPadding, topBottomPadding)
 
         if (chatBubbleSenderShape == R.layout.item_chat_bubble_image) {
-            when (chatBubbleShapeList[holder.adapterPosition]) {
+            when (chatBubbleShapeList[position]) {
                 AppConstants.CHAT_BUBBLE_SLOPE -> {
                     llSenderChatBubble?.setBackgroundResource(R.drawable.chat_bubble_shape_slant)
                     llReceiverChatBubble?.setBackgroundResource(R.drawable.chat_bubble_shape_slant)
@@ -135,7 +170,7 @@ class ChatBubbleStylesAdapter(
                 }
             }
         } else {
-            when (chatBubbleShapeList[holder.adapterPosition]) {
+            when (chatBubbleShapeList[position]) {
                 AppConstants.CHAT_BUBBLE_CORNER_CUT_UPPER -> {
                     cvSenderChatBubble.setCornerFamily(CornerFamily.CUT)
                     cvSenderChatBubble.setTopLeftCorner(smallCornerSize)
@@ -216,14 +251,14 @@ class ChatBubbleStylesAdapter(
         holder.binding.llParent.addView(receiverLayout)
         holder.binding.llParent.addView(senderLayout)
 
-        if (selectedPosition != -1 && selectedPosition == holder.adapterPosition) {
+        if (selectedPosition != -1 && selectedPosition == position) {
             holder.binding.cvMain.setAllCorners(getSizeInSDP(context, R.dimen._8sdp).toFloat())
             holder.binding.cvMain.strokeColor = context.getColor(R.color.lightGray)
             holder.binding.cvMain.strokeWidth = getSizeInSDP(context, R.dimen._1sdp)
             holder.binding.cvChatBubbleStyle.cardElevation =
                 getSizeInSDP(context, R.dimen._5sdp).toFloat()
             holder.binding.checkImg.visible()
-            Utils.dynamicUIModel?.chat?.chatBubble?.chatBubbleStyle = chatBubbleShapeList[holder.adapterPosition]
+            Utils.dynamicUIModel?.chat?.chatBubble?.chatBubbleStyle = chatBubbleShapeList[position]
         } else {
             holder.binding.cvChatBubbleStyle.cardElevation = 0F
             holder.binding.cvMain.setAllCorners(0F)
@@ -232,7 +267,7 @@ class ChatBubbleStylesAdapter(
         }
 
         holder.binding.cvChatBubbleStyle.setOnClickListener {
-            selectedPosition = holder.adapterPosition
+            selectedPosition = position
             notifyDataSetChanged()
         }
     }
